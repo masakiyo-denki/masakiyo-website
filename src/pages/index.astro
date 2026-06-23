@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+).slice(0, 3);
+---
+
+<Layout
+  title="パナソニックの電気屋 | 創業119周年 正清電器 | 熊本市南区田迎 | 映像音響システム"
+  description="お陰様で創業119周年。正清電器は熊本最古参のパナソニックの街の電気屋（パナショップ）。家電から会議室、講義室などのAVシステムなど何でもご相談ください。"
+  canonicalPath="/"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:580px;">
+    <div class="absolute inset-0">
+      <img
+        src="/images/shop-exterior.jpg"
+        alt="正清電器 店舗外観 熊本市南区田迎"
+        class="w-full h-full object-cover object-[center_60%]"
+      />
+      <!-- グラデーション（PC）：左はほぼ不透明、右端はほぼ透明 -->
+      <div class="absolute inset-0 hidden md:block" style="background: linear-gradient(to right, rgba(0,48,135,0.95) 0%, rgba(0,48,135,0.85) 40%, rgba(0,48,135,0.30) 75%, rgba(0,48,135,0.00) 100%);"></div>
+      <!-- グラデーション（スマホ）：上から下へ -->
+      <div class="absolute inset-0 md:hidden" style="background: linear-gradient(to bottom, rgba(0,48,135,0.90) 0%, rgba(0,48,135,0.75) 60%, rgba(0,48,135,0.20) 100%);"></div>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 pt-40 pb-12 md:pt-44 md:pb-16">
+      <!-- テキストを左寄せ（PCのみ）、モバイルは中央 -->
+      <div class="text-white text-center md:text-left md:max-w-xl">
+        <p class="text-xs font-medium opacity-70 mb-4 tracking-widest uppercase">
+          Kumamoto Since 1906 ／ Panasonic Authorized Shop
+        </p>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">
+          頼れる、街の電器屋さん。<br /><span class="text-yellow-300">創業119年。</span>
+        </h1>
+        <p class="text-base md:text-lg opacity-85 font-medium mb-3">
+          熊本最古参のパナソニック特約店。
+        </p>
+        <p class="text-sm opacity-75 mb-10 leading-relaxed">
+          家電・水回り・リフォーム・太陽光・防犯カメラから<br />
+          会議室の映像音響システムまで。<br />
+          顔なじみのスタッフが、くらしをまるごとサポートします。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold text-base text-center">
+            まずは無料相談
+          </a>
+          <a href="/business" class="bg-white/20 hover:bg-white/30 transition px-8 py-3 rounded-lg font-bold text-base border border-white/40 text-center">
+            事業内容を見る
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 白クッション：選ばれる理由3点 -->
+  <section class="py-10 px-4 bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-3xl">🏠</span>
+        <p class="font-bold text-[var(--color-primary)] text-sm">創業119年・地域密着</p>
+        <p class="text-xs text-gray-500 leading-relaxed">明治39年から熊本市南区で<br />4代にわたり地域に根を張っています</p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-3xl">👤</span>
+        <p class="font-bold text-[var(--color-primary)] text-sm">担当者固定・顔なじみ対応</p>
+        <p class="text-xs text-gray-500 leading-relaxed">修理・設置・点検も<br />いつも同じスタッフが訪問します</p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-3xl">📞</span>
+        <p class="font-bold text-[var(--color-primary)] text-sm">くらしの相談窓口を一本化</p>
+        <p class="text-xs text-gray-500 leading-relaxed">家電・水回り・リフォームまで<br />「どこに頼めば？」をまるごと引き受けます</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 歴史＝信頼の根拠（ヒーロー直後） -->
+  <section class="relative overflow-hidden" style="min-height:320px;">
+    <img
+      src="/images/history-old.jpg"
+      alt="創業当時の正清電器"
+      class="absolute inset-0 w-full h-full object-cover object-[center_top]"
+      style="filter:sepia(55%) brightness(0.48);"
+    />
+    <div class="relative max-w-5xl mx-auto px-4 py-14 text-white">
+      <div class="max-w-2xl">
+        <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">SINCE 1906</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 leading-snug">
+          119年間、熊本とともに歩んできました。<br />
+          <span class="text-yellow-200">長い歴史が、信頼の根拠です。</span>
+        </h2>
+        <p class="text-white/80 text-sm leading-relaxed mb-8 max-w-lg">
+          ラジオの時代・白黒テレビ・カラーテレビ・デジタル家電・スマートホームへ。
+          時代が変わっても4代にわたり同じ地域に根を張り、
+          お客様の「困った」に向き合い続けてきました。
+        </p>
+        <div class="flex flex-wrap gap-8 text-sm">
+          <div>
+            <div class="min-h-[3.2rem] flex items-end">
+              <p class="text-yellow-300 font-bold text-3xl leading-none">119<span class="text-lg">年</span></p>
+            </div>
+            <p class="opacity-65 mt-2">熊本で積み重ねた歴史</p>
+          </div>
+          <div>
+            <div class="min-h-[3.2rem] flex items-end">
+              <p class="text-yellow-300 font-bold text-3xl leading-none">4<span class="text-lg">代</span></p>
+            </div>
+            <p class="opacity-65 mt-2">受け継ぐ技術と信頼</p>
+          </div>
+          <div>
+            <div class="min-h-[3.2rem] flex items-end">
+              <p class="text-yellow-300 font-bold text-xl leading-tight">パナソニック<br />特約店認定</p>
+            </div>
+            <p class="opacity-65 mt-2">熊本最古参のパナショップ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2つの導線 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-2 text-[var(--color-primary)]">
+        どちらのお客様ですか？
+      </h2>
+      <p class="text-center text-gray-500 text-sm mb-10">それぞれのページで詳しくご紹介しています</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- 個人向け：くらしのコンシェルジュ -->
+        <a href="/business#consumer" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-primary)]">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img
+              src="/images/service-tv-install.jpg"
+              alt="スタッフが自宅にお伺いして家電設置・修理"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div class="p-7">
+            <p class="text-xs font-bold text-[var(--color-primary)] tracking-widest mb-2">個人・ご家庭のお客様</p>
+            <h3 class="text-xl font-bold mb-3 leading-snug">
+              家電も水回りも、<br />くらしのことなら何でもどうぞ
+            </h3>
+            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+              家電の故障・買い替えはもちろん、キッチン・バス・トイレの水回り、
+              リフォーム、太陽光、LED化、防犯カメラ、スマートホームまで。
+              「どこに頼めばいいかわからない」というご相談から承ります。
+              顔なじみの担当者が、くらしをまるごと引き受けます。
+            </p>
+            <ul class="text-sm text-gray-500 space-y-1 mb-4">
+              <li>✓ 家電・水回り・リフォーム、相談窓口を一本化できる</li>
+              <li>✓ 担当者固定 ― いつも顔なじみのスタッフが訪問</li>
+              <li>✓ 蛍光灯LED化（2027年問題）のご相談も無料</li>
+            </ul>
+            <span class="inline-block text-[var(--color-primary)] font-bold text-sm">詳しく見る →</span>
+          </div>
+        </a>
+
+        <!-- 法人向け -->
+        <a href="/business/seminarroom" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-accent)]">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img
+              src="/images/av-seminarroom.jpg"
+              alt="会議室・セミナールームAVシステム"
+              class="w-full h-full object-cover object-[center_30%]"
+            />
+          </div>
+          <div class="p-7">
+            <p class="text-xs font-bold text-[var(--color-accent)] tracking-widest mb-2">法人・施設のお客様</p>
+            <h3 class="text-xl font-bold mb-3 leading-snug">
+              会議室・多目的ホールの視聴覚設備、<br />まるごとお任せください
+            </h3>
+            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+              プロジェクター・スクリーン・音響・マイク・Web配信・ライブ配信対応まで、
+              会議室・ホール・教室のAVシステムを丸ごとお任せください。
+              音響シミュレーション・現地音響調整・タッチパネルUI自社開発・アフターサポートまで
+              すべて自社完結。窓口は1社、責任も1社です。
+              防犯カメラ・パッケージエアコン設備も対応します。
+            </p>
+            <ul class="text-sm text-gray-500 space-y-1 mb-4">
+              <li>✓ 技術責任者の音響設計・調整実績 全国70施設以上</li>
+              <li>✓ Web配信・ライブ配信システムも対応</li>
+              <li>✓ 防犯カメラ・パッケージエアコン設備も対応</li>
+            </ul>
+            <span class="inline-block text-[var(--color-accent)] font-bold text-sm">詳しく見る →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- くらしのコンシェルジュ説明 -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">くらしのコンシェルジュ</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          「どこに頼めばいいかわからない」<br class="sm:hidden" />を、まるごと引き受けます
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-xl mx-auto leading-relaxed">
+          街の電器屋さんは、家電を売るだけのお店ではありません。
+          水回りからリフォーム、電気工事まで、くらしに関わることなら何でもご相談ください。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {[
+          { icon: "📺", label: "家電販売・修理・設置" },
+          { icon: "🚿", label: "水回りリフォーム\nキッチン・バス・トイレ" },
+          { icon: "☀️", label: "太陽光・エコキュート\n蓄電システム" },
+          { icon: "💡", label: "LED化・照明\n（2027年問題対応）" },
+          { icon: "🔒", label: "防犯カメラ\nスマートホーム" },
+          { icon: "❄️", label: "エアコン・\nパッケージエアコン" },
+          { icon: "🔌", label: "電気工事\n（熊本県知事許可）" },
+          { icon: "🎤", label: "会議室・教室\nAVシステム" },
+        ].map(({ icon, label }) => (
+          <div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm">
+            <div class="text-3xl mb-2">{icon}</div>
+            <p class="text-xs text-gray-600 font-medium leading-snug whitespace-pre-line">{label}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 bg-[var(--color-bg-gray)] rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4">
+        <div class="text-4xl shrink-0">🔒</div>
+        <div class="flex-1">
+          <h3 class="font-bold text-[var(--color-primary)] mb-1">「知らない人を家に上げたくない」にも応えます</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            正清電器では担当者が固定されています。修理・設置・点検、いつ訪問しても
+            顔なじみの同じスタッフが対応。一人暮らしの方・女性の方にもご安心いただいています。
+          </p>
+        </div>
+        <a href="/value" class="shrink-0 border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-5 py-2 rounded-lg text-sm whitespace-nowrap">
+          詳しく見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LED化2027年問題 -->
+  <section class="py-12 px-4 bg-yellow-50 border-y-2 border-yellow-400">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
+      <div class="text-5xl shrink-0">💡</div>
+      <div class="flex-1">
+        <p class="text-yellow-700 font-bold text-sm mb-1">重要なお知らせ</p>
+        <h2 class="text-xl font-bold text-[var(--color-text)] mb-2">
+          蛍光灯が2027年末までに製造・輸入終了します
+        </h2>
+        <p class="text-gray-600 text-sm">
+          水俣条約により、蛍光ランプの製造・輸出入が2027年末までに順次終了します。
+          在庫がなくなる前に、早めのLED化をご検討ください。ご相談・お見積りは無料です。
+        </p>
+      </div>
+      <a href="/contact" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
+        LED化を相談する
+      </a>
+    </div>
+  </section>
+
+  <!-- お知らせ -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">お知らせ</h2>
+        <a href="/blog" class="text-sm text-[var(--color-primary)] hover:underline">一覧を見る →</a>
+      </div>
+      <div class="space-y-3">
+        {posts.map((post) => (
+          <a
+            href={`/blog/${post.id}`}
+            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-4 bg-white border border-gray-100 rounded-lg hover:border-[var(--color-primary)] transition"
+          >
+            <time class="text-sm text-gray-400 shrink-0">
+              {post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <span class="font-medium text-[var(--color-text)]">
+              {post.data.title}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

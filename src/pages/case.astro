@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const cases = (await getCollection('cases')).sort((a, b) => b.data.year - a.data.year);
+
+const categoryColors: Record<string, string> = {
+  '医療・福祉施設':     'text-blue-700 bg-blue-50',
+  '企業・金融機関':     'text-indigo-700 bg-indigo-50',
+  '企業・ショールーム': 'text-purple-700 bg-purple-50',
+  '教育・研修施設':     'text-green-700 bg-green-50',
+  '公共・多目的施設':   'text-orange-700 bg-orange-50',
+  'ホテル・式場':       'text-rose-700 bg-rose-50',
+  '個人・住宅':         'text-teal-700 bg-teal-50',
+};
+---
+
+<Layout
+  title="導入事例 | 正清電器 | 会議室・ホール 視聴覚設備"
+  description="正清電器の法人向け視聴覚設備（AVシステム）導入事例。医療施設・金融機関・教育施設・企業会議室など、技術責任者の音響設計・調整実績 全国70施設以上から代表事例をご紹介します。"
+  canonicalPath="/case"
+>
+
+  <!-- ページヘッダー -->
+  <section class="bg-[var(--color-primary)] text-white py-16 px-4 text-center">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">CASE STUDIES</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">導入事例</h1>
+      <p class="text-white/70 text-sm max-w-xl mx-auto">
+        技術責任者の音響設計・調整実績 全国70施設以上から、代表的な導入事例をご紹介します。
+      </p>
+    </div>
+  </section>
+
+  <!-- 事例カード一覧 -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+        {cases.map((c) => {
+          const colorClass = categoryColors[c.data.category] ?? 'text-gray-700 bg-gray-100';
+          return (
+            <a
+              href={`/case/${c.id}`}
+              class="block bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md hover:border-[var(--color-primary)] transition group"
+            >
+              <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+                <img
+                  src={c.data.heroImage}
+                  alt={c.data.heroImageAlt}
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class={`text-xs font-bold px-2 py-0.5 rounded ${colorClass}`}>{c.data.category}</span>
+                  <span class="text-xs text-gray-400">{c.data.year}年</span>
+                </div>
+                <h3 class="font-bold text-[var(--color-text)] mb-1 leading-snug text-sm">
+                  {c.data.client}<br />{c.data.title}
+                </h3>
+                <p class="text-xs text-gray-500 mb-3 line-clamp-2" set:html={c.data.description}></p>
+                {c.data.tags && (
+                  <div class="flex flex-wrap gap-1">
+                    {c.data.tags.slice(0, 3).map((tag: string) => (
+                      <span class="text-xs bg-[var(--color-bg-gray)] text-gray-500 px-1.5 py-0.5 rounded">{tag}</span>
+                    ))}
+                    {c.data.tags.length > 3 && (
+                      <span class="text-xs text-gray-400">+{c.data.tags.length - 3}</span>
+                    )}
+                  </div>
+                )}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <!-- 実績数バナー -->
+      <div class="bg-[var(--color-primary)] text-white rounded-2xl p-8 text-center">
+        <p class="text-yellow-300 font-bold text-sm tracking-widest mb-2">TRACK RECORD</p>
+        <p class="text-3xl md:text-4xl font-bold mb-2">技術責任者の音響設計・調整実績<br class="sm:hidden" /> 全国 <span class="text-yellow-300">70施設以上</span></p>
+        <p class="text-white/70 text-sm mb-6">熊本県内はもちろん、全国各地の施設への施工実績があります<br />掲載以外にも多数の施工実績があります。お気軽にご相談ください。</p>
+        <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          お見積り・ご相談はこちら
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

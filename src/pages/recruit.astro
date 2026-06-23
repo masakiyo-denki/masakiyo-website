@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="採用情報 | 正清電器 | 熊本市南区田迎"
+  description="正清電器では電気・電気通信・住宅設備に興味のある方を募集しています。創業119年の老舗パナショップで、くらしと企業を支える仕事をしませんか。"
+  canonicalPath="/recruit"
+>
+
+  <!-- ページヘッダー -->
+  <section class="bg-[var(--color-primary)] text-white py-16 px-4 text-center">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">JOIN US</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">採用情報</h1>
+      <p class="text-white/70 text-sm max-w-xl mx-auto">
+        119年続く正清電器で、ともに働く仲間を募集しています
+      </p>
+    </div>
+  </section>
+
+  <!-- 仕事の紹介 -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">正清電器で働くということ</h2>
+        <p class="text-gray-500 text-sm mt-4 max-w-2xl mx-auto leading-relaxed">
+          私たちの仕事は「家電を売る」だけではありません。
+          お客様のくらしに寄り添い、会議室の映像音響システムを一から作り上げ、
+          「ありがとう、助かった」という声を直接もらえる仕事です。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-[var(--color-bg-gray)] rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🏠</div>
+          <h3 class="font-bold text-[var(--color-primary)] mb-2">くらしのサポート</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            家電の設置・修理から水回り・リフォームまで。お客様のご自宅に伺い、くらしの困りごとを解決します。
+          </p>
+        </div>
+        <div class="bg-[var(--color-bg-gray)] rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🎤</div>
+          <h3 class="font-bold text-[var(--color-primary)] mb-2">AV設備の設計・施工</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            会議室・ホールの映像音響システムを設計から音響調整まで担当。専門技術を身に付けられる環境です。
+          </p>
+        </div>
+        <div class="bg-[var(--color-bg-gray)] rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🤝</div>
+          <h3 class="font-bold text-[var(--color-primary)] mb-2">地域との深い絆</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            119年の歴史が育んだお客様との信頼関係。名前を呼んでもらえる、顔なじみの仕事です。
+          </p>
+        </div>
+      </div>
+
+      <!-- 募集要項 -->
+      <h2 class="text-2xl font-bold text-[var(--color-primary)] mb-6 pb-2 border-b-2 border-[var(--color-primary)]">募集要項</h2>
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-12">
+        <table class="w-full text-sm">
+          <tbody>
+            {[
+              ["職種", "電気設備・AV設備の設置・施工スタッフ（正社員・パート相談可）"],
+              ["仕事内容", "家電の設置・修理補助 / 電気工事補助 / AV設備施工・配線補助\n（経験・スキルに応じてステップアップできます）"],
+              ["応募資格", "電気・電子・情報分野に興味のある方\n普通自動車免許（AT限定可）\n※電気工事士資格があれば尚可（入社後取得支援あり）"],
+              ["勤務地", "熊本市南区田迎3丁目2番37号（本社）\n※出張・現場作業あり（熊本県内中心、全国対応あり）"],
+              ["勤務時間", "月〜土 9:00〜18:30\n※残業・土日対応は相談可"],
+              ["給与", "経験・スキルに応じて相談\n（詳細はご応募後にご案内します）"],
+              ["待遇", "社会保険完備 / 交通費支給 / 資格取得支援制度"],
+            ].map(([label, value]) => (
+              <tr class="border-b border-gray-100">
+                <th class="py-4 px-5 text-left font-medium text-gray-500 bg-gray-50 w-28 align-top text-xs whitespace-nowrap">{label}</th>
+                <td class="py-4 px-5 text-[var(--color-text)] whitespace-pre-line leading-relaxed">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 応募フォーム -->
+      <h2 class="text-xl font-bold text-[var(--color-primary)] mb-6">応募フォーム</h2>
+      <p class="text-sm text-gray-500 mb-6">
+        以下のフォームからご応募いただくか、お電話（096-379-1234）にてお気軽にお問い合わせください。
+      </p>
+      <form action="https://formspree.io/f/REPLACE_WITH_RECRUIT_FORM_ID" method="POST" class="space-y-5 max-w-2xl">
+        <div>
+          <label class="block text-sm font-medium mb-1" for="name">お名前 <span class="text-[var(--color-accent)]">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="正清 太郎" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="email">メールアドレス <span class="text-[var(--color-accent)]">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="tel">電話番号</label>
+          <input type="tel" id="tel" name="tel" placeholder="090-0000-0000" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="type">希望雇用形態</label>
+          <select id="type" name="type" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+            <option value="">選択してください</option>
+            <option value="正社員">正社員</option>
+            <option value="パート">パート・アルバイト</option>
+            <option value="相談">相談したい</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="message">志望動機・自己PR <span class="text-[var(--color-accent)]">*</span></label>
+          <textarea id="message" name="message" required rows="5" placeholder="応募の動機や経験・資格などをご記入ください" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[var(--color-primary)] hover:opacity-90 transition text-white font-bold py-3 rounded-lg">
+          応募する
+        </button>
+        <p class="text-xs text-gray-400">※ フォームはSSLで暗号化されています。お電話でのご応募もお気軽にどうぞ。</p>
+      </form>
+    </div>
+  </section>
+
+</Layout>

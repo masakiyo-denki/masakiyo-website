@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #003087;   /* 正清電器ブルー */
+  --color-accent: #e60012;    /* パナソニックレッド */
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --color-bg-gray: #f5f5f5;
+}
+
+/* 日本語の改行を文節（意味の切れ目）単位に。Chromium系で有効、
+   非対応ブラウザ（Safari/Firefox）は通常折り返しにフォールバック */
+body {
+  word-break: auto-phrase;
+}

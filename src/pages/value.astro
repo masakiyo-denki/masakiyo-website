@@ -1,0 +1,298 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="まちの電器屋さんとは | 正清電器 | 熊本市南区田迎"
+  description="知らない人を家に上げない時代の、いちばん安心な頼り先。創業120年・担当者固定・顔なじみ対応。量販店・ネット通販との違いをわかりやすく解説します。"
+  canonicalPath="/value"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden text-white" style="min-height:420px;">
+    <img
+      src="/images/shop-exterior.jpg"
+      alt="正清電器 田迎店 外観"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(0,48,135,0.92) 0%, rgba(0,48,135,0.75) 50%, rgba(0,48,135,0.30) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-24">
+      <p class="text-yellow-300 font-bold text-xs tracking-widest mb-4">WHY MASAKIYO</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-snug mb-4">
+        知らない人を家に上げない時代の、<br class="hidden md:block" />
+        いちばん身近で安心な頼り先
+      </h1>
+      <p class="text-white/80 text-sm leading-relaxed max-w-xl">
+        「街の電器屋さん」という言葉を聞いて、何を思い浮かべますか？<br />
+        正清電器は、明治39年（1906年）創業。熊本で119年、
+        地域の暮らしに寄り添い続けてきた電器屋です。
+      </p>
+    </div>
+  </section>
+
+  <!-- よくある「困った」 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">こんな「困った」、心当たりありませんか？</h2>
+        <p class="text-gray-500 text-sm mt-3">価格の安さだけで選んだ結果、かえって時間・お金・不安が増えるケースが少なくありません</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {[
+          { icon: "😰", title: "知らない業者が来て不安", body: "配送・設置のたびに初対面の人が自宅に来る。毎回誰が来るかわからない" },
+          { icon: "📦", title: "届いたけど設置できない", body: "ネット通販は「届けるまで」が仕事。設置・配線・設定は自己責任" },
+          { icon: "📐", title: "サイズが合わなかった", body: "設置場所を測らずに購入。搬入できない・ドアを通らないトラブル" },
+          { icon: "📞", title: "故障時にどこへ連絡すれば？", body: "購入店・メーカー・修理窓口がバラバラで、たらい回しになる" },
+          { icon: "🤔", title: "機能が多すぎて使えない", body: "カタログスペックだけで選んだら、使いこなせない機能だらけだった" },
+          { icon: "🔧", title: "工事の手配が別途必要", body: "エアコン・食洗機は電気工事が伴う。工事業者を自分で探す手間" },
+        ].map(({ icon, title, body }) => (
+          <div class="bg-white rounded-xl p-5">
+            <div class="text-3xl mb-2">{icon}</div>
+            <p class="font-bold text-gray-800 text-sm mb-1">{title}</p>
+            <p class="text-xs text-gray-500 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 比較表 -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">量販店・ネット通販と何が違うの？</h2>
+        <p class="text-gray-500 text-sm mt-3">それぞれに良さがあります。違いを知って、賢く選んでください</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse min-w-[560px]">
+          <thead>
+            <tr>
+              <th class="py-3 px-4 bg-gray-50 text-left font-medium text-gray-500 w-1/4"></th>
+              <th class="py-3 px-4 bg-[var(--color-primary)] text-white text-center font-bold">正清電器<br /><span class="text-xs font-normal text-white/70">（街の電器屋）</span></th>
+              <th class="py-3 px-4 bg-gray-100 text-gray-600 text-center font-medium">家電量販店</th>
+              <th class="py-3 px-4 bg-gray-100 text-gray-600 text-center font-medium">ネット通販</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["家に来る人",     "毎回同じ顔なじみの担当社員",   "外部委託の工事業者が多い",    "毎回違う配送業者"],
+              ["商品選び",       "ご家庭を知る担当者が最適を提案", "売場担当に相談可（都度変わる）", "自分で調べて自分で判断"],
+              ["設置・工事",     "担当社員が責任施工（電気・管・通信）", "外部委託業者が多い",   "原則自分で（オプション手配）"],
+              ["故障・修理",     "電話一本で訪問・即対応",        "窓口経由・メーカー取次ぎ",    "メーカーへ自分で連絡"],
+              ["購入後の相談",   "使い方・住まいの電気まで何でも", "店舗へ出向く必要あり",        "基本なし"],
+              ["高齢者・女性",   "訪問対応・見守り的なお付き合い", "店舗までの移動が必要",        "操作・判断のハードル高"],
+            ].map(([label, masakiyo, ryohan, net]) => (
+              <tr class="border-b border-gray-100">
+                <td class="py-3 px-4 font-medium text-gray-700 bg-gray-50 text-xs">{label}</td>
+                <td class="py-3 px-4 text-center text-[var(--color-primary)] font-medium bg-blue-50 text-xs">{masakiyo}</td>
+                <td class="py-3 px-4 text-center text-gray-500 text-xs">{ryohan}</td>
+                <td class="py-3 px-4 text-center text-gray-500 text-xs">{net}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 顔なじみ＝防犯 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-3">担当者固定制</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)] leading-snug mb-5">
+            「知らない人を<br />家に上げたくない」<br />
+            <span class="text-lg font-medium text-gray-600">それが、正清電器の答えです</span>
+          </h2>
+          <p class="text-gray-700 text-sm leading-loose mb-4">
+            強盗事件や悪質な訪問販売が報道される中、家の中に入る作業を
+            <strong>誰に頼むか</strong>は、家電選びと同じくらい大切な問題になりました。
+          </p>
+          <p class="text-gray-700 text-sm leading-loose mb-4">
+            正清電器では、販売から廃棄までを<strong>同じ担当社員</strong>が一貫して対応します。
+            初対面の人だけでご自宅に上がることはありません。「いつもの○○さん」だから、
+            ご本人はもちろん、離れて暮らすご家族にとっても安心です。
+          </p>
+          <div class="bg-white border-l-4 border-[var(--color-primary)] rounded-r-xl p-4 text-sm text-gray-700 leading-relaxed">
+            「不審な訪問や電話を受けたとき、<strong>『うちはいつも正清電器さんに頼んでいるから』</strong>と
+            断る理由にもなります」
+          </div>
+        </div>
+        <div>
+          <div class="overflow-hidden rounded-2xl mb-3">
+            <img src="/images/service-led-install.jpg" alt="正清電器 担当社員によるLED照明取付工事" class="w-full object-cover aspect-[4/3]" />
+          </div>
+          <p class="text-xs text-gray-400 px-1">LED照明の取付工事。お伺いするのは、いつも同じ顔なじみの担当社員です</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 120年の歴史が身元保証 -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/images/hist-1906-family.jpg" alt="創業期の正清電器 ― 上通五丁目の店舗と家族・従業員" class="w-full object-cover" style="max-height:280px; object-position:center 30%;" />
+          <p class="text-xs text-gray-400 mt-2 px-1">明治39年（1906年）創業当時の上通五丁目店舗</p>
+        </div>
+        <div>
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-3">SINCE 1906</p>
+          <h2 class="text-2xl font-bold text-[var(--color-primary)] leading-snug mb-5">
+            119年の歴史が、<br />安心の裏付けです
+          </h2>
+          <p class="text-gray-700 text-sm leading-loose mb-4">
+            正清電器は明治39年（1906年）創業。熊本の同じ地域で120年、商売を続けてまいりました。
+            <strong>逃げも隠れもしない、地域に根を張った店</strong>であることが、
+            何よりの身元保証だと考えています。
+          </p>
+          <p class="text-gray-700 text-sm leading-loose">
+            親子三代・四代でお付き合いいただいているご家庭も少なくありません。
+            熊本最古参のパナソニック正規販売店として、
+            メーカー研修を受けた知識と純正部品で対応します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3つの価値 -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold">正清電器が届ける3つの価値</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            label: "安心",
+            color: "border-pink-300",
+            body: "販売・工事・修理・使い方相談・廃棄まで、すべて同じ担当社員が対応。家電の設置はご自宅にお邪魔する仕事。いつも見知った顔の社員が伺うので、知らない人を家に上げる不安がありません。"
+          },
+          {
+            label: "快適",
+            color: "border-green-300",
+            body: "ご家庭の設置環境や使い方まで把握した担当社員が、家電アドバイザーの資格と経験をもとに「買ってから使いやすい」一台をご提案。電気の総合コンシェルジュを目指しています。"
+          },
+          {
+            label: "感動",
+            color: "border-blue-300",
+            body: "長年の現場経験による美しい工事仕上がりと、納入後もずっと続くお付き合い。「使い方を忘れた」「調子がおかしい」も、いつでもお気軽にご相談いただけます。"
+          },
+        ].map(({ label, color, body }) => (
+          <div class={`bg-white/10 border-t-4 ${color} rounded-2xl p-7`}>
+            <h3 class="text-xl font-bold mb-3">{label}</h3>
+            <p class="text-white/80 text-sm leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 家電だけじゃない -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">家電だけじゃない。住まいの電気まるごと対応</h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-xl mx-auto">
+          一般建設業許可（電気・管・電気通信工事業）・登録電気工事業者として、<br />
+          家電販売にとどまらない住まい全体のお手伝いが可能です
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {[
+          { icon: "📺", title: "家電製品", body: "冷蔵庫・洗濯機・エアコン・テレビ・調理家電・照明器具など" },
+          { icon: "💡", title: "照明・LED化", body: "蛍光灯からLEDへの切り替え工事。2027年末に蛍光ランプ製造終了予定" },
+          { icon: "🚰", title: "住宅設備・リフォーム", body: "システムキッチン・トイレ・バス・水回り・ガス機器・内装リフォーム" },
+          { icon: "☀️", title: "省エネ・創エネ", body: "太陽光発電・エコキュート。光熱費削減のご相談もどうぞ" },
+          { icon: "🔌", title: "電気工事", body: "コンセント増設・照明配線・分電盤・アンテナ・LAN/Wi-Fi整備" },
+          { icon: "🔒", title: "防犯・スマートホーム", body: "防犯カメラ・ドアホン・見守り機器・AiSEGによる住まいの一括管理" },
+        ].map(({ icon, title, body }) => (
+          <div class="bg-[var(--color-bg-gray)] rounded-xl p-5">
+            <div class="text-2xl mb-2">{icon}</div>
+            <p class="font-bold text-sm text-gray-800 mb-1">{title}</p>
+            <p class="text-xs text-gray-500 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- なぜ正清電器？ -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">その中でも、なぜ正清電器なの？</h2>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        {[
+          {
+            num: "01",
+            title: "創業119年の信頼",
+            body: "明治39年（1906年）創業。熊本最古参のパナソニック正規販売店として、親子三代・四代でご利用いただいているご家庭もあります。逃げも隠れもしない、地域に根を張った店です。"
+          },
+          {
+            num: "02",
+            title: "顔なじみの担当者制",
+            body: "販売から廃棄まで同じ社員が対応。「誰が来るかわからない」「誰に聞けばいいかわからない」がなくなります。一人暮らし・高齢の方・女性の方に特に好評です。"
+          },
+          {
+            num: "03",
+            title: "資格と許可に裏付けられた技術",
+            body: "家電アドバイザー・給水装置工事主任技術者・第2種電気工事士・スマートライフコンシェルジュ（ゴールド）など多数の資格を保有。一般建設業許可で家電からリフォームまで自社一貫対応。"
+          },
+          {
+            num: "04",
+            title: "法人実績に裏付けられた専門性",
+            body: "医療機関・教育機関・ホテルへのIPカメラ・映像音響システム納入実績。法人レベルの技術力をご家庭にも還元します。防犯カメラやスマートホームも安心してお任せください。"
+          },
+          {
+            num: "05",
+            title: "地域密着の機動力",
+            body: "熊本市南区田迎の店舗から、地域の皆様のもとへ素早く駆けつけます。「まだ買うか決めていない」「ちょっと聞きたいだけ」でも大歓迎です。"
+          },
+        ].map(({ num, title, body }) => (
+          <div class="flex gap-5 bg-white rounded-xl p-6">
+            <div class="text-3xl font-bold text-[var(--color-primary)]/20 shrink-0 w-10 leading-none">{num}</div>
+            <div>
+              <p class="font-bold text-[var(--color-primary)] mb-1">{title}</p>
+              <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 次のステップへの誘導 -->
+  <section class="py-12 px-4 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-gray-500 text-sm mb-4">正清電器に頼めることを、もっと詳しく見る</p>
+      <a href="/business" class="inline-flex items-center gap-2 bg-[var(--color-bg-gray)] hover:bg-gray-200 transition text-[var(--color-primary)] font-bold px-8 py-3 rounded-lg">
+        個人のお客様へのサービス一覧 →
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずはお気軽にご相談ください</h2>
+      <p class="text-white/80 text-sm mb-8 leading-relaxed">
+        「相談だけでも大丈夫？」——もちろんです。<br />
+        見積り・現地調査は無料。買うかどうか決まっていなくてもOKです。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-6">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+</Layout>

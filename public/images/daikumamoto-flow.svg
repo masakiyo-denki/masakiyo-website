@@ -1,0 +1,57 @@
+<svg viewBox="0 0 550 232" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">
+  <defs>
+    <marker id="arw" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#bbb"/>
+    </marker>
+  </defs>
+
+  <!-- 映像系 -->
+  <text x="10" y="14" font-size="11" font-weight="bold" fill="#3730a3">映像系</text>
+  <rect x="10" y="22" width="88" height="44" rx="7" fill="#EEF2FF"/>
+  <text x="54" y="40" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e1b4b">ノートPC</text>
+  <text x="54" y="56" font-size="10" text-anchor="middle" fill="#555">発表者PC</text>
+  <path d="M98,44 L116,44" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="116" y="22" width="130" height="44" rx="7" fill="#EEF2FF"/>
+  <text x="181" y="40" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e1b4b">TY-WPS2 PressIT</text>
+  <text x="181" y="56" font-size="10" text-anchor="middle" fill="#555">ワイヤレスHDMI送信</text>
+  <path d="M246,44 L264,44" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="264" y="22" width="108" height="44" rx="7" fill="#DBEAFE"/>
+  <text x="318" y="40" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e3a8a">PT-VMZ72J</text>
+  <text x="318" y="56" font-size="10" text-anchor="middle" fill="#555">天吊りプロジェクター</text>
+  <path d="M372,44 L390,44" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="390" y="22" width="148" height="44" rx="7" fill="#DBEAFE"/>
+  <text x="464" y="40" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e3a8a">130インチ電動スクリーン</text>
+  <text x="464" y="56" font-size="10" text-anchor="middle" fill="#555">自動昇降</text>
+
+  <line x1="10" y1="78" x2="540" y2="78" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 音声系 -->
+  <text x="10" y="94" font-size="11" font-weight="bold" fill="#065f46">音声系</text>
+  <rect x="10" y="102" width="128" height="44" rx="7" fill="#ECFDF5"/>
+  <text x="74" y="120" font-size="11" font-weight="bold" text-anchor="middle" fill="#064e3b">ワイヤレスマイク × 2</text>
+  <text x="74" y="136" font-size="10" text-anchor="middle" fill="#555">Panasonicワイヤレス</text>
+  <path d="M138,124 L156,124" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="156" y="102" width="148" height="44" rx="7" fill="#ECFDF5"/>
+  <text x="230" y="120" font-size="11" font-weight="bold" text-anchor="middle" fill="#064e3b">PowerZone Connect 504</text>
+  <text x="230" y="136" font-size="10" text-anchor="middle" fill="#555">Blaze Audio DSP内蔵アンプ</text>
+  <path d="M304,124 L322,124" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="322" y="102" width="130" height="44" rx="7" fill="#D1FAE5"/>
+  <text x="387" y="120" font-size="11" font-weight="bold" text-anchor="middle" fill="#064e3b">KGEAR GF82I × 2</text>
+  <text x="387" y="136" font-size="10" text-anchor="middle" fill="#555">ラインアレイスピーカー</text>
+
+  <line x1="10" y1="158" x2="540" y2="158" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 制御系 -->
+  <text x="10" y="174" font-size="11" font-weight="bold" fill="#7c3aed">制御系</text>
+  <rect x="10" y="182" width="115" height="44" rx="7" fill="#F5F3FF"/>
+  <text x="67" y="200" font-size="11" font-weight="bold" text-anchor="middle" fill="#4c1d95">TLP Pro 725T</text>
+  <text x="67" y="216" font-size="10" text-anchor="middle" fill="#555">Extron タッチパネル</text>
+  <path d="M125,204 L143,204" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="143" y="182" width="110" height="44" rx="7" fill="#F5F3FF"/>
+  <text x="198" y="200" font-size="11" font-weight="bold" text-anchor="middle" fill="#4c1d95">IPCP PRO 250xi</text>
+  <text x="198" y="216" font-size="10" text-anchor="middle" fill="#555">Extron 制御プロセッサー</text>
+  <path d="M253,204 L271,204" stroke="#ccc" stroke-width="1.5" fill="none" marker-end="url(#arw)"/>
+  <rect x="271" y="182" width="265" height="44" rx="7" fill="#EDE9FE"/>
+  <text x="403" y="200" font-size="11" font-weight="bold" text-anchor="middle" fill="#4c1d95">プロジェクター / スクリーン / アンプ / 照明</text>
+  <text x="403" y="216" font-size="10" text-anchor="middle" fill="#555">ワンタッチで一括起動・停止</text>
+</svg>

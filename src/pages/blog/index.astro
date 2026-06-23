@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout
+  title="お知らせ | 正清電器 | 熊本市南区田迎"
+  description="正清電器からのお知らせ・新着情報。展示会情報・導入事例・商品情報など。"
+  canonicalPath="/blog"
+>
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold text-[var(--color-primary)] mb-10">お知らせ</h1>
+    <div class="space-y-6">
+      {posts.map((post) => (
+        <a
+          href={`/blog/${post.id}`}
+          class="flex flex-col sm:flex-row gap-4 bg-white border border-gray-100 rounded-xl hover:border-[var(--color-primary)] hover:shadow-md transition overflow-hidden"
+        >
+          {(post.data.heroImage || post.data.image) ? (
+            <div class="sm:w-44 sm:h-28 shrink-0 overflow-hidden bg-gray-100">
+              <img
+                src={post.data.heroImage ?? post.data.image}
+                alt={post.data.imageAlt ?? post.data.title}
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ) : (
+            <div class="sm:w-44 sm:h-28 shrink-0 bg-[var(--color-bg-gray)] flex items-center justify-center text-3xl">
+              📰
+            </div>
+          )}
+          <div class="p-4 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-1">
+              <time class="text-xs text-gray-400">
+                {post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              {post.data.category && (
+                <span class="text-xs font-bold text-[var(--color-primary)] bg-blue-50 px-2 py-0.5 rounded">{post.data.category}</span>
+              )}
+            </div>
+            <p class="font-medium text-[var(--color-text)] leading-snug">{post.data.title}</p>
+            {post.data.description && (
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">{post.data.description}</p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

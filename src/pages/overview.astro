@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="会社概要 | 正清電器 | 熊本市南区田迎"
+  description="合資会社正清電器の会社概要。所在地・代表者・許認可・営業時間など。創業明治39年（1906年）、熊本市南区田迎のパナソニック特約店。"
+  canonicalPath="/overview"
+>
+
+  <div class="max-w-5xl mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold text-[var(--color-primary)] mb-10">会社概要</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+
+      <!-- 基本情報テーブル -->
+      <div>
+        <table class="w-full text-sm border-collapse">
+          <tbody>
+            {[
+              ['社名',       '合資会社 正清電器'],
+              ['英字社名',   'MASAKIYO ELECTRONICS'],
+              ['創業',       '明治39年（1906年）'],
+              ['代表者',     '正清義啓（代表社員・4代目）'],
+              ['所在地',     '〒862-0962\n熊本県熊本市南区田迎3丁目2番37号'],
+              ['電話',       '096-379-1234'],
+              ['FAX',        '096-379-1309'],
+              ['メール',     'panahot.masakiyo@gmail.com'],
+              ['営業日時',   '月〜土 9:00〜18:30\n日曜・祝日 定休'],
+              ['許認可',     '一般建設業 熊本県知事許可\n（電気工事業・管工事業・電気通信工事業）\n熊本県登録電気工事業者（一般用電気工作物）'],
+              ['主な事業内容', '1. 家電の販売・工事、太陽光工事、リフォーム提案・工事\n　補聴器販売、電気工事、水栓工事、電話工事、ネットワーク工事\n\n2. AVシステム設計／納入／調整／保守\n　テレビ会議システム設計／工事\n　セキュリティーシステム設計／工事\n　PA機材イベント運用'],
+              ['お客様',     '個人のお客様、一般法人、学校法人、病院、ホテル、\n結婚式場、寺院教会等'],
+            ].map(([label, value]) => (
+              <tr class="border-b border-gray-200">
+                <th class="py-3 pr-6 text-left font-medium text-gray-500 w-28 align-top text-xs">{label}</th>
+                <td class="py-3 text-[var(--color-text)] whitespace-pre-line text-sm">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <!-- 歴代代表者 -->
+        <div class="mt-8">
+          <h2 class="font-bold text-[var(--color-primary)] text-sm mb-3">歴代代表者</h2>
+          <div class="grid grid-cols-4 gap-2 text-center text-xs">
+            {[
+              { gen: '初代', name: '正清 清次郎' },
+              { gen: '二代', name: '正清 清' },
+              { gen: '三代', name: '正清 隆' },
+              { gen: '四代', name: '正清 義啓' },
+            ].map(({ gen, name }) => (
+              <div class="bg-[var(--color-bg-gray)] rounded-xl py-3 px-2">
+                <p class="text-[var(--color-primary)] font-bold mb-1">{gen}</p>
+                <p class="text-gray-700 leading-snug">{name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 地図・アクセス -->
+      <div>
+        <h2 class="font-bold text-[var(--color-primary)] mb-4">アクセス</h2>
+        <div class="rounded-xl overflow-hidden mb-4" style="height:240px;">
+          <iframe
+            src="https://maps.google.com/maps?q=熊本県熊本市南区田迎3丁目2番37号&output=embed&hl=ja"
+            width="100%"
+            height="240"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="正清電器 地図"
+          ></iframe>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed mb-1">
+          〒862-0962 熊本県熊本市南区田迎3丁目2番37号
+        </p>
+        <p class="text-xs text-gray-400 mb-6">※ 駐車場あり</p>
+
+        <div class="bg-[var(--color-primary)] text-white rounded-xl p-5 mb-3">
+          <p class="font-bold mb-1">お電話でのお問い合わせ</p>
+          <p class="text-2xl font-bold mb-1">
+            <a href="tel:0963791234" class="hover:opacity-80">096-379-1234</a>
+          </p>
+          <p class="text-white/70 text-xs">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+        </div>
+        <a href="/contact" class="flex items-center justify-center gap-2 w-full border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-bold rounded-xl py-3 text-sm hover:bg-[var(--color-primary)] hover:text-white transition">
+          ✉ メールでのお問い合わせ
+        </a>
+      </div>
+    </div>
+
+    <!-- 保有技能・資格（全幅） -->
+    <div class="mb-12">
+      <h2 class="font-bold text-[var(--color-primary)] text-sm mb-3">保有技能・資格</h2>
+      <div class="bg-[var(--color-bg-gray)] rounded-xl p-6">
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 text-xs text-gray-700">
+          {[
+            'スマートライフコンシェルジュ認定証（ゴールド）',
+            '家電製品アドバイザー',
+            'パナソニック修理技術認定店',
+            'ガス可とう管接続工事監督者',
+            '給水装置工事主任技術者',
+            '冷媒回収技術者',
+            'アナログ第2種工事担当者',
+            'デジタル第3種工事担当者',
+            '第2種電気工事士',
+            '2級電気通信工事施工管理技士',
+            '高所作業者',
+            '情報処理技術者',
+            'SAP認定コンサルタント',
+            'OCI認定インストラクター',
+            '家庭用電子機器修理技術者',
+            '第2級サウンドシステムチューナー（日本音響家協会）',
+            '第2級音響技術者（日本音響家協会）',
+            'Q-SYS Level1 Training',
+          ].map((item) => (
+            <li class="flex items-start gap-1.5 whitespace-nowrap">
+              <span class="text-[var(--color-primary)] shrink-0">・</span>{item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- 関連ページリンク -->
+    <div class="border-t border-gray-200 pt-8">
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a href="/company" class="text-[var(--color-primary)] hover:underline">← 会社について（代表挨拶・沿革）</a>
+        <a href="/contact" class="text-[var(--color-primary)] hover:underline">お問い合わせ →</a>
+        <a href="/privacy-policy" class="text-[var(--color-primary)] hover:underline">個人情報保護方針</a>
+      </div>
+    </div>
+  </div>
+
+</Layout>

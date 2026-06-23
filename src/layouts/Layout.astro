@@ -1,0 +1,177 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalPath?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'お陰様で創業119周年。正清電器は熊本最古参のパナソニックの街の電気屋（パナショップ）。家電から会議室・AVシステムまで何でもご相談ください。',
+  canonicalPath = Astro.url.pathname,
+  ogImage = '/images/shop-exterior.jpg',
+} = Astro.props;
+
+const siteUrl = 'https://www.masakiyo-denki.com';
+const canonical = `${siteUrl}${canonicalPath}`;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "合資会社 正清電器",
+  "alternateName": "MASAKIYO ELECTRONICS",
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/logo.jpg`,
+  "image": `${siteUrl}/images/shop-exterior.jpg`,
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "田迎3丁目2番37号",
+    "addressLocality": "熊本市南区",
+    "addressRegion": "熊本県",
+    "postalCode": "862-0962",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.7530,
+    "longitude": 130.7295
+  },
+  "telephone": "+81-96-379-1234",
+  "faxNumber": "+81-96-379-1309",
+  "email": "panahot.masakiyo@gmail.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "18:30"
+    }
+  ],
+  "foundingDate": "1906",
+  "areaServed": {
+    "@type": "City",
+    "name": "熊本市"
+  }
+};
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content="正清電器" />
+
+    <!-- LocalBusiness 構造化データ -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  </head>
+  <body class="text-[var(--color-text)] bg-[var(--color-bg)]">
+
+    <header class="bg-[var(--color-primary)] text-white shadow-md sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <span class="text-lg font-bold leading-tight">
+            合資会社 正清電器
+            <span class="block text-xs font-normal opacity-70 tracking-wider">MASAKIYO ELECTRONICS / Since 1906</span>
+          </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-5 text-sm font-medium">
+          <a href="/value" class="hover:opacity-75 transition">まちの電器屋とは</a>
+          <a href="/business#consumer" class="hover:opacity-75 transition">個人のお客様</a>
+          <a href="/business/seminarroom" class="hover:opacity-75 transition">法人のお客様</a>
+          <a href="/case" class="hover:opacity-75 transition">導入事例</a>
+          <a href="/company" class="hover:opacity-75 transition">会社について</a>
+          <a href="/blog" class="hover:opacity-75 transition">お知らせ</a>
+          <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition px-4 py-2 rounded font-bold">
+            お問い合わせ
+          </a>
+        </nav>
+        <button class="md:hidden text-white" aria-label="メニュー" id="menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <!-- モバイルメニュー -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-white/20">
+        <nav class="flex flex-col text-sm font-medium px-4 py-3 gap-3">
+          <a href="/value" class="hover:opacity-75">まちの電器屋とは</a>
+          <a href="/business#consumer" class="hover:opacity-75">個人のお客様</a>
+          <a href="/business/seminarroom" class="hover:opacity-75">法人のお客様</a>
+          <a href="/case" class="hover:opacity-75">導入事例</a>
+          <a href="/company" class="hover:opacity-75">会社について</a>
+          <a href="/blog" class="hover:opacity-75">お知らせ</a>
+          <a href="/contact" class="bg-[var(--color-accent)] text-center py-2 rounded font-bold">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-[var(--color-primary)] text-white mt-16">
+      <!-- 会社情報 3カラム -->
+      <div class="max-w-5xl mx-auto px-4 pt-10 pb-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <div>
+          <p class="font-bold text-base mb-2">合資会社 正清電器</p>
+          <p>〒862-0962</p>
+          <p>熊本県熊本市南区田迎3丁目2番37号</p>
+          <p class="mt-2 opacity-70 text-xs">創業明治39年（1906年）</p>
+        </div>
+        <div>
+          <p class="font-bold mb-2">連絡先</p>
+          <p>TEL: <a href="tel:0963791234" class="hover:underline">096-379-1234</a></p>
+          <p>FAX: 096-379-1309</p>
+          <p class="break-all">Mail: <a href="mailto:panahot.masakiyo@gmail.com" class="underline hover:opacity-75">panahot.masakiyo@gmail.com</a></p>
+        </div>
+        <div>
+          <p class="font-bold mb-2">営業日</p>
+          <p>月〜土 9:00〜18:30</p>
+          <p class="opacity-70 text-xs mt-1">日曜・祝日 定休</p>
+        </div>
+      </div>
+      <!-- サイトナビ 横並び -->
+      <div class="border-t border-white/20">
+        <nav class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap gap-x-5 gap-y-1 text-xs opacity-70">
+          <a href="/value" class="hover:opacity-100">まちの電器屋とは</a>
+          <a href="/business#consumer" class="hover:opacity-100">個人のお客様</a>
+          <a href="/business/seminarroom" class="hover:opacity-100">法人のお客様</a>
+          <a href="/case" class="hover:opacity-100">導入事例</a>
+          <a href="/company" class="hover:opacity-100">会社について</a>
+          <a href="/blog" class="hover:opacity-100">お知らせ</a>
+          <a href="/contact" class="hover:opacity-100">お問い合わせ</a>
+        </nav>
+      </div>
+      <!-- コピーライト -->
+      <div class="border-t border-white/10 py-3">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs opacity-50 gap-1">
+          <p>© 2026 合資会社 正清電器. All Rights Reserved.</p>
+          <a href="/privacy-policy" class="hover:opacity-100">個人情報保護方針</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+    </script>
+  </body>
+</html>

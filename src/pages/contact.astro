@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="相談方法・お問合せ | 創業119周年 正清電器 | 熊本市南区田迎"
+  description="お陰様で創業119周年。正清電器は熊本最古参のパナソニックの街の電気屋。お気軽にご相談・お問い合わせください。"
+  canonicalPath="/contact"
+>
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold text-[var(--color-primary)] mb-4">相談方法・お問い合わせ</h1>
+    <p class="text-gray-500 mb-10">まずはお気軽にご相談ください。</p>
+
+    <!-- 3ステップ -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div class="text-center p-6 bg-[var(--color-bg-gray)] rounded-xl">
+        <div class="text-3xl font-bold text-[var(--color-primary)] mb-2">STEP 1</div>
+        <h3 class="font-bold mb-1">ご連絡</h3>
+        <p class="text-sm text-gray-500">電話・メール・フォームにてご連絡ください</p>
+      </div>
+      <div class="text-center p-6 bg-[var(--color-bg-gray)] rounded-xl">
+        <div class="text-3xl font-bold text-[var(--color-primary)] mb-2">STEP 2</div>
+        <h3 class="font-bold mb-1">ご相談・ヒアリング</h3>
+        <p class="text-sm text-gray-500">担当者がお客様のご要望をお伺いします</p>
+      </div>
+      <div class="text-center p-6 bg-[var(--color-bg-gray)] rounded-xl">
+        <div class="text-3xl font-bold text-[var(--color-primary)] mb-2">STEP 3</div>
+        <h3 class="font-bold mb-1">ご提案・お見積り</h3>
+        <p class="text-sm text-gray-500">最適なご提案とお見積りをご案内します</p>
+      </div>
+    </div>
+
+    <!-- 連絡先 -->
+    <div class="bg-[var(--color-primary)] text-white rounded-xl p-8 mb-10">
+      <h2 class="font-bold text-lg mb-4">お電話でのご相談</h2>
+      <p class="text-3xl font-bold mb-2">096-379-1234</p>
+      <p class="opacity-80 text-sm">月〜土 9:00〜18:30</p>
+    </div>
+
+    <!-- フォーム（Formspree） -->
+    <h2 class="text-xl font-bold text-[var(--color-primary)] mb-6">メールフォームでのお問い合わせ</h2>
+    <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" class="space-y-5">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="name">お名前 <span class="text-[var(--color-accent)]">*</span></label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="email">メールアドレス <span class="text-[var(--color-accent)]">*</span></label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="tel">電話番号</label>
+        <input type="tel" id="tel" name="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="message">お問い合わせ内容 <span class="text-[var(--color-accent)]">*</span></label>
+        <textarea id="message" name="message" required rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-[var(--color-primary)] hover:opacity-90 transition text-white font-bold py-3 rounded-lg">
+        送信する
+      </button>
+    </form>
+    <p class="text-xs text-gray-400 mt-3">※ フォームの送信にはFormspreeを利用しています。送信内容はSSLで暗号化されます。</p>
+  </div>
+</Layout>

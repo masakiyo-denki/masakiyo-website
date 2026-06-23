@@ -1,0 +1,267 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+  return cases.map((c) => ({
+    params: { id: c.id },
+    props: { entry: c },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+
+// 概要文：句点（。）の後で自動改行。手書きの <br> もそのまま活かす
+const descHtml = d.description
+  .split('。')
+  .map((s: string, i: number, a: string[]) => (i < a.length - 1 ? s + '。' : s))
+  .filter((s: string) => s.length > 0)
+  .join('<br>');
+---
+
+<Layout
+  title={`${d.title} | 導入事例 | 正清電器`}
+  description={d.description}
+  canonicalPath={`/case/${entry.id}`}
+  ogImage={d.heroImage}
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:320px;">
+    <img
+      src={d.heroImage}
+      alt={d.heroImageAlt}
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(0,48,135,0.90) 0%, rgba(0,48,135,0.70) 45%, rgba(0,48,135,0.15) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-20 text-white">
+      <a href="/case" class="text-white/60 hover:text-white text-sm mb-4 inline-block">← 導入事例一覧</a>
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs font-bold bg-white/20 px-2 py-0.5 rounded">{d.category}</span>
+        <span class="text-xs text-white/60">{d.location} ／ {d.year}年</span>
+      </div>
+      <p class="text-lg md:text-xl font-semibold text-white/90 whitespace-nowrap mb-1">{d.client}</p>
+      <h1 class="text-2xl md:text-3xl font-bold leading-snug">{d.title}</h1>
+    </div>
+  </section>
+
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- メインコンテンツ -->
+      <div class="lg:col-span-2">
+
+        <!-- アイキャッチ（俯瞰写真） -->
+        {d.images && d.images.length > 0 && (
+          <figure class="mb-8 overflow-hidden rounded-xl shadow-sm">
+            <img src={d.images[0].src} alt={d.images[0].alt} class="w-full object-cover aspect-[16/9]" />
+            {d.images[0].caption && (
+              <figcaption class="text-xs text-gray-500 mt-2 px-1 leading-relaxed" set:html={d.images[0].caption}></figcaption>
+            )}
+          </figure>
+        )}
+
+        <!-- 概要 -->
+        <p class="text-gray-600 text-sm leading-relaxed mb-8 p-5 bg-[var(--color-bg-gray)] rounded-xl border-l-4 border-[var(--color-primary)]" set:html={descHtml}></p>
+
+        <!-- 本文 -->
+        <div class="case-body max-w-none mb-10">
+          <Content />
+        </div>
+
+        <!-- 写真ギャラリー（アイキャッチの1枚目を除く） -->
+        {d.images && d.images.length > 1 && (
+          <div class="mb-10">
+            <h2 class="text-xl font-bold text-[var(--color-primary)] mb-5 pb-2 border-b-2 border-[var(--color-primary)]">施工写真</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {d.images.slice(1).map((img: { src: string; alt: string; caption?: string }) => (
+                <div class="overflow-hidden rounded-xl">
+                  <img src={img.src} alt={img.alt} class="w-full object-cover aspect-[4/3]" />
+                  {img.caption && (
+                    <p class="text-xs text-gray-500 mt-1 px-1" set:html={img.caption}></p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- YouTube動画 -->
+        {d.youtubeId && (
+          <div class="mb-10">
+            <h2 class="text-xl font-bold text-[var(--color-primary)] mb-5 pb-2 border-b-2 border-[var(--color-primary)]">施工・完成動画</h2>
+            <div class="relative w-full rounded-xl overflow-hidden" style="padding-top:56.25%;">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${d.youtubeId}`}
+                title="施工動画"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        )}
+
+        <!-- ページ末尾 一覧へ戻るリンク -->
+        <div class="mb-10">
+          <a href="/case" class="inline-flex items-center gap-2 text-sm text-[var(--color-primary)] border border-[var(--color-primary)] rounded-lg px-5 py-2.5 hover:bg-[var(--color-primary)] hover:text-white transition">
+            ← 導入事例一覧に戻る
+          </a>
+        </div>
+      </div>
+
+      <!-- サイドバー -->
+      <div class="space-y-5">
+
+        <!-- 案件情報 -->
+        <div class="bg-[var(--color-bg-gray)] rounded-xl p-5">
+          <h3 class="font-bold text-[var(--color-primary)] mb-4 text-sm">案件情報</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex gap-2">
+              <dt class="text-gray-400 w-16 shrink-0">施設</dt>
+              <dd class="font-medium">{d.client}</dd>
+            </div>
+            <div class="flex gap-2">
+              <dt class="text-gray-400 w-16 shrink-0">所在地</dt>
+              <dd>{d.location}</dd>
+            </div>
+            <div class="flex gap-2">
+              <dt class="text-gray-400 w-16 shrink-0">施工年</dt>
+              <dd>{d.year}年</dd>
+            </div>
+            <div class="flex gap-2">
+              <dt class="text-gray-400 w-16 shrink-0">種別</dt>
+              <dd>{d.category}</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- タグ -->
+        {d.tags && d.tags.length > 0 && (
+          <div class="bg-white border border-gray-100 rounded-xl p-5">
+            <h3 class="font-bold text-[var(--color-primary)] mb-3 text-sm">導入設備・技術</h3>
+            <div class="flex flex-wrap gap-2">
+              {d.tags.map((tag: string) => (
+                <span class="text-xs bg-blue-50 text-[var(--color-primary)] px-2 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- CTA -->
+        <div class="bg-[var(--color-primary)] text-white rounded-xl p-5">
+          <p class="font-bold mb-2 text-sm">同様のシステムをご検討ですか？</p>
+          <p class="text-white/70 text-xs mb-4 leading-relaxed">現地調査・お見積りは無料です。まずはお気軽にご相談ください。</p>
+          <a href="/contact" class="block text-center bg-[var(--color-accent)] hover:opacity-90 transition font-bold py-2 rounded-lg text-sm mb-2">
+            メールで相談する
+          </a>
+          <a href="tel:0963791234" class="block text-center bg-white/20 hover:bg-white/30 transition font-bold py-2 rounded-lg text-sm">
+            📞 096-379-1234
+          </a>
+        </div>
+
+        <!-- 一覧へ戻る -->
+        <a href="/case" class="block text-center border border-gray-200 rounded-xl py-3 text-sm text-[var(--color-primary)] hover:border-[var(--color-primary)] transition">
+          ← 導入事例一覧へ
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* 導入事例 本文タイポグラフィ（@tailwindcss/typography不使用のため独自定義） */
+    .case-body :global(h2) {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.4;
+      margin: 2.75rem 0 1.1rem;
+      padding-left: 0.85rem;
+      border-left: 5px solid var(--color-accent);
+    }
+    .case-body :global(h2:first-child) {
+      margin-top: 0;
+    }
+    .case-body :global(h3) {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.5;
+      margin: 2rem 0 0.6rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 0.5rem;
+      background: linear-gradient(to right, rgba(0, 48, 135, 0.07), rgba(0, 48, 135, 0));
+    }
+    .case-body :global(h3::before) {
+      content: "▶";
+      color: var(--color-accent);
+      font-size: 0.7rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .case-body :global(p) {
+      font-size: 1rem;
+      line-height: 2;
+      color: #374151;
+      margin: 0 0 1.25rem;
+    }
+    /* h3直後のリード段落を少し引き締めて見出しと結びつける */
+    .case-body :global(h3 + p) {
+      margin-top: 0.25rem;
+    }
+    .case-body :global(strong) {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+    .case-body :global(table) {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0 1.75rem;
+      font-size: 0.95rem;
+    }
+    .case-body :global(th),
+    .case-body :global(td) {
+      border: 1px solid #e5e7eb;
+      padding: 0.6rem 0.9rem;
+      text-align: left;
+      line-height: 1.6;
+    }
+    .case-body :global(th) {
+      background: var(--color-bg-gray);
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+    .case-body :global(table strong) {
+      color: var(--color-text);
+    }
+    .case-body :global(img) {
+      margin: 1.25rem 0;
+    }
+    .case-body :global(ul) {
+      margin: 0 0 1.25rem;
+      padding-left: 1.25rem;
+      list-style: none;
+    }
+    .case-body :global(li) {
+      position: relative;
+      padding-left: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 0.4rem;
+      color: #374151;
+    }
+    .case-body :global(li::before) {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75em;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 9999px;
+      background: var(--color-accent);
+    }
+  </style>
+</Layout>

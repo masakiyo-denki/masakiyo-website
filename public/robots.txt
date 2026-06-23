@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.masakiyo-denki.com/sitemap-index.xml

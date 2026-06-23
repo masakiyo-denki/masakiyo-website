@@ -1,0 +1,271 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "家電が故障したときどこに相談すればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）へお電話ください（096-379-1234）。顔なじみの担当スタッフがご自宅を訪問し、修理か買い替えかの判断も含めてご相談に乗ります。現地確認・診断は無料です。月〜土 9:00〜18:30対応。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "知らない業者を家に上げるのが不安です。安心して頼める電器屋はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器では担当者固定制を採用しています。販売・設置・修理・点検、いつご自宅に伺っても同じ顔なじみのスタッフが対応します。初対面の人だけでご自宅に上がることはありません。明治39年（1906年）創業・119年の地域密着実績が信頼の根拠です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "蛍光灯のLED化はいつまでにすればよいですか？費用はどのくらいかかりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "水俣条約により2027年末までに蛍光ランプの製造・輸入が順次終了します。在庫がなくなれば交換ランプが手に入らなくなるため、早めのLED化をおすすめしています。正清電器ではご自宅全体の照明を点検し、無料でお見積りします。費用は設置場所・台数によって異なりますのでご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "エアコンの取り付け・交換を依頼したいのですが対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、対応しています。家庭用エアコンの販売・取付・クリーニング・修理・古いエアコンの取り外し・廃棄まで一貫して対応します。熊本県知事許可の電気工事業者として安全・確実に施工します。パナソニック正規特約店として最新機種もご案内可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "キッチン・お風呂・トイレなど水回りのリフォームも相談できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、承ります。正清電器は管工事業の許可を持つスタッフが在籍しており、キッチン・バス・トイレ・洗面台の交換・修理から、水漏れ緊急対応、ユニットバス丸ごとリフォームまで対応します。家電と水回りを同じ担当者にまとめてご相談いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ネットで買った家電の設置・設定をお願いできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、対応できます。他店・通販でご購入の家電でも、設置・配線・初期設定・使い方説明まで承ります。まずはお電話（096-379-1234）にてご相談ください。"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="個人のお客様へ | くらしのコンシェルジュ 正清電器 | 熊本市南区田迎"
+  description="家電・水回り・リフォーム・太陽光・防犯カメラまで、くらしに関わることなら何でも正清電器にご相談ください。担当者固定・顔なじみの街の電器屋さんです。"
+  canonicalPath="/business"
+>
+
+  <!-- ページヒーロー -->
+  <section id="consumer" class="relative overflow-hidden bg-[var(--color-primary)] text-white" style="min-height:320px;">
+    <img
+      src="/images/service-tv-install.jpg"
+      alt="スタッフがお宅を訪問して設置・修理"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-30"
+    />
+    <div class="relative max-w-5xl mx-auto px-4 py-20 text-center">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">個人・ご家庭のお客様</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-snug">
+        家電も水回りも、<br />くらしのことなら何でもどうぞ
+      </h1>
+      <p class="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+        「どこに頼めばいいかわからない」という困りごとを、
+        顔なじみのスタッフがまるごと引き受けます。
+      </p>
+    </div>
+  </section>
+
+  <!-- くらしのコンシェルジュとは -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">くらしのコンシェルジュ</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          街の電器屋さんは、<br />家電を売るだけのお店ではありません
+        </h2>
+        <p class="text-gray-500 text-sm mt-4 max-w-2xl mx-auto leading-relaxed">
+          エアコンが壊れた、蛇口から水が漏れる、太陽光の調子が悪い——
+          こんな時、どこに頼めばいいか迷ったことはありませんか？<br />
+          正清電器は「窓口を一本化する」ことで、くらしのあらゆる困りごとに対応します。
+        </p>
+      </div>
+
+      <!-- サービス8カテゴリ -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {[
+          {
+            icon: "📺",
+            title: "家電販売・修理・設置",
+            desc: "テレビ・冷蔵庫・洗濯機・エアコンなどの家電全般。故障診断から修理、買い替え提案、設置・搬出まで対応します。パナソニック正規特約店として最新機種もご案内。",
+          },
+          {
+            icon: "🚿",
+            title: "水回りリフォーム",
+            desc: "キッチン・バス・トイレ・洗面台の交換・修理。水漏れの緊急対応から、ユニットバス丸ごとリフォームまで。管工事業の許可を持つスタッフが対応します。",
+          },
+          {
+            icon: "☀️",
+            title: "太陽光・蓄電システム",
+            desc: "太陽光パネルの設置・点検・メンテナンス。蓄電池・エコキュートとの連携システムも対応。電力会社への手続きサポートもお任せください。",
+          },
+          {
+            icon: "💡",
+            title: "LED化・照明工事",
+            desc: "2027年末に蛍光灯の製造・輸入が終了します（水俣条約）。蛍光灯からLEDへの切り替えは今のうちに。ご相談・お見積りは無料です。",
+            highlight: true,
+          },
+          {
+            icon: "🔒",
+            title: "防犯カメラ・スマートホーム",
+            desc: "玄関・車庫・庭の防犯カメラ設置。スマートフォンでの遠隔確認にも対応。インターホン交換、スマートロック導入のご相談も承ります。",
+          },
+          {
+            icon: "❄️",
+            title: "エアコン・空調",
+            desc: "家庭用エアコンの販売・取付・クリーニング・修理。古いエアコンの取り外し・廃棄も対応。省エネ機種への買い替え相談も歓迎です。",
+          },
+          {
+            icon: "🔌",
+            title: "電気工事",
+            desc: "コンセント増設・ブレーカー交換・照明配線など住宅の電気工事全般。熊本県知事許可の電気工事業者として安全・確実に施工します。",
+          },
+          {
+            icon: "🔧",
+            title: "住宅設備・その他",
+            desc: "給湯器の交換・修理、換気扇・レンジフードの取替えなど。「どこに頼めばいいかわからない」ときは、まずご相談ください。",
+          },
+        ].map(({ icon, title, desc, highlight }) => (
+          <div class={`rounded-xl p-5 border ${highlight ? 'border-yellow-400 bg-yellow-50' : 'border-gray-100 bg-white shadow-sm'}`}>
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="font-bold text-[var(--color-primary)] mb-2 text-sm">{title}</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">{desc}</p>
+            {highlight && (
+              <span class="inline-block mt-2 text-xs font-bold text-yellow-700 bg-yellow-200 px-2 py-0.5 rounded">2027年問題</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 担当者固定＝安心の根拠 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">安心の根拠</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          「知らない人を家に上げたくない」<br />にも応えます
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="text-4xl mb-3">👤</div>
+          <h3 class="font-bold text-[var(--color-primary)] mb-2">担当者固定制</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            修理・設置・点検、いつ訪問しても同じ担当スタッフが対応します。
+            顔なじみのスタッフだから、安心してお家に上げていただけます。
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="text-4xl mb-3">🏠</div>
+          <h3 class="font-bold text-[var(--color-primary)] mb-2">119年の地域密着</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            明治39年から熊本市南区に根を張る老舗。地域のお客様と長いお付き合いをしてきた実績が、信頼の根拠です。
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="text-4xl mb-3">📞</div>
+          <h3 class="font-bold text-[var(--color-primary)] mb-2">相談は無料・電話一本</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            「故障かどうかわからない」「どこに頼めばいいか」というご相談から承ります。
+            まずはお気軽にお電話ください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ホワイトペーパー -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-[var(--color-primary)] to-[#1e40af] rounded-2xl overflow-hidden shadow-lg">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-64 shrink-0 flex items-center justify-center py-10 px-8 bg-white/5">
+            <div class="bg-white rounded-2xl shadow-2xl px-6 py-8 text-center w-44">
+              <div class="text-5xl mb-3">📖</div>
+              <p class="text-[var(--color-primary)] font-bold text-xs leading-snug">"街の電器屋さん"<br />活用ガイド</p>
+              <div class="mt-3 inline-block bg-[var(--color-accent)] text-white text-xs font-bold px-3 py-1 rounded-full">無料PDF 全60ページ</div>
+            </div>
+          </div>
+          <div class="flex-1 p-8 md:p-10 text-white">
+            <p class="text-yellow-300 font-bold text-xs tracking-widest mb-3">無料ダウンロード</p>
+            <h2 class="text-xl md:text-2xl font-bold mb-1 leading-snug">家電・修理・住まいの電気で<br />「困らない・損しない・不安にならない」ための<br />"街の電器屋さん"活用ガイド</h2>
+            <p class="text-white/70 text-sm mb-5">量販店・ネット通販との違い、頼み先の選び方から2027年蛍光灯問題まで</p>
+            <ul class="text-sm text-white/80 space-y-2 mb-7">
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>量販店・ネット通販・街の電器屋さん――3つの違いを比較表で整理</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>「知らない人を家に上げない」防犯の観点からの頼み先選び</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>2027年蛍光灯終了問題と、今すぐできるLED化チェックリスト</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>価格だけで選ばない「トータルコスト」の考え方</li>
+            </ul>
+            <a href="/downloads/whitepaper-consumer.pdf" download
+               class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg text-sm">
+              無料でダウンロード（PDF）
+            </a>
+            <p class="text-white/40 text-xs mt-3">メール登録不要・すぐにダウンロードできます</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LED 2027バナー -->
+  <section class="py-12 px-4 bg-yellow-50 border-y-2 border-yellow-400">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
+      <div class="text-5xl shrink-0">💡</div>
+      <div class="flex-1">
+        <p class="text-yellow-700 font-bold text-sm mb-1">重要：2027年問題</p>
+        <h2 class="text-xl font-bold text-[var(--color-text)] mb-2">
+          蛍光灯が2027年末までに製造・輸入終了します
+        </h2>
+        <p class="text-gray-600 text-sm">
+          水俣条約により、蛍光ランプの製造・輸出入が2027年末までに順次終了します。
+          ストックがなくなる前に早めのLED化をご検討ください。ご相談・お見積りは無料です。
+          家庭用の照明から店舗・事務所まで幅広く対応します。
+        </p>
+      </div>
+      <a href="/contact" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
+        LED化を相談する
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずはお気軽にご相談ください</h2>
+      <p class="text-white/80 text-sm mb-8 leading-relaxed">
+        「どこに頼めばいいかわからない」というご相談から承ります。<br />
+        電話・メールフォームどちらでもどうぞ。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-4">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+</Layout>

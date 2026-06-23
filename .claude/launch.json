@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "masakiyo-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--prefix", "C:\\Users\\silva\\Desktop\\New_HP_PJ\\masakiyo-denki", "astro", "dev"],
+      "port": 4321,
+      "autoPort": false
+    }
+  ]
+}

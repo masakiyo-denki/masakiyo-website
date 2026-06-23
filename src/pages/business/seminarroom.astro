@@ -1,0 +1,494 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "会議室でハウリング（キーンという音）が頻発します。解決できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、解決できます。ハウリングの主な原因はスピーカーとマイクの配置・向きが音響設計なしで決められていることです。正清電器では事前に音響シミュレーションソフトウェアで最適なレイアウトを設計し、施工後にFIR/IIRハイブリッド音響調整を現地で実施することで根本から解決します。熊本県内はもちろん全国対応可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会議室の設備を導入したが操作が複雑で担当者しか使えません。改善できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "対応できます。正清電器ではExtron製業務用コントローラーで動作するタッチパネルUIを自社でフルプログラムします。「セミナー」「Web会議」「講演」などのシーンを選んでボタンを1回押すだけで、プロジェクター・スピーカー・カメラが30秒以内に自動起動。マニュアル不要で、初めて使う方でも迷いません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Web会議でエコーがひどく使い物になりません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AEC（音響エコーキャンセラー）を内蔵したシーリングマイクを採用することで解決できます。会議室のスピーカーから出た音がマイクに入り返す「音声ループ」を自動除去します。正清電器ではWeb会議対応システムの設計・施工・調整を一貫して対応します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "前列は音が大きすぎて後列は聞こえない、という状態を改善できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "改善できます。正清電器では音響シミュレーションでスピーカーの種類・台数・配置・取付角度を事前に最適化し、施工後にFIR/IIRハイブリッド調整で全座席の音量・明瞭度（STI 0.55以上）を均一化します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "熊本で会議室・ホールの音響設計・調整を依頼できる業者を探しています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）にご相談ください。技術責任者は全国70施設以上の音響設計・調整を担当してきた実績を持ちます。業界誌「サウンド＆レコーディングマガジン」掲載実績あり。熊本県内はもちろん全国対応可能です。現地調査・お見積りは無料です。TEL: 096-379-1234"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "相見積もりを取りたいのですが、仕様書の作成から対応してもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、対応します。ヒアリング・現地確認・音響シミュレーションをもとに仕様書を作成し、複数プランでご提案します。仕様書を提出することで他社との比較もしやすくなります。まずはお気軽にご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "体育館・ホールの音響が悪く、言葉が聞き取りにくい状態です。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器では体育館・ホール・アリーナの音響設計・調整も対応します。スピーカーの選定・配置設計から、FIRフィルターを使った高度な音響調整まで一貫して実施。STI（明瞭度）を数値で測定・確認しながら、言葉が聞き取りやすい音場を構築します。"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="会議室・多目的ホールの視聴覚設備 | 正清電器 | 熊本市南区田迎"
+  description="会議室・ホール・教室の視聴覚設備（AVシステム）を設計から施工・調整まで自社一貫で対応。音響シミュレーション・FIR音響調整・タッチパネルUI自社開発まで正清電器にお任せください。"
+  canonicalPath="/business/seminarroom"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:420px;">
+    <img
+      src="/images/seminar-hero.jpg"
+      alt="会議室AVシステム施工事例"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,48,135,0.95) 0%, rgba(0,48,135,0.85) 45%, rgba(0,48,135,0.25) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-24 text-white">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">法人・施設のお客様 ― 会議室・ホール・多目的スペース</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-5 md:max-w-2xl">
+        視聴覚設備の導入で<br />
+        「担当者しか使えない」<br />
+        <span class="text-yellow-300">を卒業しませんか。</span>
+      </h1>
+      <p class="text-white/80 text-sm md:text-base mb-4 md:max-w-lg leading-relaxed">
+        プロジェクター・スクリーン・マイク・スピーカー・Web配信カメラ・タッチパネル制御まで。<br />
+        設計・施工・音響調整すべて自社一貫対応。
+      </p>
+      <p class="text-yellow-200/80 text-xs mb-8">技術責任者の音響設計・調整実績 全国70施設以上 ／ 創業119年 熊本最古参パナソニック正規販売店</p>
+      <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
+        まずは無料相談（無料）
+      </a>
+    </div>
+  </section>
+
+  <!-- キャッチ写真バナー -->
+  <section class="relative overflow-hidden" style="height:340px;">
+    <img
+      src="/images/acoustic-measurement-hall.jpg"
+      alt="大ホールで音響測定器を使って現地調整を行う正清電器の技術者"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: right 85%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.05) 100%);"></div>
+    <div class="relative h-full flex items-center px-8 md:px-16 max-w-5xl mx-auto">
+      <div class="text-white">
+        <p class="text-yellow-300 text-xs font-bold tracking-widest mb-3">技術者による現地音響測定</p>
+        <p class="text-2xl md:text-3xl font-bold leading-snug mb-2">ホール・スタジアムで培った調整技術を、</p>
+        <p class="text-2xl md:text-3xl font-bold leading-snug text-yellow-200">会議室・セミナールームにも。</p>
+        <p class="text-white/70 text-sm mt-4 leading-relaxed">音響測定器を使った現地調整を標準サービスとして提供。<br />技術責任者の音響設計・調整実績 全国70施設以上。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- お困りごと共感セクション -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-red-600 font-bold text-sm tracking-widest mb-2">よくあるお困りごと</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+          こんなお悩み、ありませんか？
+        </h2>
+        <p class="text-gray-500 text-sm mt-3">会議室・ホールの映像音響設備で、こういった声を多くいただきます。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            num: "01",
+            icon: "😰",
+            title: "担当者しか使えない",
+            body: "せっかく投資したのに操作が複雑で、使いこなせる人間が限られる。担当者が不在だと設備が動かせない。引き継ぎもできない。",
+            color: "border-red-400",
+            bg: "bg-red-50",
+          },
+          {
+            num: "02",
+            icon: "🔊",
+            title: "音が悪い・聞こえない",
+            body: "前の席は音が大きすぎて、後ろは聞こえない。音量はあるのに言葉が聞き取れない。ハウリングが頻発して使いものにならない。",
+            color: "border-orange-400",
+            bg: "bg-orange-50",
+          },
+          {
+            num: "03",
+            icon: "😓",
+            title: "準備が面倒で使われない",
+            body: "機器ごとにリモコンを操作し、設定を一から確認して…と準備に10分かかる。「使わない方が楽」という空気になり、設備が眠っている。",
+            color: "border-yellow-500",
+            bg: "bg-yellow-50",
+          },
+        ].map(({ num, icon, title, body, color, bg }) => (
+          <div class={`rounded-2xl border-l-4 ${color} ${bg} p-6`}>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-3xl">{icon}</span>
+              <span class="text-gray-400 font-bold text-sm">{num}</span>
+            </div>
+            <h3 class="font-bold text-gray-800 text-lg mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-gray-500 text-sm mt-8">
+        これらはすべて、<strong class="text-[var(--color-primary)]">「設計・調整・UI設計」</strong>で解決できます。
+      </p>
+    </div>
+  </section>
+
+  <!-- 解決策セクション -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">正清電器の解決策</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          3つのお悩みに、3つの答え
+        </h2>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- 解決1: 操作 -->
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-[var(--color-primary)] text-white p-8 flex flex-col justify-center">
+              <p class="text-yellow-300 font-bold text-xs tracking-widest mb-2">お悩み 01 への答え</p>
+              <h3 class="text-xl font-bold mb-2">ワンタップで<br />30秒以内に起動</h3>
+              <p class="text-white/70 text-sm">タッチパネルUIを自社でフルプログラム</p>
+              <div class="mt-5 rounded-xl overflow-hidden border border-white/20">
+                <img src="/images/illust-touchpanel.jpg" alt="タッチパネル操作画面 実機（玉名郡市医師会館）" class="w-full object-cover" />
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                正清電器では、Extron製業務用コントローラーで動作するタッチパネルUIを<strong>自社でフルプログラム</strong>します。<br>「セミナー」「Web会議」「講演」などのシーンを選んでボタンを1回押すだけで、<br>プロジェクター・スピーカー・カメラ・照明がすべて<strong>シーケンス制御で自動起動</strong>。30秒以内に使える状態になります。
+              </p>
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                電源OFF時には全設定を自動リフレッシュ。<br>「前回の設定が残って音が出ない」「いきなり爆音になる」といったトラブルを根本から防ぎます。<br>マニュアル不要で、初めて使う方でも迷いません。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {["シーン選択→ワンタップ起動", "設定自動リフレッシュ", "電源シーケンス制御", "ヘルプ画面搭載"].map(t => (
+                  <span class="bg-[var(--color-bg-gray)] text-[var(--color-primary)] text-xs font-medium px-3 py-1 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 解決2: 音響 -->
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-[#1e40af] text-white p-8 flex flex-col justify-center">
+              <p class="text-yellow-300 font-bold text-xs tracking-widest mb-2">お悩み 02 への答え</p>
+              <h3 class="text-xl font-bold mb-2">全座席均一の音と<br />高い明瞭度</h3>
+              <p class="text-white/70 text-sm">音響シミュレーション＋FIR/IIRハイブリッド調整</p>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                部屋のCADデータをもとに<strong>音響シミュレーションソフトウェア</strong>で<br>スピーカーの種類・台数・配置・取付角度を事前に最適化。<br>「前後で音量差が大きい」「ハウリングが起きやすい」レイアウトを施工前に数値で検証・修正します。
+              </p>
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                施工後は、現地で<strong>FIR/IIRハイブリッド補正</strong>を実施します。<br>一般的なパラメトリックイコライザー（IIR）だけでなく、<br>位相特性に影響しないFIRフィルターも組み合わせた高度な調整で、<br>全座席で均一な音圧と高い明瞭度（STI 0.55以上）を確保します。全体の音声遅延も8ms以下に抑制。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {["事前音響シミュレーション", "FIR/IIRハイブリッド調整", "STI明瞭度測定", "ハウリングマージン設計", "全座席音圧均一化"].map(t => (
+                  <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <!-- 横幅フル：音響データ画像 -->
+          <div class="px-6 py-5" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%); border-radius: 0 0 1rem 1rem;">
+            <img src="/images/illust-acoustic-composite.png" alt="音圧レベル分布シミュレーションと調整前後の伝送周波数特性" class="w-full max-w-2xl mx-auto object-contain" />
+          </div>
+        </div>
+
+        <!-- 解決3: 準備の手間 -->
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-[#065f46] text-white p-8 flex flex-col justify-center">
+              <p class="text-yellow-300 font-bold text-xs tracking-widest mb-2">お悩み 03 への答え</p>
+              <h3 class="text-xl font-bold mb-2">準備ゼロ、<br />ケーブル不要</h3>
+              <p class="text-white/70 text-sm">ワイヤレスHDMI＋自動化で手間を排除</p>
+              <div class="mt-5 rounded-xl overflow-hidden bg-white/10 p-3">
+                <img src="/images/illust-pressit.png" alt="Panasonic PressIT ワイヤレスHDMI送受信機" class="w-full object-contain" />
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                PanasonicのワイヤレスHDMI「PressIT」のドングルをノートPCに挿すだけで、HDMIケーブルなしで即投影。「ケーブルが届かない」「挿さらない」といったストレスを排除します。
+              </p>
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                プロジェクター起動と連動して<strong>照明が自動でディミング</strong>、<br>終了ボタンを押すとスクリーンが格納されて照明が戻る――といった<strong>自動化（オートメーション）</strong>を組み込むことで、会議の準備・後片付けにかかる手間を限りなくゼロに近づけます。
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {["ワイヤレスHDMI投影", "照明連動自動制御", "ワンボタン終了", "次回起動まで設定保持不要"].map(t => (
+                  <span class="bg-green-50 text-green-800 text-xs font-medium px-3 py-1 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 導入事例への動線 -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">導入事例</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          熊本の現場で、実際に解決してきた事例
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-2xl mx-auto">医療機関・金融機関・住宅メーカーなど、さまざまな施設に導入しています。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        {[
+          {
+            href: "/case/tamana-ishikai",
+            img: "/images/case-tamana-ishikai-hall.jpg",
+            label: "医療・福祉施設",
+            title: "玉名郡市医師会館",
+            sub: "新会議室 Web会議対応システム",
+            tags: ["シーリングアレイマイク", "Web会議対応", "フルコンフィグミキサー"],
+            more: 11,
+          },
+          {
+            href: "/case/daikumamoto-shoken",
+            img: "/images/new-okuma-hall.jpg",
+            label: "金融機関",
+            title: "大熊本証券",
+            sub: "ホール 映像音響システム",
+            tags: ["照明制御", "タッチパネル制御", "KGEARラインアレイスピーカー"],
+            more: 11,
+          },
+          {
+            href: "/case/panahome-seminar",
+            img: "/images/new-seminar-room.jpg",
+            label: "企業・ショールーム",
+            title: "松栄パナホーム",
+            sub: "セミナールーム AVシステム",
+            tags: ["ワイヤレスHDMI", "プロジェクター", "ワンボタン起動"],
+            more: 5,
+          },
+        ].map(({ href, img, label, title, sub, tags, more }) => (
+          <a href={href} class="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img} alt={title} class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-bold text-[var(--color-accent)] mb-1">{label}</p>
+              <h3 class="font-bold text-[var(--color-primary)] mb-0.5">{title}</h3>
+              <p class="text-xs text-gray-500 mb-3">{sub}</p>
+              <div class="flex flex-wrap gap-1">
+                {tags.map(t => (
+                  <span class="bg-[var(--color-bg-gray)] text-gray-600 text-xs px-2 py-0.5 rounded-full">{t}</span>
+                ))}
+                {more > 0 && <span class="text-xs text-gray-400 self-center">+{more}</span>}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <a href="/case" class="inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-8 py-3 rounded-lg">
+          導入事例をすべて見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 一気通貫の強み（プロセス） -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">自社一貫対応</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          設計から調整まで、窓口は正清電器1社
+        </h2>
+        <p class="text-gray-500 text-sm mt-4 max-w-2xl mx-auto leading-relaxed">
+          「設計は別の会社」「施工はまた別」では責任の所在が曖昧になりがちです。
+          ヒアリング・音響シミュレーション・施工・現地音響調整・アフターサポートまですべて自社完結。
+          同一担当者が最初から最後まで責任を持って対応します。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+        {[
+          { step: "01", title: "ヒアリング・設計", desc: "用途・部屋の形状・予算をお聞きし、音響シミュレーションで最適なシステム構成を設計します。" },
+          { step: "02", title: "機器選定・見積", desc: "Panasonic・Extron等プロ用途の信頼ブランドを厳選。複数プランでご提案します。" },
+          { step: "03", title: "施工・タッチパネルUI開発", desc: "電気工事から機器設置・配線処理・タッチパネルUIプログラミングまで自社スタッフが対応。" },
+          { step: "04", title: "音響調整・測定・引き渡し", desc: "FIR/IIR調整を現地で実施。音響測定で数値を確認し、操作レクチャーを行って引き渡します。" },
+        ].map(({ step, title, desc }) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <p class="text-[var(--color-primary)] font-bold text-3xl mb-2">{step}</p>
+            <h3 class="font-bold text-[var(--color-primary)] mb-2">{title}</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- 施工写真 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="overflow-hidden rounded-xl aspect-[4/3]">
+          <img src="/images/install-projector-laser.jpg" alt="レーザー水平器でプロジェクター天吊り位置を精密に決める施工" class="w-full h-full object-cover object-top hover:scale-105 transition duration-300" />
+        </div>
+        <div class="overflow-hidden rounded-xl aspect-[4/3]">
+          <img src="/images/install-projector-wiring.jpg" alt="プロジェクター天吊り配線施工" class="w-full h-full object-cover object-top hover:scale-105 transition duration-300" />
+        </div>
+        <div class="overflow-hidden rounded-xl aspect-[4/3]">
+          <img src="/images/install-display-mount.jpg" alt="大型ディスプレイ壁面マウント施工" class="w-full h-full object-cover hover:scale-105 transition duration-300" />
+        </div>
+      </div>
+      <p class="text-center text-xs text-gray-400 mt-3">施工写真：松栄パナホーム 熊本 納入事例（2025年）</p>
+    </div>
+  </section>
+
+  <!-- 実績・信頼 -->
+  <section class="py-14 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">実績・信頼</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">なぜ正清電器が選ばれるのか</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          { icon: "🏟️", title: "技術責任者の音響設計・調整実績 全国70施設以上", body: "ホール・アリーナ・スタジアム等で培った技術責任者の実績を正清電器に展開。業界誌「サウンド＆レコーディングマガジン」掲載実績あり。" },
+          { icon: "🎛️", title: "FIR音響調整は現場実施例が極めて少ない高度技術", body: "一般的なイコライザー（IIR）にとどまらず、FIRフィルターを組み合わせたハイブリッド調整を標準サービスとして提供。" },
+          { icon: "📱", title: "タッチパネルUIをオーダーメイドで自社開発", body: "Extron製コントローラーで動作するUIをゼロから自社プログラム。お客様の運用に合わせた直感的な画面を構築します。" },
+          { icon: "🔧", title: "企画から納品後サポートまで完全自社完結", body: "外注がない分、品質のブレがありません。同一担当者が設計〜施工〜調整〜アフターサポートまで一貫して担当。" },
+          { icon: "🏠", title: "創業119年・熊本最古参パナソニック正規販売店", body: "1906年（明治39年）創業。地域密着だからこそのアフターサポートと迅速対応。電気工事業・電気通信工事業も自社保有。" },
+          { icon: "📐", title: "電気工事も自社施工", body: "熊本県知事許可の電気工事業を保有。映像音響設備に必要な電源工事・配線工事も含めてワンストップで対応します。" },
+        ].map(({ icon, title, body }) => (
+          <div class="flex gap-4 p-5 bg-[var(--color-bg-gray)] rounded-xl">
+            <span class="text-3xl shrink-0 mt-0.5">{icon}</span>
+            <div>
+              <h3 class="font-bold text-[var(--color-primary)] text-sm mb-1">{title}</h3>
+              <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ホワイトペーパー -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-[#1e3a8a] to-[#1d4ed8] rounded-2xl overflow-hidden shadow-lg">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-64 shrink-0 flex items-center justify-center py-10 px-8 bg-white/5">
+            <div class="bg-white rounded-2xl shadow-2xl px-6 py-8 text-center w-44">
+              <div class="text-5xl mb-3">📘</div>
+              <p class="text-[#1e40af] font-bold text-xs leading-snug">映像音響システム<br />導入ガイド</p>
+              <div class="mt-3 inline-block bg-[var(--color-accent)] text-white text-xs font-bold px-3 py-1 rounded-full">無料PDF 全65ページ</div>
+            </div>
+          </div>
+          <div class="flex-1 p-8 md:p-10 text-white">
+            <p class="text-yellow-300 font-bold text-xs tracking-widest mb-3">無料ダウンロード</p>
+            <h2 class="text-xl md:text-2xl font-bold mb-1 leading-snug">会議室・セミナールームの映像音響システムで<br />「失敗しない」ための<br />選び方・頼み先の見極め方</h2>
+            <p class="text-white/70 text-sm mb-5">施設担当者・総務ご担当者様向け。よくある失敗パターンから仕様書チェックまで</p>
+            <ul class="text-sm text-white/80 space-y-2 mb-7">
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>ハウリング・音量ムラ・操作属人化――よくある失敗7パターンと対策</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>機器スペックより「音響設計・調整」が音質を決める理由</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>相見積もり時に確認すべき仕様書チェックリスト</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>Web会議対応・タッチパネルUI設計のポイントと導入事例</li>
+            </ul>
+            <a href="/downloads/whitepaper-seminar.pdf" download
+               class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg text-sm">
+              無料でダウンロード（PDF）
+            </a>
+            <p class="text-white/40 text-xs mt-3">メール登録不要・すぐにダウンロードできます</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- その他対応業務 -->
+  <section class="py-14 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-xl font-bold text-[var(--color-primary)] mb-6 text-center">その他の法人向けサービス</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class="bg-white rounded-xl p-5">
+          <div class="text-3xl mb-2">📷</div>
+          <h3 class="font-bold mb-1">防犯カメラ設備</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">施設・駐車場・エントランスへの防犯カメラ設置。録画サーバー・遠隔監視システムも対応します。</p>
+        </div>
+        <div class="bg-white rounded-xl p-5">
+          <div class="text-3xl mb-2">❄️</div>
+          <h3 class="font-bold mb-1">パッケージエアコン</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">事務所・店舗・施設向けパッケージエアコンの設計・設置・メンテナンス。電気工事も自社施工です。</p>
+        </div>
+        <div class="bg-white rounded-xl p-5">
+          <div class="text-3xl mb-2">💡</div>
+          <h3 class="font-bold mb-1">LED照明工事</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">施設・事務所・工場の蛍光灯からLEDへの切り替え工事。2027年問題に向けた早期対応をお勧めします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずはお気軽にご相談ください</h2>
+      <p class="text-white/80 text-sm mb-2 leading-relaxed">
+        「こんな会議室にしたい」「予算はどのくらい？」というご相談から承ります。<br />
+        現地調査・お見積りは無料です。
+      </p>
+      <p class="text-yellow-300 text-sm mb-8 font-medium">全国対応可 ／ 熊本県内は特に迅速対応</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-4">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+</Layout>
