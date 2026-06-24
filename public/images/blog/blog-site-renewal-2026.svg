@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans', 'Meiryo', sans-serif">
+  <!-- 背景 -->
+  <rect width="800" height="450" fill="#1e3a6e"/>
+
+  <!-- 装飾グラデーション円 -->
+  <circle cx="700" cy="80" r="200" fill="#2a4fa0" opacity="0.4"/>
+  <circle cx="100" cy="380" r="160" fill="#1a2f5e" opacity="0.5"/>
+
+  <!-- モニター外枠 -->
+  <rect x="80" y="60" width="460" height="290" rx="10" fill="#0f1f4a" stroke="#4a6fa0" stroke-width="2"/>
+  <!-- モニター画面 -->
+  <rect x="92" y="72" width="436" height="266" rx="4" fill="#f5f7fa"/>
+
+  <!-- サイトヘッダー模倣 -->
+  <rect x="92" y="72" width="436" height="36" rx="4" fill="#1e3a6e"/>
+  <rect x="104" y="84" width="90" height="12" rx="3" fill="white" opacity="0.9"/>
+  <rect x="340" y="84" width="50" height="12" rx="3" fill="#c8a84b" opacity="0.9"/>
+  <rect x="270" y="84" width="60" height="12" rx="3" fill="white" opacity="0.5"/>
+  <rect x="200" y="84" width="60" height="12" rx="3" fill="white" opacity="0.5"/>
+
+  <!-- ヒーロー部分 -->
+  <rect x="92" y="108" width="436" height="80" fill="#e8ecf3"/>
+  <rect x="112" y="124" width="160" height="16" rx="3" fill="#1e3a6e" opacity="0.7"/>
+  <rect x="112" y="148" width="220" height="10" rx="3" fill="#1e3a6e" opacity="0.3"/>
+  <rect x="112" y="163" width="180" height="10" rx="3" fill="#1e3a6e" opacity="0.3"/>
+
+  <!-- カードグリッド -->
+  <rect x="104" y="200" width="130" height="70" rx="5" fill="white" stroke="#dde3ee" stroke-width="1"/>
+  <rect x="115" y="212" width="60" height="8" rx="2" fill="#1e3a6e" opacity="0.6"/>
+  <rect x="115" y="226" width="100" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="115" y="238" width="80" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="115" y="252" width="60" height="10" rx="3" fill="#c8a84b" opacity="0.7"/>
+
+  <rect x="245" y="200" width="130" height="70" rx="5" fill="white" stroke="#dde3ee" stroke-width="1"/>
+  <rect x="256" y="212" width="60" height="8" rx="2" fill="#1e3a6e" opacity="0.6"/>
+  <rect x="256" y="226" width="100" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="256" y="238" width="80" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="256" y="252" width="60" height="10" rx="3" fill="#c8a84b" opacity="0.7"/>
+
+  <rect x="386" y="200" width="130" height="70" rx="5" fill="white" stroke="#dde3ee" stroke-width="1"/>
+  <rect x="397" y="212" width="60" height="8" rx="2" fill="#1e3a6e" opacity="0.6"/>
+  <rect x="397" y="226" width="100" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="397" y="238" width="80" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="397" y="252" width="60" height="10" rx="3" fill="#c8a84b" opacity="0.7"/>
+
+  <!-- フッター -->
+  <rect x="92" y="282" width="436" height="56" rx="4" fill="#1e3a6e"/>
+
+  <!-- モニタースタンド -->
+  <rect x="280" y="350" width="60" height="16" rx="2" fill="#0f1f4a"/>
+  <rect x="250" y="364" width="120" height="8" rx="4" fill="#0f1f4a"/>
+
+  <!-- スマホ -->
+  <rect x="580" y="130" width="120" height="210" rx="12" fill="#0f1f4a" stroke="#4a6fa0" stroke-width="2"/>
+  <rect x="590" y="148" width="100" height="180" rx="3" fill="#f5f7fa"/>
+  <!-- スマホ画面内容 -->
+  <rect x="590" y="148" width="100" height="28" rx="3" fill="#1e3a6e"/>
+  <rect x="596" y="157" width="50" height="8" rx="2" fill="white" opacity="0.8"/>
+  <rect x="590" y="184" width="100" height="50" fill="#e8ecf3"/>
+  <rect x="596" y="194" width="60" height="8" rx="2" fill="#1e3a6e" opacity="0.6"/>
+  <rect x="596" y="208" width="80" height="6" rx="2" fill="#888" opacity="0.4"/>
+  <rect x="596" y="242" width="100" height="40" rx="3" fill="white" stroke="#dde3ee" stroke-width="1"/>
+  <rect x="602" y="252" width="50" height="6" rx="2" fill="#1e3a6e" opacity="0.5"/>
+  <rect x="602" y="264" width="70" height="5" rx="2" fill="#888" opacity="0.3"/>
+  <rect x="596" y="290" width="100" height="32" rx="3" fill="#1e3a6e"/>
+  <!-- ホームボタン -->
+  <circle cx="640" cy="328" r="6" fill="#1a2f5e" stroke="#4a6fa0" stroke-width="1"/>
+
+  <!-- テキストエリア -->
+  <text x="560" y="50" font-size="13" fill="white" opacity="0.6" text-anchor="middle">RENEWAL</text>
+  <text x="560" y="78" font-size="28" font-weight="bold" fill="white" text-anchor="middle">ホームページ</text>
+  <text x="560" y="108" font-size="28" font-weight="bold" fill="white" text-anchor="middle">リニューアル</text>
+
+  <text x="560" y="420" font-size="14" fill="#c8a84b" text-anchor="middle">合資会社 正清電器 | Since 1906</text>
+</svg>
