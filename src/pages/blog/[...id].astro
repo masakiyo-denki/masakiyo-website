@@ -12,6 +12,33 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const siteUrl = 'https://www.masakiyo-denki.com';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "datePublished": post.data.date.toISOString(),
+  "image": post.data.heroImage ? `${siteUrl}${post.data.heroImage}` : `${siteUrl}/images/shop-exterior.jpg`,
+  "author": {
+    "@type": "Organization",
+    "name": "合資会社 正清電器",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "合資会社 正清電器",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/images/logo.jpg`
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `${siteUrl}/blog/${post.id}`
+  }
+};
 ---
 
 <Layout
@@ -54,4 +81,6 @@ const { Content } = await render(post);
       <a href="/blog" class="text-sm text-[var(--color-primary)] hover:underline">← お知らせ一覧へ戻る</a>
     </div>
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 </Layout>
