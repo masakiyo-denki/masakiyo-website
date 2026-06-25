@@ -20,13 +20,16 @@ const canonical = `${siteUrl}${canonicalPath}`;
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ElectronicsStore"],
   "name": "合資会社 正清電器",
-  "alternateName": "MASAKIYO ELECTRONICS",
+  "alternateName": ["正清電器", "MASAKIYO ELECTRONICS", "まさきよでんき"],
   "url": siteUrl,
-  "logo": `${siteUrl}/images/logo.jpg`,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/images/logo.jpg`
+  },
   "image": `${siteUrl}/images/shop-exterior.jpg`,
-  "description": description,
+  "description": "熊本市南区田迎のパナソニック専門店（パナショップ）。創業明治39年（1906年）、熊本最古参の電器店。家電販売・修理から会議室・体育館・学校・幼稚園の音響映像設備工事まで対応。電気工事業・電気通信工事業登録。",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "田迎3丁目2番37号",
@@ -49,13 +52,39 @@ const localBusinessSchema = {
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       "opens": "09:00",
       "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "00:00",
+      "closes": "00:00"
     }
   ],
   "foundingDate": "1906",
-  "areaServed": {
-    "@type": "City",
-    "name": "熊本市"
-  }
+  "areaServed": [
+    { "@type": "City", "name": "熊本市" },
+    { "@type": "AdministrativeArea", "name": "熊本県" }
+  ],
+  "knowsAbout": [
+    "音響設備", "映像設備", "ハウリング対策", "PA設備",
+    "エコキュート", "エアコン", "パナソニック家電",
+    "電気工事", "体育館音響", "会議室AV設備", "学校放送設備", "幼稚園音響"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "サービス一覧",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "家電販売・設置（パナソニック専門店）" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "エコキュート導入・補助金申請代行" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "エアコン販売・設置・リサイクル" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "音響・映像設備工事（体育館・会議室・学校・幼稚園）" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "電気工事・電気通信工事" } }
+    ]
+  },
+  "sameAs": [
+    "https://panasonic.net/pcc/support/loc/jp/shop/",
+    "https://www.masakiyo-denki.com"
+  ]
 };
 ---
 
