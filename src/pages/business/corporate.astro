@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="法人・施設のお客様へ | 熊本の正清電器"
+  description="音響・映像設備設計から防犯カメラ・パッケージエアコン・LED照明まで。熊本市南区の正清電器は創業119年のパナソニック正規販売店。法人・施設向けサービス一覧。"
+  canonicalPath="/business/corporate"
+>
+
+  <!-- ヒーロー -->
+  <section class="bg-[var(--color-primary)] text-white py-16 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">法人・施設のお客様</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-5">
+        設備のことは、<br />正清電器にまとめてご相談ください
+      </h1>
+      <p class="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+        音響・映像設備から防犯カメラ・エアコン・LED照明工事まで。<br />
+        電気工事業・管工事業を自社保有し、設備工事をワンストップで対応します。
+      </p>
+      <p class="text-yellow-200/70 text-xs mt-4">創業明治39年（1906年）／ 熊本最古参パナソニック正規販売店</p>
+    </div>
+  </section>
+
+  <!-- 強みの強調 -->
+  <section class="py-10 px-4 bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      {[
+        { num: "119", unit: "年", label: "創業からの歴史（1906年〜）" },
+        { num: "70", unit: "施設以上", label: "技術責任者の音響設計・調整実績" },
+        { num: "3", unit: "業種の許可", label: "電気工事・電気通信工事・管工事" },
+      ].map(({ num, unit, label }) => (
+        <div>
+          <p class="text-4xl font-bold text-[var(--color-primary)]">{num}<span class="text-lg ml-1">{unit}</span></p>
+          <p class="text-xs text-gray-500 mt-1">{label}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- 音響・映像設備（専門性が高いカテゴリ） -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-8">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-1">専門技術が必要なサービス</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">音響・映像設備設計・施工</h2>
+        <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+          技術責任者は全国70施設以上の音響設計・調整実績を持つ専門家。<br />
+          音響シミュレーション・FIR音響調整・タッチパネルUI開発まで自社一貫対応。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            href: "/business/seminarroom",
+            icon: "🏢",
+            title: "会議室・ホール",
+            desc: "Web会議対応・タッチパネル制御・FIR音響調整。「担当者しか使えない」を卒業。",
+            tags: ["ハウリング対策", "タッチパネルUI", "音響シミュレーション"],
+          },
+          {
+            href: "/business/school",
+            icon: "🏫",
+            title: "学校・体育館",
+            desc: "体育館の「声が聞き取れない」明瞭度問題を音響設計で解決。プロジェクター設置も対応。",
+            tags: ["明瞭度（STI）測定", "プロジェクター設置", "視聴覚室リニューアル"],
+          },
+          {
+            href: "/business/nursery",
+            icon: "🌸",
+            title: "幼稚園・保育園",
+            desc: "老朽化したミキサー・アンプの更新から、先生が迷わない操作設計まで一貫対応。",
+            tags: ["老朽化機器の更新", "操作シンプル化", "教室ごと鳴らし分け"],
+          },
+        ].map(({ href, icon, title, desc, tags }) => (
+          <a href={href} class="group block bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
+            <div class="bg-[var(--color-primary)] px-6 py-5 flex items-center gap-3">
+              <span class="text-3xl">{icon}</span>
+              <h3 class="font-bold text-white text-lg">{title}</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 leading-relaxed mb-4">{desc}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                {tags.map(t => (
+                  <span class="bg-[var(--color-bg-gray)] text-[var(--color-primary)] text-xs px-2 py-1 rounded-full">{t}</span>
+                ))}
+              </div>
+              <p class="text-[var(--color-primary)] text-sm font-bold group-hover:underline">詳しく見る →</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- その他の法人向けサービス -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-8">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-1">その他の法人向けサービス</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">防犯・空調・照明もお任せください</h2>
+        <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+          パナソニック正規特約店として機器を調達し、自社の電気工事チームが施工。<br />
+          設備まわりの複数の工事をまとめてご依頼いただけます。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            icon: "🛡️",
+            title: "防犯カメラ設備",
+            items: [
+              "施設・駐車場・エントランスへの設置",
+              "録画サーバー・NAS構築",
+              "スマートフォン遠隔監視システム",
+              "既存カメラの更新・増設",
+            ],
+          },
+          {
+            icon: "❄️",
+            title: "パッケージエアコン",
+            items: [
+              "事務所・店舗・施設向け設計・設置",
+              "複数台の一括管理システム",
+              "定期メンテナンス・フィルター清掃",
+              "老朽化した設備の更新提案",
+            ],
+          },
+          {
+            icon: "💡",
+            title: "LED照明工事",
+            items: [
+              "蛍光灯からLEDへの切り替え工事",
+              "2027年問題に向けた早期対応",
+              "施設・事務所・工場・倉庫対応",
+              "調光システムとの組み合わせも可",
+            ],
+          },
+        ].map(({ icon, title, items }) => (
+          <div class="bg-[var(--color-bg-gray)] rounded-2xl p-6">
+            <div class="text-4xl mb-3">{icon}</div>
+            <h3 class="font-bold text-[var(--color-primary)] text-lg mb-4">{title}</h3>
+            <ul class="space-y-2">
+              {items.map(item => (
+                <li class="text-sm text-gray-600 flex items-start gap-2">
+                  <span class="text-[var(--color-primary)] shrink-0 mt-0.5">▸</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 bg-yellow-50 border border-yellow-200 rounded-xl p-5 text-sm text-gray-700 leading-relaxed">
+        <strong class="text-[var(--color-primary)]">まとめてご依頼いただくメリット：</strong>
+        音響設備の更新と照明工事、防犯カメラ設置を同時に行うことで、足場・電気工事の段取りを共有でき、
+        個別に発注するより費用と工期を抑えられます。お気軽にご相談ください。
+      </div>
+    </div>
+  </section>
+
+  <!-- 選ばれる理由 -->
+  <section class="py-14 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">正清電器が法人のお客様に選ばれる理由</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          { icon: "🔧", title: "設計から施工・調整・アフターまで自社一貫", body: "外注なし。同一担当者が設計〜施工〜調整〜アフターサポートまで一貫対応。責任の所在が明確です。" },
+          { icon: "⚡", title: "電気工事も自社施工", body: "熊本県知事許可の電気工事業・電気通信工事業を保有。音響・防犯・照明に必要な電源工事・配線工事も一括対応。" },
+          { icon: "🎛️", title: "音響設計の高度な専門技術", body: "技術責任者は全国70施設以上の音響設計・調整実績。業界誌「サウンド＆レコーディングマガジン」掲載実績あり。" },
+          { icon: "📋", title: "設計図書を作成してお引き渡し", body: "システム系統図・配線図等の図面を作成し契約時に取り交わします。後の改修・担当交代時にも安心です。" },
+          { icon: "📞", title: "トラブル時は設計者が直接対応", body: "「物納」ではなく「システム納入」。不具合時のトラブルシューティングは設計・調整を行った担当者が直接応対します。" },
+          { icon: "🏠", title: "創業119年・熊本最古参パナソニック正規販売店", body: "1906年（明治39年）創業。地域に根ざした長期サポート。担当者が変わっても継続してお付き合いいただけます。" },
+        ].map(({ icon, title, body }) => (
+          <div class="flex gap-4 p-5 bg-white rounded-xl shadow-sm">
+            <span class="text-3xl shrink-0 mt-0.5">{icon}</span>
+            <div>
+              <h3 class="font-bold text-[var(--color-primary)] text-sm mb-1">{title}</h3>
+              <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずはお気軽にご相談ください</h2>
+      <p class="text-white/80 text-sm mb-8 leading-relaxed">
+        「どこに頼めばいいか分からない」「複数の工事をまとめたい」<br />
+        といったご相談から承ります。現地調査・お見積りは無料です。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-4">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+</Layout>
