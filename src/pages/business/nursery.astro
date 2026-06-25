@@ -1,0 +1,386 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "お遊戯会・卒園式でマイクを使うとハウリング（キーン）が起きます。解決できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "解決できます。ハウリングの原因はスピーカーとマイクの配置・向き・音響調整が適切でないことがほとんどです。正清電器ではスピーカーの設置見直しと音響調整でハウリングマージンを確保します。また、ハウリングが起きにくいアレイスピーカーへの更新も有効な選択肢です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "幼稚園・保育園の音響設備が古く、ミキサーやアンプが壊れました。修理・交換できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "対応できます。ミキサー・パワーアンプ・スピーカー・CDプレーヤーの診断・修理・交換に対応しています。設備の状態によって「同等品への単純置換」から「機能向上を伴う改修」まで複数プランでご提案します。まずは現状確認（無料）にお伺いします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "複数の教室を分割・統合して使いたい。教室ごとに別々の音を鳴らすことはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できます。デジタルミキサーと制御システムを組み合わせることで、パーティション分割時に教室ごと異なる音を流すことが可能です。iPad・Androidタブレットで直感的に切り替えができるシステムも提案できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "音響機器の操作が複雑で先生が迷ってしまいます。シンプルにできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できます。正清電器では、複数の機材にまたがっていたボリューム操作をミキサー1台に集約し、不要なボタンを最小化した構成を提案します。また、電源をOFFにするたびに設定が初期値にリセットされる設計にすることで、次に使う先生が設定に迷う問題を防ぎます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スピーカーから音は出るが声が聞き取りにくい・音が割れる気がします。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "スピーカーやアンプの経年劣化が原因の可能性があります。正清電器では現地で機器の状態を確認し、音響測定で問題の原因を特定します。アンプにFIRフィルターやディレイ機能を備えた機器を導入することで、複数スピーカー間の音のだぶりをなくし明瞭度を大きく改善できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "熊本で幼稚園・保育園・こども園の音響設備を相談できる業者を探しています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）にご相談ください。幼稚園・こども園の音響設備改修の実績があり、現状確認・お見積りは無料です。TEL: 096-379-1234（月〜土 9:00〜18:30）"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="幼稚園・保育園の音響設備改修 | 熊本の正清電器"
+  description="お遊戯会・卒園式のハウリング対策、老朽化したミキサー・アンプ・スピーカーの更新。先生が迷わない簡単操作設計。複数教室の鳴らし分けも対応。熊本市南区の正清電器にご相談ください。"
+  canonicalPath="/business/nursery"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:320px;">
+    <img
+      src="/images/pexels-artempodrez-8088099.jpg"
+      alt="幼稚園・こども園のホールイメージ"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(120,50,10,0.90) 0%, rgba(120,50,10,0.75) 50%, rgba(120,50,10,0.25) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-14 text-white">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">幼稚園・保育園・こども園のお客様</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-5 md:max-w-2xl">
+        お遊戯会・卒園式の音響、<br />
+        <span class="text-yellow-300">「また今年もハウリングした」</span><br />
+        を終わりにしませんか。
+      </h1>
+      <p class="text-white/85 text-sm md:text-base mb-4 md:max-w-lg leading-relaxed">
+        設備の老朽化診断から、ミキサー・アンプ・スピーカーの更新、<br />
+        先生が迷わない操作設計まで。正清電器が一貫対応します。
+      </p>
+      <p class="text-yellow-200/80 text-xs mb-8">創業119年 熊本最古参パナソニック正規販売店 ／ 現地調査・お見積り無料</p>
+      <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
+        まずは無料相談
+      </a>
+    </div>
+  </section>
+
+  <!-- よくあるお困りごと -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-red-600 font-bold text-sm tracking-widest mb-2">幼稚園・保育園でよくあるお困りごと</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+          こんなお悩み、ありませんか？
+        </h2>
+        <p class="text-gray-500 text-sm mt-3">熊本の幼稚園・こども園からよくいただくご相談です。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            num: "01",
+            icon: "🔊",
+            title: "式典でハウリングが起きる",
+            body: "お遊戯会・入園式・卒園式でマイクを使うと「キーン」と鳴る。大切な行事のたびに冷や汗をかく。子どもたちも驚いてしまう。",
+            color: "border-red-400",
+            bg: "bg-red-50",
+          },
+          {
+            num: "02",
+            icon: "⚙️",
+            title: "ミキサー・アンプが壊れた・調子が悪い",
+            body: "急に音が出なくなった、ノイズが乗る、電源が入らない。10〜20年前に設置したままの機器がいつ完全に止まるか不安。",
+            color: "border-orange-400",
+            bg: "bg-orange-50",
+          },
+          {
+            num: "03",
+            icon: "😓",
+            title: "操作が複雑で先生が毎回迷う",
+            body: "マイクのボリューム、CDのボリューム、教室ごとのボリューム…と複数の機器にまたがっていて担当の先生しか分からない。担当が変わると引き継げない。",
+            color: "border-yellow-500",
+            bg: "bg-yellow-50",
+          },
+          {
+            num: "04",
+            icon: "🏫",
+            title: "教室を分けたとき別々の音を流せない",
+            body: "パーティションで3教室に分割しているのに、音は1系統しかなく全部屋に同じ音が流れてしまう。教室ごとに別の活動をしているのに困る。",
+            color: "border-blue-400",
+            bg: "bg-blue-50",
+          },
+          {
+            num: "05",
+            icon: "📀",
+            title: "CDプレーヤーが読み込まなくなった",
+            body: "お遊戯会の曲をCDで流しているが、ディスクを読み込まないことが増えてきた。USB・Bluetoothにも対応したい。",
+            color: "border-gray-400",
+            bg: "bg-gray-50",
+          },
+          {
+            num: "06",
+            icon: "👂",
+            title: "音量はあるのに声が聞き取りにくい",
+            body: "スピーカーから音は出ているが、先生のアナウンスが聞き取りにくい。スピーカーの劣化が進んでいるのかもしれない。",
+            color: "border-green-500",
+            bg: "bg-green-50",
+          },
+        ].map(({ num, icon, title, body, color, bg }) => (
+          <div class={`rounded-2xl border-l-4 ${color} ${bg} p-6`}>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-3xl">{icon}</span>
+              <span class="text-gray-400 font-bold text-sm">{num}</span>
+            </div>
+            <h3 class="font-bold text-gray-800 text-lg mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 改修パターン -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">正清電器の改修提案</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          予算と目的に合わせて<br />3つのプランから選べます
+        </h2>
+        <p class="text-gray-500 text-sm mt-4 max-w-2xl mx-auto leading-relaxed">
+          一気にすべてを更新する必要はありません。まず壊れた機器だけ直すところから、将来の拡張まで見据えたプランまで、ご予算に合わせてご提案します。
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        {[
+          {
+            tag: "プラン A",
+            color: "bg-gray-600",
+            title: "壊れた機器だけ直す（単純置換）",
+            body: "ミキサー・アンプなど故障した機器を現行の同等品に交換します。費用を最小限に抑えたい場合に。操作性や音質は現状維持です。",
+            points: ["最小限の費用", "操作方法が変わらない", "既存配線をそのまま活用"],
+          },
+          {
+            tag: "プラン B ★おすすめ",
+            color: "bg-[var(--color-primary)]",
+            title: "音質向上＋操作シンプル化（おすすめ改修）",
+            body: "FIRフィルター・ディレイ機能内蔵のパワーアンプに更新し、音のだぶりをなくして明瞭度を大幅改善。同時にミキサーを1台に集約して操作をシンプルにします。電源OFFで設定が自動リセットされるので、次に使う先生が迷いません。",
+            points: ["声の明瞭度が大幅アップ", "ボリューム操作を1台に集約", "電源OFFで設定リセット", "ハウリングしにくい設計"],
+          },
+          {
+            tag: "プラン C",
+            color: "bg-[#065f46]",
+            title: "教室ごと独立制御＋タブレット操作（フルアップグレード）",
+            body: "パーティション分割時に教室ごと別々の音を流せるシステムに一新。iPad・Androidタブレットで音の鳴らし先をワンタップで切り替え可能。将来の運用変化にも対応できます。",
+            points: ["教室ごとに別々の音を流せる", "タブレットで直感操作", "電源OFFで完全リセット", "将来の拡張にも対応"],
+          },
+        ].map(({ tag, color, title, body, points }) => (
+          <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class={`md:w-36 ${color} text-white p-6 flex items-center justify-center shrink-0`}>
+              <p class="font-bold text-sm text-center leading-snug">{tag}</p>
+            </div>
+            <div class="flex-1 p-6">
+              <h3 class="font-bold text-[var(--color-primary)] text-lg mb-2">{title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-4">{body}</p>
+              <div class="flex flex-wrap gap-2">
+                {points.map(p => (
+                  <span class="bg-[var(--color-bg-gray)] text-[var(--color-primary)] text-xs font-medium px-3 py-1 rounded-full">{p}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-xs text-gray-500 mt-6">
+        ※どのプランが最適かは現地確認後にご提案します。まずはお気軽にご相談ください。
+      </p>
+    </div>
+  </section>
+
+  <!-- 操作シンプル化の説明 -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">先生に優しい設計</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          「担当の先生しか使えない」を<br />なくします
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            icon: "🎚️",
+            title: "ボリューム操作を1台に集約",
+            body: "マイクのボリューム・CDのボリューム・教室ごとのボリュームが複数機器にまたがっていた状態を解消。ミキサー1台ですべて操作できる構成にします。",
+          },
+          {
+            icon: "🔄",
+            title: "電源OFFで設定が自動リセット",
+            body: "前の先生が音量を上げたまま終わっても、電源を切れば次の使用時には初期設定に戻ります。「誰かがいじって音が出ない」「いきなり爆音になる」を防ぎます。",
+          },
+          {
+            icon: "📱",
+            title: "タブレットで直感操作（上位プラン）",
+            body: "iPad・Androidタブレットから音の鳴らし先をワンタップで切り替え。「教室1だけ鳴らす」「全教室に流す」が画面を見ながら直感的に操作できます。",
+          },
+        ].map(({ icon, title, body }) => (
+          <div class="bg-[var(--color-bg-gray)] rounded-xl p-6">
+            <div class="text-4xl mb-4">{icon}</div>
+            <h3 class="font-bold text-[var(--color-primary)] mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 対応設備 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">対応設備</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">対応できる機器・工事</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {[
+          { icon: "🎤", label: "ワイヤレスマイク" },
+          { icon: "🔈", label: "スピーカー更新" },
+          { icon: "🎛️", label: "ミキサー更新" },
+          { icon: "🔌", label: "パワーアンプ更新" },
+          { icon: "📀", label: "CDプレーヤー更新" },
+          { icon: "📱", label: "タブレット制御" },
+          { icon: "🏫", label: "教室ごとの鳴らし分け" },
+          { icon: "⚡", label: "電気工事（電源配線）" },
+          { icon: "🔧", label: "故障診断・修理" },
+          { icon: "🎵", label: "音響調整・FIR調整" },
+          { icon: "📋", label: "設計図書作成" },
+          { icon: "🤝", label: "操作レクチャー" },
+        ].map(({ icon, label }) => (
+          <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+            <span class="text-2xl shrink-0">{icon}</span>
+            <span class="text-sm font-medium text-[var(--color-primary)]">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 実績・信頼 -->
+  <section class="py-14 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">実績・信頼</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">なぜ正清電器が選ばれるのか</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          { icon: "🔍", title: "まず現状診断。提案はその後", body: "いきなり高額な提案はしません。現地で機器の状態を確認し、「直せるか・交換すべきか」を診断した上で、予算に合った複数プランをご提案します。" },
+          { icon: "🎛️", title: "FIR音響調整で音質を数値で改善", body: "一般的なEQ調整にとどまらず、FIRフィルター・ディレイ補正まで対応。スピーカー間の音のだぶりをなくし、声の明瞭度を数値で確認します。" },
+          { icon: "🏟️", title: "技術責任者の音響調整実績 全国70施設以上", body: "ホール・アリーナ・スタジアムから学校・幼稚園まで幅広い実績。大きい施設で培ったノウハウを小さい空間にも活かします。" },
+          { icon: "🔧", title: "設計から施工・調整・アフターまで自社一貫", body: "外注なし。同一担当者が診断〜提案〜施工〜調整〜アフターサポートまで一貫対応するため、責任の所在が明確です。" },
+          { icon: "⚡", title: "電気工事も自社施工", body: "熊本県知事許可の電気工事業を保有。音響設備に必要な電源工事・配線工事も含めてワンストップ対応できます。" },
+          { icon: "🏠", title: "創業119年・熊本最古参パナソニック正規販売店", body: "1906年（明治39年）創業。地域に根ざした長期サポート。担当の先生が変わっても、いつでもご相談いただけます。" },
+        ].map(({ icon, title, body }) => (
+          <div class="flex gap-4 p-5 bg-[var(--color-bg-gray)] rounded-xl">
+            <span class="text-3xl shrink-0 mt-0.5">{icon}</span>
+            <div>
+              <h3 class="font-bold text-[var(--color-primary)] text-sm mb-1">{title}</h3>
+              <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">よくあるご質問</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">Q & A</h2>
+      </div>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map((item: any) => (
+          <details class="bg-white rounded-xl shadow-sm group">
+            <summary class="cursor-pointer p-6 font-bold text-[var(--color-primary)] flex justify-between items-start gap-4">
+              <span>{item.name}</span>
+              <span class="text-[var(--color-primary)] shrink-0 text-xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-700 leading-relaxed">
+              {item.acceptedAnswer.text}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 関連ページへの動線 -->
+  <section class="py-12 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-[var(--color-bg-gray)] rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-2">関連ページ</p>
+          <h3 class="text-xl font-bold text-[var(--color-primary)] mb-2">学校・体育館の音響設備もお任せください</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">小学校・中学校・高校の体育館音響、視聴覚室リニューアル、プロジェクター設置なども対応しています。</p>
+        </div>
+        <a href="/business/school" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
+          学校・体育館ページを見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずは現状確認にお伺いします</h2>
+      <p class="text-white/80 text-sm mb-2 leading-relaxed">
+        「壊れているかどうか分からない」「どこを直せばいいか分からない」<br />
+        そんなご相談から承ります。現地確認・お見積りは無料です。
+      </p>
+      <p class="text-yellow-300 text-sm mb-8 font-medium">まずはお気軽にご相談ください</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-4">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+</Layout>
