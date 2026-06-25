@@ -1,0 +1,481 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "体育館でマイクを使っても声が「わーん」と響いて何を言っているかわかりません。改善できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "改善できます。これは「明瞭度不足」と呼ばれる体育館特有の問題です。音量は十分でも、床・壁・天井からの反射音が重なって言葉が聞き取れなくなります。解決策はスピーカーの音量を上げることではなく、指向性の高いスピーカーを適切な位置に設置し、FIRフィルターを使った音響調整で直接音と反射音のバランスを整えることです。正清電器では施工後にSTI（音声明瞭度）を測定器で数値確認し、合格基準（STI 0.45以上）を満たすことを確認してお引き渡しします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "体育館でマイクを使うとハウリング（キーン）が起きてしまいます。解決できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "解決できます。体育館のハウリングは、スピーカーとマイクの配置・向き・音響調整が適切でないことが主な原因です。正清電器では音響シミュレーションで最適なスピーカー配置を設計し、施工後にFIR/IIRハイブリッド音響調整を現地で実施します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "体育館の音が反響・残響が強く、先生やアナウンスの言葉が聞き取りにくいです。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "体育館は反射面が多く残響が長くなりやすい空間です。正清電器では音響測定でSTI（明瞭度）を数値で確認しながら、スピーカーの種類・指向性・配置とFIRフィルターによる調整を組み合わせて言葉の明瞭度を改善します。「声は聞こえるが何を言っているか分からない」状態を改善した実績があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "視聴覚室や多目的ホールの設備が古く、映像・音響を一式リニューアルしたいです。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "対応します。プロジェクター・スクリーン・マイク・スピーカー・アンプ・操作系の一式リニューアルを設計から施工・音響調整まで一貫して対応します。既存配線の活用やコストを抑えた提案も可能ですので、まずはご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "体育館の前方では音が大きく、後方では聞こえないという音量ムラがあります。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "音圧の不均一はスピーカーの配置・指向性・台数の設計で改善できます。正清電器では音響シミュレーションで全座席エリアの音圧分布を事前に確認した上でスピーカーを選定・配置。施工後に現地測定で音圧均一性を数値確認します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "熊本で学校・体育館の音響設備を依頼できる業者を探しています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）にご相談ください。技術責任者は全国70施設以上（ホール・アリーナ・スタジアム含む）の音響設計・調整実績を持ちます。業界誌「サウンド＆レコーディングマガジン」掲載実績あり。現地調査・お見積りは無料です。TEL: 096-379-1234"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "体育館のスピーカーから音が出なくなった、または音が割れています。修理・交換できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "対応できます。スピーカー・アンプ・ミキサー等の診断・修理・交換に対応しています。経年劣化による音質低下の場合は、同等品または現行機器への更新も提案します。まずはTEL 096-379-1234 または お問い合わせフォームにてご連絡ください。"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="体育館の音響設備「声が聞き取れない」を解決 | 熊本の正清電器"
+  description="体育館でマイクを使っても「何を言っているかわからない」明瞭度不足はスピーカー設計と音響調整で解決できます。ハウリング対策・視聴覚室・プロジェクター設置も一貫対応。熊本の正清電器は全国70施設以上の音響調整実績。"
+  canonicalPath="/business/school"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:320px;">
+    <img
+      src="/images/school-gym-hero.png"
+      alt="学校体育館の内観"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(15,39,68,0.92) 0%, rgba(15,39,68,0.80) 50%, rgba(15,39,68,0.30) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-14 text-white">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">学校・教育施設のお客様 ― 体育館・視聴覚室・多目的ホール</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-5 md:max-w-2xl">
+        体育館でマイクを使っても<br />
+        <span class="text-yellow-300">「何を言っているかわからない」</span><br />
+        ――それ、解決できます。
+      </h1>
+      <p class="text-white/80 text-sm md:text-base mb-4 md:max-w-lg leading-relaxed">
+        音量が出ていても言葉が聞き取れない「明瞭度不足」は、体育館特有の難問です。<br />
+        スピーカー設計・配置から現地音響調整まで一貫対応し、<strong class="text-white">明瞭度（STI）を数値で確認</strong>してお引き渡しします。
+      </p>
+      <p class="text-yellow-200/80 text-xs mb-8">技術責任者の音響設計・調整実績 全国70施設以上（ホール・アリーナ含む） ／ 創業119年 熊本最古参パナソニック正規販売店</p>
+      <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
+        まずは無料相談
+      </a>
+    </div>
+  </section>
+
+  <!-- よくあるお困りごと -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-red-600 font-bold text-sm tracking-widest mb-2">学校・体育館でよくあるお困りごと</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+          こんなお悩み、ありませんか？
+        </h2>
+        <p class="text-gray-500 text-sm mt-3">熊本の学校・教育施設から多くいただく音響のご相談です。</p>
+      </div>
+
+      <!-- 体育館特有の問題として明瞭度不足を強調 -->
+      <div class="bg-orange-50 border-l-4 border-orange-500 rounded-2xl p-6 mb-8">
+        <div class="flex items-start gap-4">
+          <span class="text-4xl shrink-0">👂</span>
+          <div>
+            <p class="text-orange-700 font-bold text-xs tracking-widest mb-1">体育館に特有の問題</p>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">音量は十分なのに「何を言っているかわからない」</h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-3">
+              ハウリング（キーン）はどんな音響設備でも起きますが、<strong>「声は聞こえるのに言葉が聞き取れない」という明瞭度不足は体育館・大空間で特に深刻</strong>です。<br />
+              床・壁・天井すべてが音を反射する体育館では、直接音より反射音の方が耳に届くことも。スピーカーの音量を上げると余計に響いて悪化します。<br />
+              この問題は<strong>スピーカー設計と専門的な音響調整でしか根本解決できません。</strong>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {["後ろの席で言葉が聞き取れない", "音量を上げると余計に響く", "先生の声がわーんと反響する", "式典でアナウンスが聞き取れない"].map(t => (
+                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-3 py-1 rounded-full">{t}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            num: "01",
+            icon: "🔊",
+            title: "ハウリングが頻発する",
+            body: "マイクを使うたびに「キーン」という耳障りな音が鳴り、先生もアナウンス担当者も使うのが怖い。入学式・卒業式などの大事な場面で起きると本当に困る。",
+            color: "border-red-400",
+            bg: "bg-red-50",
+          },
+          {
+            num: "02",
+            icon: "📢",
+            title: "前は大きすぎて後ろは聞こえない",
+            body: "スピーカー前方の席は音量が大きすぎて、後方は小さすぎる。全員に均一な音量で届けられない。",
+            color: "border-yellow-500",
+            bg: "bg-yellow-50",
+          },
+          {
+            num: "03",
+            icon: "🎙️",
+            title: "設備が古く音が割れる・音が出ない",
+            body: "スピーカーやアンプが古く、ガリノイズが出たり音が途切れたりする。修理できるのか、交換するべきか判断もできない。",
+            color: "border-gray-400",
+            bg: "bg-gray-50",
+          },
+          {
+            num: "04",
+            icon: "📽️",
+            title: "体育館にプロジェクターを入れたい・映像投影したい",
+            body: "入学式・卒業式・体育祭でスライドや映像を映したい。でも体育館は奥行きがあり、一般的なプロジェクターでは届かない。架台の設置や電気工事も必要でどこに頼めばいいか分からない。",
+            color: "border-blue-400",
+            bg: "bg-blue-50",
+          },
+          {
+            num: "05",
+            icon: "🏃",
+            title: "運動場・屋外の放送が聞こえない",
+            body: "運動会のアナウンスが風に負けて聞き取れない。スピーカーの向きが悪く、特定エリアにしか音が届かない。",
+            color: "border-green-500",
+            bg: "bg-green-50",
+          },
+        ].map(({ num, icon, title, body, color, bg }) => (
+          <div class={`rounded-2xl border-l-4 ${color} ${bg} p-6`}>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-3xl">{icon}</span>
+              <span class="text-gray-400 font-bold text-sm">{num}</span>
+            </div>
+            <h3 class="font-bold text-gray-800 text-lg mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-gray-500 text-sm mt-8">
+        これらの問題は、<strong class="text-[var(--color-primary)]">「音響設計・測定・現地調整」</strong>で根本から改善できます。
+      </p>
+    </div>
+  </section>
+
+  <!-- なぜ問題が起きるか（原因解説） -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">音響トラブルの根本原因</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          体育館の音が悪い「本当の理由」
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
+          スピーカーを高性能な機器に替えても、設計・調整なしでは改善しません。<br />根本原因は「音響設計なしでの設置」と「調整不実施」にあります。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            icon: "📐",
+            title: "スピーカーの設置位置・角度が最適化されていない",
+            body: "体育館は残響時間が長く音が反射しやすい空間です。スピーカーの向き・高さ・台数が適切でないと、直接音と反射音が干渉しハウリングや音の濁りが生じます。指向性の高いスピーカーを適切な位置に設置することが重要です。",
+          },
+          {
+            icon: "⏳",
+            title: "機材の経年劣化・規格の陳腐化",
+            body: "10〜20年以上前に設置されたスピーカーやアンプはコーンやエッジが劣化し、本来の性能が出ていないことがあります。また入力規格が現在のマイクや映像機器に合わない場合も多く、全体的な刷新が効果的です。",
+          },
+          {
+            icon: "🔄",
+            title: "音響調整（イコライジング）が行われていない",
+            body: "スピーカーを設置しただけでは最適な音は出ません。部屋の特性に合わせたEQ調整・レベル設定・ハウリングマージン確保が必要です。特にFIRフィルターを用いた調整は一般的な業者では対応していない高度技術です。",
+          },
+          {
+            icon: "🏗️",
+            title: "体育館特有の音響環境への対処がない",
+            body: "床・壁・天井がすべて反射面となる体育館は、残響時間が1〜2秒以上になることがあります。この環境ではSTI（音声明瞭度）が低下し、言葉の聞き取りに支障が出ます。音響設計では残響特性を踏まえた設計が必須です。",
+          },
+        ].map(({ icon, title, body }) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm flex gap-4">
+            <span class="text-3xl shrink-0">{icon}</span>
+            <div>
+              <h3 class="font-bold text-[var(--color-primary)] mb-2">{title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 解決策セクション -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">正清電器の解決策</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          5ステップで「聞こえる体育館」に変える
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-2xl mx-auto">ヒアリングから現地音響測定・引き渡しまで、同一担当者が一貫対応します。</p>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            step: "STEP 01",
+            title: "ヒアリング・現状確認",
+            body: "どんな用途で使うか（入学式・体育祭・授業等）、現在の問題点、設備の現状をお聞きします。既存設備の図面・仕様書があればご提供ください。現地調査（無料）で音響環境・配線・機器状態を確認します。",
+            color: "bg-[var(--color-primary)]",
+          },
+          {
+            step: "STEP 02",
+            title: "音響測定・分析",
+            body: "現地で音響測定器を使い、残響時間（RT60）・周波数特性・音圧分布・STI（明瞭度）を計測します。「どこに問題があるか」を数値で把握することが改善の出発点です。",
+            color: "bg-[#1e40af]",
+          },
+          {
+            step: "STEP 03",
+            title: "設計目標の設定とシミュレーション",
+            body: "測定結果をもとに「目標STI値」「目標音圧均一度」を設定。音響シミュレーションソフトウェアで、スピーカーの種類・台数・設置位置・角度を事前に最適化します。施工前に数値でレイアウトを検証・修正することで、施工後の「思ったと違う」を防ぎます。",
+            color: "bg-[#065f46]",
+          },
+          {
+            step: "STEP 04",
+            title: "施工・機器設置",
+            body: "電気工事・配線・スピーカー設置・アンプ設置・操作卓配線を自社施工します。熊本県知事許可の電気工事業を保有しているため、音響工事に付随する電源・配線工事も一括対応可能です。",
+            color: "bg-[#7c3aed]",
+          },
+          {
+            step: "STEP 05",
+            title: "現地音響調整・STI測定・引き渡し",
+            body: "施工後、FIR/IIRハイブリッド音響調整を現地で実施。全座席エリアで音圧・明瞭度（STI）を測定し、数値で確認してからお引き渡しします。操作レクチャーも実施し、先生方が迷わず使える状態で完了です。",
+            color: "bg-[#c2410c]",
+          },
+        ].map(({ step, title, body, color }) => (
+          <div class="bg-[var(--color-bg-gray)] rounded-2xl overflow-hidden flex flex-col md:flex-row">
+            <div class={`md:w-48 ${color} text-white p-6 flex flex-col justify-center shrink-0`}>
+              <p class="text-yellow-300 font-bold text-xs tracking-widest mb-1">{step}</p>
+              <h3 class="text-lg font-bold leading-snug">{title}</h3>
+            </div>
+            <div class="flex-1 p-6">
+              <p class="text-sm text-gray-700 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 対応できる施設・設備の種類 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">対応施設・設備</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          学校・教育施設の音響・映像設備に幅広く対応
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          {
+            icon: "🏫",
+            title: "体育館（音響・映像）",
+            items: ["スピーカー設備設計・施工", "マイクシステム（ワイヤレス最大4本運用）", "ハウリング対策・FIR/IIR音響調整", "STI明瞭度測定（数値でお引き渡し）", "プロジェクター設置（後方遠距離投影）", "特注架台＋専用電気回路工事", "タッチパネル・タブレットで全一括操作"],
+          },
+          {
+            icon: "🎓",
+            title: "視聴覚室・多目的ホール",
+            items: ["プロジェクター・スクリーン・音響一式", "電動スクリーン取付", "操作の簡略化・タッチパネル化", "ワイヤレスHDMI投影（ケーブル不要）", "照明連動・暗幕制御"],
+          },
+          {
+            icon: "🏃",
+            title: "運動場・屋外放送",
+            items: ["屋外スピーカー設置", "ホーンスピーカー配置設計", "運動会・行事放送対応", "既存放送設備との接続"],
+          },
+          {
+            icon: "📢",
+            title: "校内放送設備",
+            items: ["放送設備リニューアル", "各教室スピーカー更新", "緊急放送・チャイム連動", "マスターボリューム設計"],
+          },
+          {
+            icon: "🎤",
+            title: "卒業式・入学式・体育祭",
+            items: ["式典用マイク・PAシステム", "ワイヤレスマイク設定", "式典当日の音響サポート（相談可）"],
+          },
+          {
+            icon: "🔧",
+            title: "既存設備の修理・更新",
+            items: ["スピーカー・アンプ診断", "故障部品の交換・修理", "現行機種への更新提案", "部分更新・段階的リニューアル"],
+          },
+        ].map(({ icon, title, items }) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="font-bold text-[var(--color-primary)] mb-3">{title}</h3>
+            <ul class="space-y-1">
+              {items.map(item => (
+                <li class="text-xs text-gray-600 flex items-start gap-2">
+                  <span class="text-[var(--color-primary)] shrink-0 mt-0.5">▸</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- プラットフォーム型システムのコンセプト -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">段階的な投資・拡張</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          「製品」ではなく「システム」として<br />必要な機能を後から追加できます
+        </h2>
+        <p class="text-gray-500 text-sm mt-4 max-w-2xl mx-auto leading-relaxed">
+          一度に全てを更新しなくても大丈夫。まず映像投影システムを入れて、翌年度に音響改修、さらに後でカメラ・配信と段階的に拡張できる設計を初めから組み込みます。
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        {[
+          { phase: "フェーズ 1", icon: "📽️", title: "映像投影", body: "プロジェクター設置・スクリーン・タッチパネル制御。式典でのスライド投影から始める。" },
+          { phase: "フェーズ 2", icon: "🔊", title: "音響改修", body: "パワーアンプ更新・スピーカー調整追加。FIR音響調整でSTIを確保。" },
+          { phase: "フェーズ 3", icon: "📹", title: "カメラ配信", body: "PTZカメラ追加で校内配信・記録。タブレットからカメラ操作も可。" },
+          { phase: "フェーズ 4", icon: "💡", title: "照明連動", body: "プロジェクターONで舞台照明OFF等、全設備の自動連動制御に拡張。" },
+        ].map(({ phase, icon, title, body }) => (
+          <div class="bg-[var(--color-bg-gray)] rounded-xl p-5 text-center">
+            <p class="text-xs font-bold text-[var(--color-accent)] mb-2">{phase}</p>
+            <div class="text-4xl mb-2">{icon}</div>
+            <h3 class="font-bold text-[var(--color-primary)] mb-2">{title}</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-xs text-gray-500 mt-6">
+        ※各フェーズは独立して追加可能。最初から統合制御を見越した設計をするため、後から追加しても追加費用の無駄が最小限になります。
+      </p>
+    </div>
+  </section>
+
+  <!-- 実績・信頼 -->
+  <section class="py-14 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">実績・信頼</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">なぜ正清電器が選ばれるのか</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          { icon: "🏟️", title: "技術責任者の音響設計・調整実績 全国70施設以上", body: "ホール・アリーナ・スタジアム等の大型施設で培った音響技術を学校・体育館にも展開。業界誌「サウンド＆レコーディングマガジン」掲載実績あり。" },
+          { icon: "📊", title: "音響測定で数値を確認してお引き渡し", body: "「なんとなく良くなった」ではなく、STI（音声明瞭度）・音圧均一度を測定器で数値確認。熊本の実績施設ではスタジアム規模でもSTI 0.6以上（合格点0.45以上）を達成。改善前後のデータをレポートとして提出します。" },
+          { icon: "🎛️", title: "FIR音響調整は現場実施例が極めて少ない高度技術", body: "一般的なEQ（IIR）だけでなく、FIRフィルターを組み合わせたハイブリッド調整を提供。体育館のような難しい音響環境でも高い明瞭度を実現します。" },
+          { icon: "🔧", title: "設計から施工・調整・アフターまで完全自社一貫", body: "「設計は別会社・施工はまた別」では責任が曖昧になります。正清電器は同一担当者が設計〜施工〜調整〜アフターサポートまで一貫担当します。" },
+          { icon: "⚡", title: "電気工事も自社施工でワンストップ対応", body: "熊本県知事許可の電気工事業を保有。音響設備に必要な電源工事・配線工事も含めて一社完結。窓口が増えて責任が曖昧になる問題を防ぎます。" },
+          { icon: "🏠", title: "創業119年・熊本最古参パナソニック正規販売店", body: "1906年（明治39年）創業。地域に根ざした迅速なアフターサポートが可能です。施設管理担当が変わっても長期的にサポートします。" },
+        ].map(({ icon, title, body }) => (
+          <div class="flex gap-4 p-5 bg-[var(--color-bg-gray)] rounded-xl">
+            <span class="text-3xl shrink-0 mt-0.5">{icon}</span>
+            <div>
+              <h3 class="font-bold text-[var(--color-primary)] text-sm mb-1">{title}</h3>
+              <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">よくあるご質問</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">Q & A</h2>
+      </div>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map((item: any) => (
+          <details class="bg-white rounded-xl shadow-sm group">
+            <summary class="cursor-pointer p-6 font-bold text-[var(--color-primary)] flex justify-between items-start gap-4">
+              <span>{item.name}</span>
+              <span class="text-[var(--color-primary)] shrink-0 text-xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-700 leading-relaxed">
+              {item.acceptedAnswer.text}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 会議室・セミナールームへの誘導 -->
+  <section class="py-12 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-[var(--color-bg-gray)] rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-2">関連ページ</p>
+          <h3 class="text-xl font-bold text-[var(--color-primary)] mb-2">会議室・セミナールームの音響・映像設備</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Web会議・タッチパネル制御・FIR音響調整など、企業・医療機関・金融機関向けの導入事例もご紹介しています。</p>
+        </div>
+        <a href="/business/seminarroom" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
+          会議室ページを見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずはお気軽にご相談ください</h2>
+      <p class="text-white/80 text-sm mb-2 leading-relaxed">
+        「体育館のハウリングを直したい」「視聴覚室を一新したい」<br />
+        というご相談から承ります。現地調査・お見積りは無料です。
+      </p>
+      <p class="text-yellow-300 text-sm mb-8 font-medium">まずはお気軽にご相談ください</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-4">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+</Layout>
