@@ -11,11 +11,12 @@ interface Props {
 const {
   title,
   description = 'お陰様で創業119周年。正清電器は熊本最古参のパナソニックの街の電気屋（パナショップ）。家電から会議室・AVシステムまで何でもご相談ください。',
-  canonicalPath = Astro.url.pathname,
+  canonicalPath: rawCanonicalPath = Astro.url.pathname,
   ogImage = '/images/shop-exterior.jpg',
 } = Astro.props;
 
 const siteUrl = 'https://www.masakiyo-denki.com';
+const canonicalPath = rawCanonicalPath.endsWith('/') ? rawCanonicalPath : rawCanonicalPath + '/';
 const canonical = `${siteUrl}${canonicalPath}`;
 
 const localBusinessSchema = {
