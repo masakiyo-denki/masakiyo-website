@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import indexnow from 'astro-indexnow';
 import tailwindcss from '@tailwindcss/vite';
 
 /**
@@ -48,7 +49,7 @@ function rehypeSentenceBreaks() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.masakiyo-denki.com',
-  integrations: [sitemap()],
+  integrations: [sitemap(), indexnow({ key: 'a89324d0c7b651fe' })],
   markdown: {
     rehypePlugins: [rehypeSentenceBreaks],
   },
