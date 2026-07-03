@@ -1,5 +1,5 @@
 ---
-title: "新年のご挨拶"
+title: "2026年 新年のご挨拶｜正清電器"
 date: 2026-01-01
 description: "旧年中は格別のご厚情を賜り、誠にありがとうございました。本年もよろしくお願いいたします。"
 heroImage: "/images/blog/blog-shinnen-2026.png"

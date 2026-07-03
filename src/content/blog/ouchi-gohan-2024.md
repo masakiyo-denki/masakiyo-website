@@ -1,5 +1,5 @@
 ---
-title: "おうちごはんキャンペーン"
+title: "おうちごはんキャンペーン2024｜炊飯器・オーブンレンジ特別価格"
 date: 2024-09-01
 description: "9月1日〜10月31日の期間、炊飯器・オーブンレンジを特別価格にて販売します。"
 heroImage: "/images/blog/blog-ouchi-gohan-2024.jpg"
