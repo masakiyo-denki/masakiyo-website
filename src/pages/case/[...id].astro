@@ -103,6 +103,16 @@ const descHtml = d.description
                 allowfullscreen
               ></iframe>
             </div>
+            <script type="application/ld+json" set:html={JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "name": `${d.title} | ${d.client}`,
+              "description": d.description,
+              "thumbnailUrl": `https://img.youtube.com/vi/${d.youtubeId}/maxresdefault.jpg`,
+              "uploadDate": `${d.year}-01-01`,
+              "contentUrl": `https://www.youtube.com/watch?v=${d.youtubeId}`,
+              "embedUrl": `https://www.youtube.com/embed/${d.youtubeId}`
+            })} />
           </div>
         )}
 
