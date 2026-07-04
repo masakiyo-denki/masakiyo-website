@@ -20,6 +20,7 @@ const posts = (await getCollection('blog')).sort(
         src="/images/shop-exterior.jpg"
         alt="正清電器 店舗外観 熊本市南区田迎"
         class="w-full h-full object-cover object-[center_60%]"
+        fetchpriority="high"
       />
       <!-- グラデーション（PC）：左はほぼ不透明、右端はほぼ透明 -->
       <div class="absolute inset-0 hidden md:block" style="background: linear-gradient(to right, rgba(0,48,135,0.95) 0%, rgba(0,48,135,0.85) 40%, rgba(0,48,135,0.30) 75%, rgba(0,48,135,0.00) 100%);"></div>
