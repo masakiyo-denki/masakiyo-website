@@ -16,12 +16,15 @@ const posts = (await getCollection('blog')).sort(
   <!-- ヒーロー -->
   <section class="relative overflow-hidden" style="min-height:580px;">
     <div class="absolute inset-0">
-      <img
-        src="/images/shop-exterior.jpg"
-        alt="正清電器 店舗外観 熊本市南区田迎"
-        class="w-full h-full object-cover object-[center_60%]"
-        fetchpriority="high"
-      />
+      <picture>
+        <source srcset="/images/shop-exterior.webp" type="image/webp" />
+        <img
+          src="/images/shop-exterior.jpg"
+          alt="正清電器 店舗外観 熊本市南区田迎"
+          class="w-full h-full object-cover object-[center_60%]"
+          fetchpriority="high"
+        />
+      </picture>
       <!-- グラデーション（PC）：左はほぼ不透明、右端はほぼ透明 -->
       <div class="absolute inset-0 hidden md:block" style="background: linear-gradient(to right, rgba(0,48,135,0.95) 0%, rgba(0,48,135,0.85) 40%, rgba(0,48,135,0.30) 75%, rgba(0,48,135,0.00) 100%);"></div>
       <!-- グラデーション（スマホ）：上から下へ -->
@@ -79,12 +82,15 @@ const posts = (await getCollection('blog')).sort(
 
   <!-- 歴史＝信頼の根拠（ヒーロー直後） -->
   <section class="relative overflow-hidden" style="min-height:320px;">
-    <img
-      src="/images/history-old.jpg"
-      alt="創業当時の正清電器"
-      class="absolute inset-0 w-full h-full object-cover object-[center_top]"
-      style="filter:sepia(55%) brightness(0.48);"
-    />
+    <picture>
+      <source srcset="/images/history-old.webp" type="image/webp" />
+      <img
+        src="/images/history-old.jpg"
+        alt="創業当時の正清電器"
+        class="absolute inset-0 w-full h-full object-cover object-[center_top]"
+        style="filter:sepia(55%) brightness(0.48);"
+      />
+    </picture>
     <div class="relative max-w-5xl mx-auto px-4 py-14 text-white">
       <div class="max-w-2xl">
         <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">SINCE 1906</p>
@@ -163,11 +169,14 @@ const posts = (await getCollection('blog')).sort(
         <!-- 法人向け -->
         <a href="/business/seminarroom" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-accent)]">
           <div class="aspect-[16/9] overflow-hidden">
-            <img
-              src="/images/av-seminarroom.jpg"
-              alt="会議室・セミナールームAVシステム"
-              class="w-full h-full object-cover object-[center_30%]"
-            />
+            <picture>
+              <source srcset="/images/av-seminarroom.webp" type="image/webp" />
+              <img
+                src="/images/av-seminarroom.jpg"
+                alt="会議室・セミナールームAVシステム"
+                class="w-full h-full object-cover object-[center_30%]"
+              />
+            </picture>
           </div>
           <div class="p-7">
             <p class="text-xs font-bold text-[var(--color-accent)] tracking-widest mb-2">法人・施設のお客様</p>
