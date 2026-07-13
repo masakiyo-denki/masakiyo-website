@@ -203,6 +203,42 @@ const posts = (await getCollection('blog')).sort(
     </div>
   </section>
 
+  <!-- 選ばれる理由：個人・法人それぞれの視点で -->
+  <section class="py-16 px-4 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-2">WHY MASAKIYO</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">
+          家庭から施設まで、熊本で選ばれ続けている理由
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 個人向け -->
+        <div class="bg-[var(--color-bg-gray)] rounded-xl p-6">
+          <p class="text-xs font-bold text-[var(--color-primary)] tracking-widest mb-2">個人・ご家庭のお客様</p>
+          <p class="font-bold text-[var(--color-text)] text-base mb-4">安心して任せられる、くらしの相談相手</p>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2"><span class="text-[var(--color-primary)] shrink-0 mt-0.5">▶</span>担当者が固定。いつ来ても顔なじみのスタッフ</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--color-primary)] shrink-0 mt-0.5">▶</span>家電・水回り・リフォームを一社でまとめて依頼できる</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--color-primary)] shrink-0 mt-0.5">▶</span>修理・点検のアフターフォローも、同じ担当者が責任をもって対応</li>
+          </ul>
+          <a href="/business#consumer" class="inline-block mt-5 text-[var(--color-primary)] font-bold text-sm hover:underline">個人向けサービスを見る →</a>
+        </div>
+        <!-- 法人向け -->
+        <div class="bg-[var(--color-bg-gray)] rounded-xl p-6">
+          <p class="text-xs font-bold text-[var(--color-accent)] tracking-widest mb-2">法人・施設のお客様</p>
+          <p class="font-bold text-[var(--color-text)] text-base mb-4">専門技術と一社完結で、無駄のない設備投資を実現</p>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2"><span class="text-[var(--color-accent)] shrink-0 mt-0.5">▶</span>音響設計・調整の実績 <span class="font-bold">全国80施設以上</span></li>
+            <li class="flex items-start gap-2"><span class="text-[var(--color-accent)] shrink-0 mt-0.5">▶</span>設計・施工・音響調整・アフターサポートまで一社完結</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--color-accent)] shrink-0 mt-0.5">▶</span>音響・映像・制御・ネットワークを一貫設計できる技術力</li>
+          </ul>
+          <a href="/business/seminarroom" class="inline-block mt-5 text-[var(--color-accent)] font-bold text-sm hover:underline">法人向けサービスを見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- くらしのコンシェルジュ説明 -->
   <section class="py-16 px-4">
     <div class="max-w-5xl mx-auto">
