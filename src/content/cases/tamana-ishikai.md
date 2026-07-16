@@ -69,3 +69,19 @@ PTZカメラ（AW-UE40K）で登壇者をズーム追尾し、固定カメラ（
 ## 音響調整
 
 正清電器の技術者がFIR+IIRハイブリッド調整を実施し、全座席で均一な音圧と高い明瞭度を確保しています。
+
+### 事前の音響シミュレーション
+
+設置前に3D音響シミュレーションで座席全体の音圧分布を検証。スピーカーの機種・位置・角度を設計段階で最適化し、「なんとなく設置」ではなく数値で裏付けた配置を実現しています。
+
+<img src="/images/case-tamana-acoustic-simulation.png" alt="玉名郡市医師会館 会議室 音響シミュレーション 音圧分布図" style="width:100%;max-width:600px;" />
+
+### 納入後の現場調整
+
+竣工後、測定マイクと音響アナライザーを用いて全座席で実測。測定データをもとにFIR+IIRハイブリッド補正を施し、聴き取りやすさを数値で仕上げています。
+
+<img src="/images/case-tamana-acoustic-measurement.jpg" alt="玉名郡市医師会館 会議室 音響調整作業風景" style="width:100%;max-width:600px;" />
+
+<img src="/images/case-tamana-acoustic-graph.png" alt="音響調整前後の周波数特性グラフ（マゼンタ＝調整前 グリーン＝調整後）" style="width:100%;max-width:600px;" />
+
+<small>マゼンタ＝調整前 ／ グリーン＝調整後。全帯域にわたり特性が均一化され、明瞭度が向上しています。</small>
