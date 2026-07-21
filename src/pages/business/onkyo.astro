@@ -72,7 +72,7 @@ const faqSchema = {
         音響設備工事。
       </h1>
       <p class="text-white/80 text-sm md:text-base mb-4 md:max-w-lg leading-relaxed">
-        音響シミュレーション → 施工 → 現場測定 → FIR/IIRハイブリッド調整 → STI数値確認でお引き渡し。<br />
+        音響シミュレーション → 施工 → 現場測定 → FIR/IIRハイブリッド調整 → 測定値でお引き渡し。<br />
         設計から調整まで正清電器が一社で対応します。
       </p>
       <p class="text-yellow-200/80 text-xs mb-8">技術責任者の音響設計・調整実績 全国80施設以上 ／ 業界誌「サウンド＆レコーディングマガジン」掲載 ／ 創業119年</p>
@@ -89,11 +89,10 @@ const faqSchema = {
 
   <!-- 実績数値バー -->
   <section class="py-10 px-4 bg-white border-b border-gray-100">
-    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
       {[
         { num: "80", unit: "施設以上", label: "技術責任者の音響設計・調整実績" },
-        { num: "0.6", unit: "以上", label: "目標STI値（合格ライン0.45）" },
-        { num: "8", unit: "ms以下", label: "音声遅延の目標値" },
+        { num: "STI", unit: "測定値引渡し", label: "調整後の音声明瞭度を全座席で実測" },
         { num: "119", unit: "年", label: "創業からの地域密着（1906年〜）" },
       ].map(({ num, unit, label }) => (
         <div>
@@ -129,13 +128,13 @@ const faqSchema = {
             step: "02",
             color: "bg-[#1e40af]",
             title: "施工後の現場音響測定",
-            body: "設置後、測定用マイクロホンと音響アナライザーで全座席の音圧・周波数特性・STI（音声明瞭度）を実測します。「感覚で調整」ではなく、測定データが調整の根拠になります。",
+            body: "設置後、測定用マイクロホンと音響アナライザーで全座席の音圧・周波数特性・STI（音声明瞭度）を実測します。部屋固有の特性を数値で把握することで、次のFIR/IIR調整の根拠データを得ます。",
           },
           {
             step: "03",
             color: "bg-[#065f46]",
             title: "FIR/IIRハイブリッド音響調整（現場実施例が極めて少ない高度技術）",
-            body: "一般的なパラメトリックEQ（IIR）はバンド数に限りがあり、多段に重ねると位相が乱れます。FIRは補正カーブを自由に「描いて」補正でき、位相を保ちながら精密な補正が可能。低域はFIRの遅延が大きくなるためIIR、中高域はFIRを使うハイブリッド構成を現場で標準実施しています。調整後はSTI 0.6以上を目標値とし、測定値でお引き渡しします。",
+            body: "測定データをもとにEQ補正を施します。一般的なパラメトリックEQ（IIR）は多段に重ねると位相が乱れますが、FIRは位相を保ちながら精密な補正が可能。低域はIIR、中高域はFIRを使うハイブリッド構成が正清電器の標準実施方法です。調整後に音圧分布・音声明瞭度を再測定し、測定値でお引き渡しします。",
           },
         ].map(({ step, color, title, body }) => (
           <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row">
@@ -254,7 +253,7 @@ const faqSchema = {
           <div class="space-y-4">
             {[
               { icon: "📋", title: "電気通信工事業（熊本県知事許可）", body: "音響配線工事・映像配線工事を自社施工。外注不要でワンストップ対応できます。" },
-              { icon: "⚡", title: "電気工事業（熊本県知事許可）", body: "スピーカー・アンプへの電源工事まで自社対応。工期短縮・責任の一元化が可能です。" },
+              { icon: "⚡", title: "電気通信施工管理技士 在籍", body: "音響・映像配線工事の施工管理を担当できる有資格者が在籍。工期・品質管理を一貫して行います。" },
               { icon: "📐", title: "設計図書の作成・引き渡し", body: "施工時にシステム系統図・配線図を作成し契約時に取り交わします。後の増設・担当者交代時も安心です。" },
             ].map(({ icon, title, body }) => (
               <div class="flex gap-3">
@@ -345,6 +344,29 @@ const faqSchema = {
             </div>
           </details>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- デモ対応 -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">導入前のご確認に</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">デモ対応しています</h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-2xl mx-auto">「本当に変わるのか確かめてから発注したい」というご要望にお応えします。</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[var(--color-bg-gray)] rounded-2xl p-7">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-3">自社機材のみで対応可能</p>
+          <h3 class="font-bold text-[var(--color-primary)] text-lg mb-3">既設スピーカーのまま、音を変えるデモ</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">スピーカーは交換せず、DSPアンプと音響調整だけで音質がどれだけ変わるかを現地でご確認いただけます。ハウリングが減る・言葉が聞き取りやすくなる効果を、実際の空間で体験してから判断できます。自社機材のみで対応できるため、お気軽にご相談ください。</p>
+        </div>
+        <div class="bg-[var(--color-bg-gray)] rounded-2xl p-7">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-3">大型案件向け</p>
+          <h3 class="font-bold text-[var(--color-primary)] text-lg mb-3">メーカーデモ機によるスピーカー試聴デモ</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">体育館・ホールなど大型案件では、各メーカーとの取引実績を活かしてデモ機をお借りし、実際のスピーカーで音出しをご確認いただくことも可能です。「カタログではなく実音で判断したい」というお客様に対応できます。詳細はご相談ください。</p>
+        </div>
       </div>
     </div>
   </section>
