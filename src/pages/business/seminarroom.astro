@@ -34,7 +34,7 @@ const faqSchema = {
       "name": "前列は音が大きすぎて後列は聞こえない、という状態を改善できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "改善できます。正清電器では音響シミュレーションでスピーカーの種類・台数・配置・取付角度を事前に最適化し、施工後にFIR/IIRハイブリッド調整で全座席の音量・明瞭度（STI 0.55以上）を均一化します。"
+        "text": "改善できます。正清電器では音響シミュレーションでスピーカーの種類・台数・配置・取付角度を事前に最適化し、施工後にFIR/IIRハイブリッド調整で客席代表点の音量・明瞭度を均一化します。"
       }
     },
     {
@@ -215,7 +215,7 @@ const faqSchema = {
           <div class="flex flex-col md:flex-row">
             <div class="md:w-1/3 bg-[#1e40af] text-white p-8 flex flex-col justify-center">
               <p class="text-yellow-300 font-bold text-xs tracking-widest mb-2">お悩み 02 への答え</p>
-              <h3 class="text-xl font-bold mb-2">全座席均一の音と<br />高い明瞭度</h3>
+              <h3 class="text-xl font-bold mb-2">ムラのない音と<br />高い明瞭度</h3>
               <p class="text-white/70 text-sm">音響シミュレーション＋FIR/IIRハイブリッド調整</p>
             </div>
             <div class="md:w-2/3 p-8">
@@ -226,7 +226,7 @@ const faqSchema = {
                 施工後は、現地で<strong>FIR/IIRハイブリッド補正</strong>を実施します。一般的なPEQ（IIR）では対応しきれない複雑な部屋の特性を、位相を乱さず精密に補正できる高度な手法です。現場での実施例が極めて少なく、音質・ハウリング耐性の両面で明確な差が出ます（<a href="/blog/onkyo-chosei-2026" class="text-blue-700 underline">技術詳細はこちら</a>）。
               </p>
               <div class="flex flex-wrap gap-2">
-                {["事前音響シミュレーション", "FIR/IIRハイブリッド調整", "STI明瞭度測定", "ハウリングマージン設計", "全座席音圧均一化"].map(t => (
+                {["事前音響シミュレーション", "FIR/IIRハイブリッド調整", "STI明瞭度測定", "ハウリングマージン設計", "音圧均一化設計"].map(t => (
                   <span class="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">{t}</span>
                 ))}
               </div>
