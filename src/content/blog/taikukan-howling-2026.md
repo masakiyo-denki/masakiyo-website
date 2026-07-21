@@ -115,4 +115,4 @@ heroImage: "/images/school-gym-hero.png"
 
 ---
 
-**関連ページ：** [学校・体育館の音響設備](/business/school) ／ [会議室・ホールの音響設備](/business/seminarroom)
+**関連ページ：** [学校・体育館の音響設備](/business/school) ／ [音響設備ハブページ（熊本の音響設備）](/business/onkyo) ／ [会議室・ホールの音響設備](/business/seminarroom)
