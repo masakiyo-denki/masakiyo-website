@@ -9,13 +9,31 @@ import Layout from '../../layouts/Layout.astro';
 >
 
   <!-- ヒーロー -->
-  <section class="bg-[var(--color-primary)] text-white py-16 px-4">
-    <div class="max-w-5xl mx-auto text-center">
+  <section class="relative overflow-hidden" style="min-height:380px; background:#001e50;">
+    <!-- 斜め分割写真パネル -->
+    <div class="absolute inset-0">
+      <!-- パネル1: 音響設備（ホール） -->
+      <div class="absolute inset-0" style="clip-path: polygon(0 0, 44% 0, 36% 100%, 0 100%);">
+        <img src="/images/case-tamana-ishikai-hall.jpg" alt="音響設備施工" class="w-full h-full object-cover" style="object-position: center center;" />
+      </div>
+      <!-- パネル2: 防犯カメラ -->
+      <div class="absolute inset-0" style="clip-path: polygon(40% 0, 70% 0, 62% 100%, 32% 100%);">
+        <img src="/images/av-ptz-installed.jpg" alt="防犯カメラ設置" class="w-full h-full object-cover" style="object-position: center center;" />
+      </div>
+      <!-- パネル3: LED照明工事 -->
+      <div class="absolute inset-0" style="clip-path: polygon(66% 0, 100% 0, 100% 100%, 58% 100%);">
+        <img src="/images/service-led-install.jpg" alt="LED照明工事" class="w-full h-full object-cover" style="object-position: center center;" />
+      </div>
+    </div>
+    <!-- テキスト用グラデーションオーバーレイ -->
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,20,70,0.93) 0%, rgba(0,20,70,0.78) 38%, rgba(0,20,70,0.18) 75%, rgba(0,20,70,0.05) 100%);"></div>
+    <!-- テキスト -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 py-20 text-white">
       <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">法人・施設のお客様</p>
-      <h1 class="text-3xl md:text-4xl font-bold mb-5">
+      <h1 class="text-3xl md:text-4xl font-bold mb-5 leading-tight">
         設備のことは、<br />正清電器にまとめてご相談ください
       </h1>
-      <p class="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+      <p class="text-white/80 text-sm md:text-base max-w-lg leading-relaxed">
         音響・映像設備から防犯カメラ・エアコン・LED照明工事まで。<br />
         電気工事業・管工事業を自社保有し、設備工事をワンストップで対応します。
       </p>
