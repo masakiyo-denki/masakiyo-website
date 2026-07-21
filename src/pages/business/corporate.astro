@@ -18,9 +18,9 @@ import Layout from '../../layouts/Layout.astro';
   -->
   <section class="relative overflow-hidden bg-[#001440]" style="min-height:420px;">
 
-    <!-- パネルA: プロジェクター映像設備 — left:40%〜60%(top)/52%(bottom) -->
+    <!-- パネルA: プロジェクター映像設備 -->
     <div class="absolute top-0 bottom-0" style="left:40%; width:24%; clip-path: polygon(0 0, 83% 0, 50% 100%, 0 100%);">
-      <img src="/images/install-projector-laser.jpg" alt="映像・プロジェクター設備" class="w-full h-full object-cover" style="object-position:center center;" />
+      <img src="/images/install-projector-laser.jpg" alt="映像・プロジェクター設備" class="w-full h-full object-cover" style="object-position:65% 35%;" />
       <div class="absolute inset-0 bg-[#001440]/52"></div>
       <div class="absolute bottom-5 text-white" style="left:8%;">
         <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">AUDIO / VIDEO</p>
@@ -28,19 +28,18 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- パネルB: 施工事例(玉名) — left:50%〜80%(top)/52%〜72%(bottom) -->
-    <div class="absolute top-0 bottom-0" style="left:50%; width:40%; clip-path: polygon(25% 0, 75% 0, 55% 100%, 5% 100%);">
-      <img src="/images/tamana-new-11.jpg" alt="AV設備施工事例" class="w-full h-full object-cover" style="object-position:center center;" />
+    <!-- パネルB: 防犯カメラ -->
+    <div class="absolute top-0 bottom-0 overflow-hidden" style="left:50%; width:40%; clip-path: polygon(25% 0, 75% 0, 55% 100%, 5% 100%); background-image:url('/images/case-panahome-camera-bullet-wall.jpg'); background-size:180%; background-position:80% 42%; background-repeat:no-repeat;">
       <div class="absolute inset-0 bg-[#001440]/45"></div>
       <div class="absolute bottom-5 text-white" style="left:30%;">
-        <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">CASE STUDY</p>
-        <p class="font-bold text-sm">施工実績</p>
+        <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">SECURITY</p>
+        <p class="font-bold text-sm">防犯カメラ</p>
       </div>
     </div>
 
-    <!-- パネルC: LED照明工事 — left:72%〜100%(top)/72%〜100%(bottom) -->
+    <!-- パネルC: LED照明工事 -->
     <div class="absolute top-0 bottom-0" style="left:72%; width:28%; clip-path: polygon(29% 0, 100% 0, 100% 100%, 0 100%);">
-      <img src="/images/service-led-install.jpg" alt="LED照明工事" class="w-full h-full object-cover" style="object-position:center top;" />
+      <img src="/images/service-led-install.jpg" alt="LED照明工事" class="w-full h-full object-cover" style="object-position:35% 20%;" />
       <div class="absolute inset-0 bg-[#001440]/40"></div>
       <div class="absolute bottom-5 text-white" style="left:35%;">
         <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">LIGHTING</p>
