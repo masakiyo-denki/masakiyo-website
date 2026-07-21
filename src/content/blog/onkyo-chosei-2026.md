@@ -106,4 +106,4 @@ EQ補正にはFIR（有限インパルス応答）フィルターとIIR（無限
 
 **関連記事：** [会議室のハウリング・音が聞き取りにくいを解決する](/blog/kaigishitsu-onkyo-2026) ／ [体育館のハウリング・明瞭度不足を解決する](/blog/taikukan-howling-2026)
 
-**関連ページ：** [法人・施設向けサービス](/business/corporate) ／ [音響設備の施工実績](/case)
+**関連ページ：** [音響設備 技術・実績](/business/onkyo) ／ [法人・施設向けサービス](/business/corporate) ／ [音響設備の施工実績](/case)
