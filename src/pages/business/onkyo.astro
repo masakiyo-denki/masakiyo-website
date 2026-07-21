@@ -1,0 +1,374 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "熊本で音響設備の設計・施工・音響調整を一社に依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）にお任せください。音響シミュレーションによる事前設計から、施工・FIR/IIRハイブリッド音響調整・STI測定まで一社で完結します。技術責任者は全国80施設以上の音響設計・調整実績を持ちます。現地調査・お見積りは無料です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FIR/IIRハイブリッド音響調整とはどんな技術ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般的なパラメトリックEQ（IIR）は多段に重ねると位相が乱れ、別の音質劣化を生じます。FIRは「補正後の周波数特性を自由に描いて補正できる」手法で、位相を保ちながら精密な補正が可能。低域はFIRの遅延が大きくなるためIIRを使い、中高域はFIRを使うハイブリッド構成が最適解です。現場での実施例は極めて少なく、正清電器では標準工程として実施しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「音響調整なし」で設置した設備と、正清電器が施工した設備は何が違いますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "設置のみでは、部屋固有の反射特性とスピーカーの周波数特性が重なって生じるピーキーな帯域が手つかずで残ります。正清電器では施工後に測定器でSTI（音声明瞭度）・音圧分布を全座席で計測し、FIR/IIR調整でその部屋に合った状態に仕上げてお引き渡しします。「設置して終わり」と「設計・施工・調整まで一貫」では、仕上がりの品質に明確な差が出ます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ハウリングが頻発しています。機器を替えれば直りますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "機器の交換だけでは直らないケースがほとんどです。ハウリングの根本原因はスピーカーの指向特性とマイクとの位置関係にあります。機種選定・レイアウト設計を変えないまま機器だけ替えても、状況は変わりません。正清電器では音響シミュレーションで最適なレイアウトを設計し、施工後にFIR/IIR調整でハウリングマージンを確保します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "音響調整の費用・工期の目安を教えてください。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "部屋の規模・現状設備・ご要望によって大きく異なります。まずは現地調査（無料）で現状を確認し、複数プランでお見積りします。調整のみのご依頼も承ります。TEL 096-379-1234（月〜土 9:00〜18:30）またはお問い合わせフォームからご連絡ください。"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="熊本の音響設備 設計・施工・音響調整｜正清電器｜全国80施設以上の実績"
+  description="熊本で音響設備の設計・施工・音響調整をお探しなら正清電器へ。ハウリング対策・STI明瞭度測定・FIR/IIRハイブリッド音響調整まで一社完結。会議室・体育館・幼稚園など施設種別を問わず対応。技術責任者の実績80施設以上。現地調査・お見積り無料。"
+  canonicalPath="/business/onkyo"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:400px;">
+    <img
+      src="/images/acoustic-measurement-hall.jpg"
+      alt="大ホールで音響測定器を使って現地調整を行う正清電器の技術者"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: right 85%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,30,80,0.96) 0%, rgba(0,30,80,0.88) 50%, rgba(0,30,80,0.30) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-24 text-white">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">熊本の音響設備 設計・施工・音響調整</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-5 md:max-w-2xl">
+        「設置して終わり」ではなく、<br />
+        <span class="text-yellow-300">音響調整まで完結させる</span><br />
+        音響設備工事。
+      </h1>
+      <p class="text-white/80 text-sm md:text-base mb-4 md:max-w-lg leading-relaxed">
+        音響シミュレーション → 施工 → 現場測定 → FIR/IIRハイブリッド調整 → STI数値確認でお引き渡し。<br />
+        設計から調整まで正清電器が一社で対応します。
+      </p>
+      <p class="text-yellow-200/80 text-xs mb-8">技術責任者の音響設計・調整実績 全国80施設以上 ／ 業界誌「サウンド＆レコーディングマガジン」掲載 ／ 創業119年</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
+          無料相談・お見積り
+        </a>
+        <a href="/blog/onkyo-chosei-2026" class="inline-block border border-white/50 hover:bg-white/10 transition px-8 py-3 rounded-lg font-bold text-white/90">
+          音響調整について詳しく →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 実績数値バー -->
+  <section class="py-10 px-4 bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+      {[
+        { num: "80", unit: "施設以上", label: "技術責任者の音響設計・調整実績" },
+        { num: "0.6", unit: "以上", label: "目標STI値（合格ライン0.45）" },
+        { num: "8", unit: "ms以下", label: "音声遅延の目標値" },
+        { num: "119", unit: "年", label: "創業からの地域密着（1906年〜）" },
+      ].map(({ num, unit, label }) => (
+        <div>
+          <p class="text-3xl md:text-4xl font-bold text-[var(--color-primary)]">{num}<span class="text-base ml-1">{unit}</span></p>
+          <p class="text-xs text-gray-500 mt-1">{label}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- 正清電器の音響技術の核心 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">音響技術の核心</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          音響設備の仕上がりを決める3つの工程
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
+          「機器を入れ替えたのに改善しない」「設置したが音が悪い」——その原因の多くは、この3工程のどこかが抜けていることにあります。
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        {[
+          {
+            step: "01",
+            color: "bg-[var(--color-primary)]",
+            title: "音響シミュレーションによる事前設計",
+            body: "部屋のCADデータをもとに、スピーカーの機種・台数・設置位置・角度を施工前に数値で検証します。「なんとなくこのあたりに」という経験則ではなく、全座席の音圧分布をシミュレーションで確認してからレイアウトを確定。ハウリングや音量ムラを設置前に防ぎます。",
+          },
+          {
+            step: "02",
+            color: "bg-[#1e40af]",
+            title: "施工後の現場音響測定",
+            body: "設置後、測定用マイクロホンと音響アナライザーで全座席の音圧・周波数特性・STI（音声明瞭度）を実測します。「感覚で調整」ではなく、測定データが調整の根拠になります。",
+          },
+          {
+            step: "03",
+            color: "bg-[#065f46]",
+            title: "FIR/IIRハイブリッド音響調整（現場実施例が極めて少ない高度技術）",
+            body: "一般的なパラメトリックEQ（IIR）はバンド数に限りがあり、多段に重ねると位相が乱れます。FIRは補正カーブを自由に「描いて」補正でき、位相を保ちながら精密な補正が可能。低域はFIRの遅延が大きくなるためIIR、中高域はFIRを使うハイブリッド構成を現場で標準実施しています。調整後はSTI 0.6以上を目標値とし、測定値でお引き渡しします。",
+          },
+        ].map(({ step, color, title, body }) => (
+          <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+            <div class={`md:w-40 ${color} text-white p-6 flex flex-col justify-center items-center shrink-0`}>
+              <p class="text-yellow-300 font-bold text-xs tracking-widest mb-1">STEP</p>
+              <p class="text-4xl font-bold">{step}</p>
+            </div>
+            <div class="flex-1 p-7">
+              <h3 class="font-bold text-[var(--color-primary)] text-base mb-3">{title}</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/blog/onkyo-chosei-2026" class="inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-8 py-3 rounded-lg text-sm">
+          音響調整の詳細を読む →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- シーン別リンク集 -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">施設種別</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          施設の種類に合わせた音響設備のご提案
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 max-w-2xl mx-auto">会議室・体育館・幼稚園など、施設ごとに求められる音響性能とよくある課題が異なります。それぞれの詳細をご確認ください。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            href: "/business/seminarroom",
+            icon: "🏢",
+            title: "会議室・ホール・セミナールーム",
+            problems: ["ハウリングで会議が止まる", "Web会議の音が聞き取りにくい", "担当者しか操作できない"],
+            solution: "タッチパネルUI自社開発 ＋ FIR音響調整 ＋ Web会議対応シーリングマイク",
+            color: "border-[var(--color-primary)]",
+          },
+          {
+            href: "/business/school",
+            icon: "🏫",
+            title: "学校・体育館・視聴覚室",
+            problems: ["声は聞こえるが何を言っているかわからない", "ハウリングが式典のたびに起きる", "プロジェクターを体育館に入れたい"],
+            solution: "分散スピーカー設計 ＋ タイムアライメント補正 ＋ STI測定でお引き渡し",
+            color: "border-blue-600",
+          },
+          {
+            href: "/business/nursery",
+            icon: "🌸",
+            title: "幼稚園・保育園・こども園",
+            problems: ["お遊戯会でハウリングが起きる", "ミキサー・アンプが壊れた", "先生が操作に迷う"],
+            solution: "まず現状診断 → 予算別3プラン提案 → 操作シンプル化",
+            color: "border-orange-500",
+          },
+        ].map(({ href, icon, title, problems, solution, color }) => (
+          <a href={href} class={`group block bg-white rounded-2xl shadow-sm hover:shadow-md transition border-t-4 ${color} overflow-hidden`}>
+            <div class="p-6">
+              <div class="text-4xl mb-3">{icon}</div>
+              <h3 class="font-bold text-[var(--color-primary)] text-lg mb-4">{title}</h3>
+              <div class="mb-4">
+                <p class="text-xs font-bold text-red-600 mb-2">よくあるお困りごと</p>
+                <ul class="space-y-1">
+                  {problems.map(p => (
+                    <li class="text-xs text-gray-600 flex items-start gap-1">
+                      <span class="text-red-400 shrink-0">▸</span>{p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="bg-[var(--color-bg-gray)] rounded-lg p-3">
+                <p class="text-xs font-bold text-[var(--color-primary)] mb-1">正清電器の解決策</p>
+                <p class="text-xs text-gray-700 leading-relaxed">{solution}</p>
+              </div>
+              <p class="text-[var(--color-primary)] text-sm font-bold mt-4 group-hover:underline">詳しく見る →</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 実績・許可 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">実績・資格・許可</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">
+          正清電器の音響技術が信頼される理由
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <!-- 実績カード（大） -->
+        <div class="bg-[var(--color-primary)] text-white rounded-2xl p-8">
+          <p class="text-yellow-300 font-bold text-xs tracking-widest mb-3">技術責任者の実績</p>
+          <p class="text-5xl font-bold mb-2">80<span class="text-2xl ml-1">施設以上</span></p>
+          <p class="text-white/80 text-sm leading-relaxed mb-4">
+            ホール・アリーナ・スタジアムから会議室・体育館・幼稚園まで、全国80施設以上で音響設計・調整を担当してきた技術者が正清電器の技術責任者です。
+          </p>
+          <ul class="space-y-2 text-sm text-white/80">
+            <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>業界誌「サウンド＆レコーディングマガジン」掲載実績</li>
+            <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>スタジアム規模でSTI 0.6以上（合格ライン0.45以上）を達成</li>
+            <li class="flex items-start gap-2"><span class="text-yellow-300 shrink-0">✓</span>FIR/IIRハイブリッド調整を現場で標準実施</li>
+          </ul>
+        </div>
+
+        <!-- 許可・資格カード -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-3">保有許可・資格</p>
+          <div class="space-y-4">
+            {[
+              { icon: "📋", title: "電気通信工事業（熊本県知事許可）", body: "音響配線工事・映像配線工事を自社施工。外注不要でワンストップ対応できます。" },
+              { icon: "⚡", title: "電気工事業（熊本県知事許可）", body: "スピーカー・アンプへの電源工事まで自社対応。工期短縮・責任の一元化が可能です。" },
+              { icon: "📐", title: "設計図書の作成・引き渡し", body: "施工時にシステム系統図・配線図を作成し契約時に取り交わします。後の増設・担当者交代時も安心です。" },
+            ].map(({ icon, title, body }) => (
+              <div class="flex gap-3">
+                <span class="text-2xl shrink-0">{icon}</span>
+                <div>
+                  <h3 class="font-bold text-[var(--color-primary)] text-sm mb-0.5">{title}</h3>
+                  <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- 導入事例 -->
+      <div class="text-center mb-8">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">導入事例</p>
+        <h3 class="text-xl font-bold text-[var(--color-primary)]">熊本の現場で解決してきた実績</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {[
+          {
+            href: "/case/tamana-ishikai",
+            img: "/images/case-tamana-ishikai-hall.jpg",
+            label: "医療機関",
+            title: "玉名郡市医師会館",
+            sub: "会議室 Web会議対応システム",
+            tags: ["シーリングアレイマイク", "AEC内蔵", "フルコンフィグミキサー"],
+          },
+          {
+            href: "/case/daikumamoto-shoken",
+            img: "/images/new-okuma-hall.jpg",
+            label: "金融機関",
+            title: "大熊本証券",
+            sub: "ホール 映像音響システム",
+            tags: ["タッチパネル制御", "KGEARラインアレイ", "照明連動"],
+          },
+          {
+            href: "/case/panahome-seminar",
+            img: "/images/new-seminar-room.jpg",
+            label: "企業・ショールーム",
+            title: "松栄パナホーム",
+            sub: "セミナールーム AVシステム",
+            tags: ["ワイヤレスHDMI", "ワンボタン起動", "FIR音響調整"],
+          },
+        ].map(({ href, img, label, title, sub, tags }) => (
+          <a href={href} class="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img} alt={title} class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-bold text-[var(--color-accent)] mb-1">{label}</p>
+              <h3 class="font-bold text-[var(--color-primary)] mb-0.5">{title}</h3>
+              <p class="text-xs text-gray-500 mb-3">{sub}</p>
+              <div class="flex flex-wrap gap-1">
+                {tags.map(t => (
+                  <span class="bg-[var(--color-bg-gray)] text-gray-600 text-xs px-2 py-0.5 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center">
+        <a href="/case" class="inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-8 py-3 rounded-lg">
+          導入事例をすべて見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">よくあるご質問</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">Q & A</h2>
+      </div>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map((item: any) => (
+          <details class="bg-[var(--color-bg-gray)] rounded-xl group">
+            <summary class="cursor-pointer p-6 font-bold text-[var(--color-primary)] flex justify-between items-start gap-4">
+              <span>{item.name}</span>
+              <span class="text-[var(--color-primary)] shrink-0 text-xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-700 leading-relaxed">
+              {item.acceptedAnswer.text}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">音響設備のご相談は正清電器へ</h2>
+      <p class="text-white/80 text-sm mb-2 leading-relaxed">
+        「どの施設に向いていますか？」「今の設備を改善できますか？」<br />
+        というご相談から承ります。現地調査・お見積りは無料です。
+      </p>
+      <p class="text-yellow-300 text-sm mb-8 font-medium">熊本市南区田迎 ／ 月〜土 9:00〜18:30</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+</Layout>
