@@ -21,6 +21,19 @@ heroImage: "/images/blog/blog-sonance-2026.jpg"
 
 ---
 
+## 実機を入手しました
+
+今回、**James by Sonance**（ジェームス・バイ・ソナンス）のメインスピーカーとサブウーファーを実際に入手しました。
+
+<figure style="margin:0 0 2rem;">
+  <img src="/images/blog/Sonan.png" alt="James by Sonance メインスピーカー前面パネル（右）とサブウーファー本体（左）" style="width:100%;border-radius:0.75rem;" loading="lazy" />
+  <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5rem;text-align:center;">左：James by Sonance サブウーファー本体（背面）。右：メインスピーカーの前面パネル——壁・天井に埋め込むとこの白いパネルが面一に仕上がり、塗装すれば存在が消える</figcaption>
+</figure>
+
+右の白い正方形パネルがメインスピーカーの「顔」です。これが壁や天井と面一に収まり、塗装仕上げにすることで見た目上スピーカーの存在を消せます。左のサブウーファーは床下や収納内部に隠蔽し、ダクト経由で低音を放射します。カタログで見るのと実物を手にするのとでは、隠蔽の完成度に対する納得感がまったく違います。
+
+---
+
 ## SONANCEとは
 
 SONANCE（ソナンス）は米国のアーキテクチャルオーディオブランドです。「建築に音響を溶け込ませる」をコンセプトに、住宅・商業空間向けの高品位な隠蔽型スピーカーを専門に製造しています。国内はビーテック株式会社が取り扱っています。
