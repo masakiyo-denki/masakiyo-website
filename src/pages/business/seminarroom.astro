@@ -524,6 +524,29 @@ const faqSchema = {
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">よくあるご質問</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">Q & A</h2>
+      </div>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map((item: any) => (
+          <details class="bg-[var(--color-bg-gray)] rounded-xl group">
+            <summary class="cursor-pointer p-6 font-bold text-[var(--color-primary)] flex justify-between items-start gap-4">
+              <span>{item.name}</span>
+              <span class="text-[var(--color-primary)] shrink-0 text-xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-700 leading-relaxed">
+              {item.acceptedAnswer.text}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
     <div class="max-w-xl mx-auto">
