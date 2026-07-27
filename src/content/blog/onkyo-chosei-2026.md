@@ -106,6 +106,6 @@ TAP数を増やすほど低い周波数帯まで精密に補正できます。�
 
 ---
 
-**関連記事：** [会議室のハウリング・音が聞き取りにくいを解決する](/blog/kaigishitsu-onkyo-2026) ／ [体育館のハウリング・明瞭度不足を解決する](/blog/taikukan-howling-2026)
+**関連記事：** [会議室のハウリング・音が聞き取りにくいを解決する](/blog/kaigishitsu-onkyo-2026) ／ [体育館のハウリング・明瞭度不足を解決する](/blog/taikukan-howling-2026) ／ [保育園の音響設備更新](/blog/hoikuen-onkyo-2026) ／ [幼稚園のBGM・配信システム導入事例](/blog/yochien-haishin-2026)
 
 **関連ページ：** [音響設備 技術・実績](/business/onkyo) ／ [法人・施設向けサービス](/business/corporate) ／ [音響設備の施工実績](/case)

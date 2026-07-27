@@ -52,3 +52,7 @@ Panasonic PressITのドングルをノートPCのHDMIに挿すだけで即座に
 ## システム構成
 
 <img src="/images/seminar-flow.svg" alt="セミナールーム システム構成図" style="width:100%;max-width:530px;" />
+
+---
+
+**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom) ／ [音響設備 技術・実績](/business/onkyo)

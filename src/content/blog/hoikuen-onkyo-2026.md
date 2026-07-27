@@ -109,4 +109,6 @@ USB・Bluetooth・3.5mmステレオ入力を備えた機器に更新すること
 
 ---
 
+**関連記事：** [幼稚園のBGM・配信システム導入事例](/blog/yochien-haishin-2026)
+
 **関連ページ：** [幼稚園・保育園の音響設備](/business/nursery) ／ [法人サービス一覧](/business/corporate)

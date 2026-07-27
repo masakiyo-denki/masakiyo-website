@@ -85,3 +85,7 @@ PTZカメラ（AW-UE40K）で登壇者をズーム追尾し、固定カメラ（
 <img src="/images/case-tamana-acoustic-graph.png" alt="音響調整前後の周波数特性グラフ（マゼンタ＝調整前 グリーン＝調整後）" style="width:100%;max-width:600px;" />
 
 <small>マゼンタ＝調整前 ／ グリーン＝調整後。全帯域にわたり周波数特性がフラットに補正され、原音に忠実なシステムに仕上がっています。</small>
+
+---
+
+**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom) ／ [音響設備 技術・実績](/business/onkyo)

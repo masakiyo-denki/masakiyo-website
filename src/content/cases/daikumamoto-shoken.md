@@ -69,3 +69,7 @@ Panasonic PressITのUSB-A型ドングルをPCに挿すだけでプロジェク�
 ## システム構成
 
 <img src="/images/daikumamoto-flow.svg" alt="大熊本証券 ホール システム構成図" style="width:100%;max-width:550px;" />
+
+---
+
+**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom) ／ [音響設備 技術・実績](/business/onkyo)
