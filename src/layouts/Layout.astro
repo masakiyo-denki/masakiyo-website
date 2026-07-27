@@ -6,6 +6,7 @@ interface Props {
   description?: string;
   canonicalPath?: string;
   ogImage?: string;
+  preloadImage?: string;
 }
 
 const {
@@ -13,6 +14,7 @@ const {
   description = 'お陰様で創業119周年。正清電器は熊本最古参のパナソニックの街の電気屋（パナショップ）。家電から会議室・AVシステムまで何でもご相談ください。',
   canonicalPath: rawCanonicalPath = Astro.url.pathname,
   ogImage = '/images/shop-exterior.jpg',
+  preloadImage,
 } = Astro.props;
 
 const siteUrl = 'https://www.masakiyo-denki.com';
@@ -98,6 +100,7 @@ const localBusinessSchema = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />}
     <meta name="google-site-verification" content="nn9MSL16T_vjtS5YZxYAd_bOFxJUcTc6gaWnfJn4JBI" />
     <meta name="msvalidate.01" content="6902C52A15B87A3BF51090DBD8513950" />
     <!-- Google Analytics 4 -->
