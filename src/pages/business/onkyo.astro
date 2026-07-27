@@ -1,6 +1,30 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": ["音響設備工事", "ハウリング対策", "FIR音響調整", "STI測定", "体育館音響", "会議室AV設備", "幼稚園音響"],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "合資会社 正清電器",
+    "telephone": "+81-96-379-1234",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "田迎3丁目2番33号",
+      "addressLocality": "熊本市南区",
+      "addressRegion": "熊本県",
+      "postalCode": "862-0962",
+      "addressCountry": "JP"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "熊本市" },
+    { "@type": "AdministrativeArea", "name": "熊本県" }
+  ],
+  "url": "https://www.masakiyo-denki.com/business/onkyo"
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -414,5 +438,6 @@ const faqSchema = {
   </section>
 
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 
 </Layout>
