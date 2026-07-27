@@ -1,6 +1,30 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": ["会議室AV設備", "視聴覚設備工事", "映像音響システム設計", "タッチパネル制御システム開発", "ハウリング対策", "Web会議システム導入"],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "合資会社 正清電器",
+    "telephone": "+81-96-379-1234",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "田迎3丁目2番33号",
+      "addressLocality": "熊本市南区",
+      "addressRegion": "熊本県",
+      "postalCode": "862-0962",
+      "addressCountry": "JP"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "熊本市" },
+    { "@type": "AdministrativeArea", "name": "熊本県" }
+  ],
+  "url": "https://www.masakiyo-denki.com/business/seminarroom"
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -59,6 +83,30 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "正清電器では体育館・ホール・アリーナの音響設計・調整も対応します。スピーカーの選定・配置設計から、FIRフィルターを使った高度な音響調整まで一貫して実施。STI（明瞭度）を数値で測定・確認しながら、言葉が聞き取りやすい音場を構築します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "熊本で会議室の視聴覚設備・映像設備の相談ができる業者を教えてください。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）にご相談ください。プロジェクター・スクリーン・スピーカー・マイク・Web会議カメラ・タッチパネル制御まで、視聴覚設備全体を設計から施工・調整まで一社で完結します。技術責任者の実績80施設以上。現地調査・お見積りは無料です。TEL: 096-379-1234"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会議室の視聴覚設備工事は熊本のどこに頼めばいいですか。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "熊本市南区の正清電器が対応しています。医療機関・金融機関・住宅メーカーなど幅広い施設に視聴覚設備を納入してきた実績があります。音響調整・タッチパネルUI設計も自社一貫で行います。まずはお気軽にご相談ください（TEL: 096-379-1234）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会議室のタッチパネル制御・AV自動化はどこに依頼できますか。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器ではExtron製業務用コントローラーを使ったタッチパネルUIを自社でフルプログラムします。「セミナー」「Web会議」「講演」などシーンを選ぶだけで映像・音響・照明が自動連動。AV自動化（オートメーション）の設計から施工・調整まで一貫対応します。熊本市南区、TEL: 096-379-1234。"
       }
     }
   ]
@@ -124,7 +172,7 @@ const faqSchema = {
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
           こんなお悩み、ありませんか？
         </h2>
-        <p class="text-gray-600 text-sm mt-3">会議室・ホールの映像音響設備で、こういった声を多くいただきます。</p>
+        <p class="text-gray-600 text-sm mt-3">会議室・ホールの視聴覚設備（映像・音響・制御システム）で、こういった声を多くいただきます。</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -497,5 +545,6 @@ const faqSchema = {
   </section>
 
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 
 </Layout>
