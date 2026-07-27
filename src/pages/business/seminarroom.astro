@@ -1,5 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const latestColumns = (await getCollection('blog'))
+  .filter(p => p.data.category === '法人向けコラム')
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -523,6 +529,29 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <!-- 関連コラム（自動） -->
+  {latestColumns.length > 0 && (
+    <section class="py-12 px-4 bg-[var(--color-bg-gray)]">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center justify-between mb-6">
+          <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest">法人向けコラム</p>
+          <a href="/blog" class="text-xs text-[var(--color-accent-text)] font-bold hover:underline">一覧を見る →</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          {latestColumns.map(post => (
+            <a href={`/blog/${post.id}`} class="flex items-start gap-4 bg-white rounded-xl p-4 hover:shadow-md transition group">
+              <div class="flex-1 min-w-0">
+                <p class="text-xs text-gray-400 mb-1">{post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                <p class="text-sm font-bold text-[var(--color-primary)] group-hover:underline leading-snug line-clamp-2">{post.data.title}</p>
+              </div>
+              <span class="text-[var(--color-accent-text)] shrink-0 text-lg">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- FAQ -->
   <section class="py-16 px-4 bg-white">
