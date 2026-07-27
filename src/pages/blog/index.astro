@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -46,7 +46,7 @@ const posts = (await getCollection('blog')).sort(
             </div>
             <p class="font-medium text-[var(--color-text)] leading-snug">{post.data.title}</p>
             {post.data.description && (
-              <p class="text-xs text-gray-500 mt-1 line-clamp-2">{post.data.description}</p>
+              <p class="text-xs text-gray-600 mt-1 line-clamp-2">{post.data.description}</p>
             )}
           </div>
         </a>

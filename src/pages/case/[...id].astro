@@ -59,7 +59,7 @@ const descHtml = d.description
           <figure class="mb-8 overflow-hidden rounded-xl shadow-sm">
             <img src={d.images[0].src} alt={d.images[0].alt} class="w-full object-cover aspect-[16/9]" />
             {d.images[0].caption && (
-              <figcaption class="text-xs text-gray-500 mt-2 px-1 leading-relaxed" set:html={d.images[0].caption}></figcaption>
+              <figcaption class="text-xs text-gray-600 mt-2 px-1 leading-relaxed" set:html={d.images[0].caption}></figcaption>
             )}
           </figure>
         )}
@@ -81,7 +81,7 @@ const descHtml = d.description
                 <div class="overflow-hidden rounded-xl">
                   <img src={img.src} alt={img.alt} class="w-full object-cover aspect-[4/3]" />
                   {img.caption && (
-                    <p class="text-xs text-gray-500 mt-1 px-1" set:html={img.caption}></p>
+                    <p class="text-xs text-gray-600 mt-1 px-1" set:html={img.caption}></p>
                   )}
                 </div>
               ))}

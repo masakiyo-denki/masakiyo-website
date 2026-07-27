@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -58,11 +58,11 @@ const categoryColors: Record<string, string> = {
                 <h3 class="font-bold text-[var(--color-text)] mb-1 leading-snug text-sm">
                   {c.data.client}<br />{c.data.title}
                 </h3>
-                <p class="text-xs text-gray-500 mb-3 line-clamp-2" set:html={c.data.description}></p>
+                <p class="text-xs text-gray-600 mb-3 line-clamp-2" set:html={c.data.description}></p>
                 {c.data.tags && (
                   <div class="flex flex-wrap gap-1">
                     {c.data.tags.slice(0, 3).map((tag: string) => (
-                      <span class="text-xs bg-[var(--color-bg-gray)] text-gray-500 px-1.5 py-0.5 rounded">{tag}</span>
+                      <span class="text-xs bg-[var(--color-bg-gray)] text-gray-600 px-1.5 py-0.5 rounded">{tag}</span>
                     ))}
                     {c.data.tags.length > 3 && (
                       <span class="text-xs text-gray-400">+{c.data.tags.length - 3}</span>
