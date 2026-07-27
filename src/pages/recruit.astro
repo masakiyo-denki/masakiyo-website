@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -85,11 +85,11 @@ import Layout from '../layouts/Layout.astro';
       </p>
       <form action="https://formspree.io/f/xeeboanl" method="POST" class="space-y-5 max-w-2xl">
         <div>
-          <label class="block text-sm font-medium mb-1" for="name">お名前 <span class="text-[var(--color-accent)]">*</span></label>
+          <label class="block text-sm font-medium mb-1" for="name">お名前 <span class="text-[var(--color-accent-text)]">*</span></label>
           <input type="text" id="name" name="name" required placeholder="正清 太郎" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1" for="email">メールアドレス <span class="text-[var(--color-accent)]">*</span></label>
+          <label class="block text-sm font-medium mb-1" for="email">メールアドレス <span class="text-[var(--color-accent-text)]">*</span></label>
           <input type="email" id="email" name="email" required placeholder="example@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]" />
         </div>
         <div>
@@ -106,7 +106,7 @@ import Layout from '../layouts/Layout.astro';
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1" for="message">志望動機・自己PR <span class="text-[var(--color-accent)]">*</span></label>
+          <label class="block text-sm font-medium mb-1" for="message">志望動機・自己PR <span class="text-[var(--color-accent-text)]">*</span></label>
           <textarea id="message" name="message" required rows="5" placeholder="応募の動機や経験・資格などをご記入ください" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"></textarea>
         </div>
         <button type="submit" class="w-full bg-[var(--color-primary)] hover:opacity-90 transition text-white font-bold py-3 rounded-lg">

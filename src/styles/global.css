@@ -2,7 +2,8 @@
 
 :root {
   --color-primary: #003087;   /* 正清電器ブルー */
-  --color-accent: #e60012;    /* パナソニックレッド */
+  --color-accent: #e60012;    /* パナソニックレッド（ボタン・ボーダー・装飾用） */
+  --color-accent-text: #c9000f; /* テキストラベル専用：WCAGコントラスト確保（約6:1） */
   --color-text: #1a1a1a;
   --color-bg: #ffffff;
   --color-bg-gray: #f5f5f5;

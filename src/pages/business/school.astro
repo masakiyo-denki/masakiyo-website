@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 
 const faqSchema = {
@@ -383,7 +383,7 @@ const faqSchema = {
           { phase: "フェーズ 4", icon: "💡", title: "照明連動", body: "プロジェクターONで舞台照明OFF等、全設備の自動連動制御に拡張。" },
         ].map(({ phase, icon, title, body }) => (
           <div class="bg-[var(--color-bg-gray)] rounded-xl p-5 text-center">
-            <p class="text-xs font-bold text-[var(--color-accent)] mb-2">{phase}</p>
+            <p class="text-xs font-bold text-[var(--color-accent-text)] mb-2">{phase}</p>
             <div class="text-4xl mb-2">{icon}</div>
             <h3 class="font-bold text-[var(--color-primary)] mb-2">{title}</h3>
             <p class="text-xs text-gray-600 leading-relaxed">{body}</p>
