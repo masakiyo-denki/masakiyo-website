@@ -42,12 +42,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- 歴代代表者 -->
         <div class="mt-8">
           <h2 class="font-bold text-[var(--color-primary)] text-sm mb-3">歴代代表者</h2>
-          <div class="grid grid-cols-4 gap-2 text-center text-xs">
+          <div class="grid grid-cols-5 gap-2 text-center text-xs">
             {[
               { gen: '初代', name: '正清 清次郎' },
               { gen: '二代', name: '正清 清' },
               { gen: '三代', name: '正清 隆' },
               { gen: '四代', name: '正清 義啓' },
+              { gen: '五代', name: '正清 義悟' },
             ].map(({ gen, name }) => (
               <div class="bg-[var(--color-bg-gray)] rounded-xl py-3 px-2">
                 <p class="text-[var(--color-primary)] font-bold mb-1">{gen}</p>
