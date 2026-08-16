@@ -54,3 +54,9 @@ tags:
 ## システム構成
 
 <img src="/images/camera-flow.svg" alt="セキュリティカメラシステム構成図" style="width:100%;max-width:710px;" />
+
+---
+
+**関連ページ：** [法人向けサービス一覧](/business/corporate)
+
+**関連事例：** [デジタルサイネージシステム](/case/panahome-signage)（同施設。カメラの人物検知と連動）

@@ -1,5 +1,13 @@
 ﻿---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// 個人向けハブの内部導線。B2C記事は鮮度で埋もれるため、恒久ページ側から拾い直す。
+// 法人向け4ページ（onkyo/seminarroom/school/nursery）が「法人向けコラム3件」を
+// 自動表示しているのと同じ役割を、個人向けハブにも持たせる。
+const latestPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -247,6 +255,41 @@ const faqSchema = {
       <a href="/contact" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
         LED化を相談する
       </a>
+    </div>
+  </section>
+
+  <!-- 施工事例・最新のお知らせ -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="bg-white rounded-2xl p-6 mb-8 flex flex-col md:flex-row items-center gap-6 shadow-sm">
+        <div class="flex-1">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-1">施工事例</p>
+          <h2 class="text-lg font-bold text-[var(--color-primary)] mb-1">ご家庭の住宅設備・リフォーム事例</h2>
+          <p class="text-sm text-gray-600">キッチン・水回り・太陽光・エコキュート・LED化など、熊本市内の施工実績をご紹介しています。</p>
+        </div>
+        <a href="/case-housing" class="shrink-0 inline-block bg-[var(--color-primary)] text-white hover:opacity-90 transition font-bold px-6 py-3 rounded-lg text-sm">
+          住宅設備の施工事例を見る →
+        </a>
+      </div>
+
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">最新のお知らせ</h2>
+        <a href="/blog" class="text-sm text-[var(--color-primary)] hover:underline">一覧を見る →</a>
+      </div>
+      <div class="space-y-3">
+        {latestPosts.map((post) => (
+          <a
+            href={`/blog/${post.id}`}
+            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-4 bg-white border border-gray-100 rounded-lg hover:border-[var(--color-primary)] transition"
+          >
+            <time class="text-sm text-gray-400 shrink-0">
+              {post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <span class="font-medium text-[var(--color-text)]">{post.data.title}</span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
