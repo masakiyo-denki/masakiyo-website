@@ -1,5 +1,5 @@
 ---
-title: "エアコンクリーニングのご案内"
+title: "2022年 エアコンクリーニングのご案内"
 date: 2022-05-18
 description: "夏本番前にエアコンクリーニングをお勧めしております。お気軽にご相談ください。"
 heroImage: "/images/blog/blog-aircon-cleaning-2022.gif"

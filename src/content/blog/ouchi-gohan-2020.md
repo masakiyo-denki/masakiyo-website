@@ -1,5 +1,5 @@
 ---
-title: "おうちごはんキャンペーンのお知らせ"
+title: "2020年 おうちごはんキャンペーンのお知らせ"
 date: 2020-09-05
 description: "9月1日〜10月30日の期間、対象の炊飯器・スチームオーブンレンジ等を特別価格にてご案内します。"
 heroImage: "/images/blog/blog-ouchi-gohan-2020.jpg"

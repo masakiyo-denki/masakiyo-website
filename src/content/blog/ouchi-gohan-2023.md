@@ -1,5 +1,5 @@
 ---
-title: "おうちごはんキャンペーンのお知らせ"
+title: "2023年 おうちごはんキャンペーンのお知らせ"
 date: 2023-08-26
 description: "8月21日〜10月31日の期間、調理家電を特別価格にて販売。Bistro炊飯器購入で7,000円キャッシュバックも。"
 heroImage: "/images/blog/blog-ouchi-gohan-2023.jpg"
