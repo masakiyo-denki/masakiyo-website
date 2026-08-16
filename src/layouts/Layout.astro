@@ -106,6 +106,9 @@ const localBusinessSchema = {
     <meta name="description" content={description?.trim() || DEFAULT_DESCRIPTION} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    {/* 宣言が無いとiOSが /apple-touch-icon.png を自動要求し、全ページで404が2件出る。
+        favicon.png は180x180でapple-touch-iconの推奨サイズと一致するため流用する */}
+    <link rel="apple-touch-icon" href="/favicon.png" />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />}
     <meta name="google-site-verification" content="nn9MSL16T_vjtS5YZxYAd_bOFxJUcTc6gaWnfJn4JBI" />
     <meta name="msvalidate.01" content="6902C52A15B87A3BF51090DBD8513950" />
