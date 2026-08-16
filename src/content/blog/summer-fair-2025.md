@@ -2,7 +2,7 @@
 title: "夏のパナソニックフェア開催のお知らせ"
 date: 2025-06-09
 description: "2025年6月26日〜7月6日、当店にて夏のパナソニックフェアを開催。エコキュート相談会も同時開催。"
-heroImage: "/images/blog/blog-summer-fair-2025.png"
+heroImage: "/images/blog/blog-summer-fair-2025.jpg"
 ---
 
 2025年6月26日（金）〜7月6日（土）の期間、当店にて「夏のパナソニックフェアを開催」します。

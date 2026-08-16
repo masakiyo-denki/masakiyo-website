@@ -74,7 +74,7 @@ PTZカメラ（AW-UE40K）で登壇者をズーム追尾し、固定カメラ（
 
 設置前に3D音響シミュレーションで座席全体の音圧分布を検証。スピーカーの機種・位置・角度を設計段階で最適化し、「なんとなく設置」ではなく数値で裏付けた配置を実現しています。
 
-<img src="/images/case-tamana-acoustic-simulation.png" alt="玉名郡市医師会館 会議室 音響シミュレーション 音圧分布図" style="width:100%;max-width:600px;" />
+<img src="/images/case-tamana-acoustic-simulation.jpg" alt="玉名郡市医師会館 会議室 音響シミュレーション 音圧分布図" style="width:100%;max-width:600px;" />
 
 ### 納入後の現場調整
 
