@@ -1,0 +1,264 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "全部を一度に交換しないといけませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。まず現状の照明台数・種類を調査し、優先順位を付けた更新計画をご提案します。使用中の照明が急に使えなくなるわけではないので、計画的に進められます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "安定器はそのまま使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "器具によります。安定器を使うタイプは経年劣化により交換時に不具合が出ることもあるため、LED化のタイミングで併せて点検・更新することをおすすめしています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "電気工事も一緒に依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。電気工事業の許可を自社で保有しているため、照明器具の交換と電源まわりの工事をまとめて対応できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "熊本でオフィス・施設のLED化を相談できる業者を探しています。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正清電器（熊本市南区田迎）にご相談ください。熊本県知事許可の電気工事業者として、事務所・店舗・施設の照明更新に対応しています。現地調査・お見積りは無料です。TEL: 096-379-1234（月〜土 9:00〜18:30）"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="オフィス・施設のLED化 | 蛍光灯2027年問題 | 熊本の正清電器"
+  description="2027年末までに蛍光ランプの製造・輸入が終了します。事務所・店舗・施設の照明台数の調査から、優先順位・工期を含めた更新計画のご提案、安定器を含む電源まわりの電気工事まで一括対応。電気工事業 熊本県知事許可。熊本市南区の正清電器、現地調査・お見積り無料。"
+  canonicalPath="/business/led"
+>
+
+  <!-- ヒーロー -->
+  <section class="relative overflow-hidden" style="min-height:320px;">
+    <img
+      src="/images/service-led-install.jpg"
+      alt="LED照明工事の施工風景"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position:35% 20%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,20,64,0.92) 0%, rgba(0,20,64,0.78) 50%, rgba(0,20,64,0.30) 100%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-14 text-white">
+      <p class="text-yellow-300 font-bold text-sm tracking-widest mb-3">法人・施設のお客様 ― 照明設備</p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-5 md:max-w-2xl">
+        オフィス・施設の蛍光灯照明、<br />
+        <span class="text-yellow-300">計画的なLED化</span>を
+      </h1>
+      <p class="text-white/85 text-sm md:text-base mb-4 md:max-w-lg leading-relaxed">
+        2027年末までに蛍光ランプの製造が終了します。<br />
+        台数が多い施設ほど、早めの計画的な更新をおすすめします。
+      </p>
+      <p class="text-yellow-200/80 text-xs mb-8">創業120年 熊本最古参パナソニック正規販売店 ／ 電気工事業 熊本県知事許可 ／ 現地調査・お見積り無料</p>
+      <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
+        まずは無料相談
+      </a>
+    </div>
+  </section>
+
+  <!-- よくあるお困りごと -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-red-600 font-bold text-sm tracking-widest mb-2">施設の照明更新でよくあるお困りごと</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+          こんなお悩み、ありませんか？
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            num: "01",
+            icon: "🔢",
+            title: "台数が多く手をつけられない",
+            body: "施設全体で照明が何台あるのか把握できていない。台数が多く、どこから手をつければいいかわからない。予算取りの根拠も作れない。",
+            color: "border-orange-400",
+            bg: "bg-orange-50",
+          },
+          {
+            num: "02",
+            icon: "🏢",
+            title: "業務を止めずに進めたい",
+            body: "稼働中の施設なので、どの区画をいつ工事するか組み立てられない。全体を一度に止めるわけにもいかず、そのまま後回しになっている。",
+            color: "border-blue-400",
+            bg: "bg-blue-50",
+          },
+          {
+            num: "03",
+            icon: "⚠️",
+            title: "安定器の寿命も心配",
+            body: "照明器具そのものも古く、安定器の寿命も心配。ランプだけ替えてもまた不具合が出るのではないか。次の交換で終わらせたい。",
+            color: "border-yellow-500",
+            bg: "bg-yellow-50",
+          },
+        ].map(({ num, icon, title, body, color, bg }) => (
+          <div class={`rounded-2xl border-l-4 ${color} ${bg} p-6`}>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-3xl">{icon}</span>
+              <span class="text-gray-400 font-bold text-sm">{num}</span>
+            </div>
+            <h3 class="font-bold text-gray-800 text-lg mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 解決策 -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">正清電器の対応</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">お悩みへの、2つの答え</h2>
+      </div>
+
+      <div class="space-y-5">
+        {[
+          {
+            icon: "📋",
+            title: "計画的な一斉更新提案",
+            body: "施設全体の照明台数を調査し、優先順位・工期を含めた更新計画をご提案します。一度にすべてを交換する必要はありません。予算・稼働状況に合わせて段階的に進められます。",
+          },
+          {
+            icon: "⚡",
+            title: "電気工事も自社一貫対応",
+            body: "安定器を含む電源まわりの工事も、電気工事業の許可を持つ自社チームが対応します。LED化のタイミングで、配線の老朽化リスクも一緒に解消できます。",
+          },
+        ].map(({ icon, title, body }) => (
+          <div class="bg-white rounded-2xl p-6 flex gap-5 items-start shadow-sm">
+            <span class="text-4xl shrink-0">{icon}</span>
+            <div>
+              <h3 class="font-bold text-[var(--color-primary)] text-lg mb-2">{title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 対応設備 -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">対応設備</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">対応できる照明・工事</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {[
+          { icon: "💡", label: "直管型蛍光灯（オフィス・教室等の一般照明）" },
+          { icon: "🔦", label: "ダウンライト・非常灯" },
+          { icon: "⚡", label: "電気工事（安定器・電源配線）" },
+        ].map(({ icon, label }) => (
+          <div class="bg-[var(--color-bg-gray)] rounded-xl p-4 flex items-center gap-3">
+            <span class="text-2xl shrink-0">{icon}</span>
+            <span class="text-sm font-medium text-[var(--color-primary)]">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 2027年問題の解説 -->
+  <section class="py-12 px-4 bg-yellow-50 border-y-2 border-yellow-400">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
+      <div class="text-5xl shrink-0">💡</div>
+      <div class="flex-1">
+        <p class="text-yellow-700 font-bold text-sm mb-1">重要：2027年問題</p>
+        <h2 class="text-xl font-bold text-[var(--color-text)] mb-2">
+          蛍光灯が2027年末までに製造・輸入終了します
+        </h2>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          水俣条約により、蛍光ランプの製造・輸出入が2027年末までに順次終了します。
+          既存の照明がすぐ使えなくなるわけではありませんが、在庫がなくなれば交換ランプが手に入らなくなります。
+          台数の多い施設ほど調査・予算取り・工期の調整に時間がかかるため、早めの計画づくりをおすすめします。
+        </p>
+      </div>
+      <a href="/contact" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
+        LED化を相談する
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-[var(--color-bg-gray)]">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest mb-2">よくあるご質問</p>
+        <h2 class="text-2xl font-bold text-[var(--color-primary)]">Q & A</h2>
+      </div>
+      <div class="space-y-4">
+        {faqSchema.mainEntity.map((item: any) => (
+          <details class="bg-white rounded-xl shadow-sm group">
+            <summary class="cursor-pointer p-6 font-bold text-[var(--color-primary)] flex justify-between items-start gap-4">
+              <span>{item.name}</span>
+              <span class="text-[var(--color-primary)] shrink-0 text-xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-700 leading-relaxed">
+              {item.acceptedAnswer.text}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 関連ページへの動線 -->
+  <section class="py-12 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-[var(--color-bg-gray)] rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1">
+          <p class="text-[var(--color-primary)] font-bold text-xs tracking-widest mb-1">その他の法人向けサービス</p>
+          <h3 class="text-lg font-bold text-[var(--color-primary)] mb-1">音響・映像設備・防犯カメラもお任せください</h3>
+          <p class="text-sm text-gray-600">照明工事と同時にご依頼いただくと、電気工事の段取りを共有でき、個別に発注するより費用と工期を抑えられます。</p>
+        </div>
+        <a href="/business/corporate" class="shrink-0 inline-block bg-[var(--color-primary)] text-white hover:opacity-90 transition font-bold px-6 py-3 rounded-lg text-sm">
+          法人サービス一覧を見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-[var(--color-primary)] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3">まずは現地調査（無料）でご相談ください</h2>
+      <p class="text-white/80 text-sm mb-2 leading-relaxed">
+        「何台あるのか把握できていない」「予算取りの根拠が欲しい」<br />
+        そんな段階からのご相談で構いません。現地調査・お見積りは無料です。
+      </p>
+      <p class="text-yellow-300 text-sm mb-8 font-medium">まずはお気軽にご相談ください</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          📞 096-379-1234
+        </a>
+        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+          メールで相談する
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-4">月〜土 9:00〜18:30 ／ 日曜・祝日 定休</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+</Layout>

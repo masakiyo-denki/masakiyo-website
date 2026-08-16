@@ -39,15 +39,16 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </a>
 
-    <!-- パネルC: LED照明工事 -->
-    <div class="absolute top-0 bottom-0" style="left:72%; width:28%; clip-path: polygon(29% 0, 100% 0, 100% 100%, 0 100%);">
+    <!-- パネルC: LED照明工事（LED照明ページへのリンク） -->
+    <a href="/business/led" class="group absolute top-0 bottom-0" style="left:72%; width:28%; clip-path: polygon(29% 0, 100% 0, 100% 100%, 0 100%);">
       <img src="/images/service-led-install.jpg" alt="LED照明工事" class="w-full h-full object-cover" style="object-position:35% 20%;" />
-      <div class="absolute inset-0 bg-[#001440]/40"></div>
+      <div class="absolute inset-0 bg-[#001440]/40 group-hover:bg-[#001440]/20 transition"></div>
       <div class="absolute bottom-5 text-white" style="left:35%;">
         <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">LIGHTING</p>
-        <p class="font-bold text-sm">LED照明工事</p>
+        <p class="font-bold text-sm group-hover:underline">LED照明工事</p>
+        <p class="text-white/70 text-[11px] mt-0.5 group-hover:text-white">詳しく見る →</p>
       </div>
-    </div>
+    </a>
 
     <!-- テキストエリア用グラデーションオーバーレイ（左:完全不透明→右:透明） -->
     <!-- pointer-events-none: 装飾レイヤーがパネルB（防犯カメラ事例リンク）のクリックを奪わないようにする -->
@@ -190,6 +191,8 @@ import Layout from '../../layouts/Layout.astro';
           {
             icon: "💡",
             title: "LED照明工事",
+            href: "/business/led",
+            linkLabel: "詳しく見る →",
             items: [
               "蛍光灯からLEDへの切り替え工事",
               "2027年問題に向けた早期対応",
@@ -197,7 +200,7 @@ import Layout from '../../layouts/Layout.astro';
               "調光システムとの組み合わせも可",
             ],
           },
-        ].map(({ icon, title, items, href }) => {
+        ].map(({ icon, title, items, href, linkLabel }) => {
           const Tag = href ? 'a' : 'div';
           return (
             <Tag
@@ -215,7 +218,7 @@ import Layout from '../../layouts/Layout.astro';
                 ))}
               </ul>
               {href && (
-                <p class="mt-4 pt-1 text-[var(--color-primary)] text-sm font-bold group-hover:underline">事例を見る →</p>
+                <p class="mt-4 pt-1 text-[var(--color-primary)] text-sm font-bold group-hover:underline">{linkLabel ?? '事例を見る →'}</p>
               )}
             </Tag>
           );
