@@ -24,7 +24,7 @@ FIR（有限インパルス応答）フィルターは、デジタル信号処�
 
 では、TAP数を増やすメリットは何かというと——**IIRでは再現できない、細やかな伝送周波数特性の補正**です。TAP数が多いほど、より低い周波数帯まで精密にEQ補正をかけることができます。
 
-| TAP数 | 伝送周波数補正の実用的な下限（目安） |
+| TAP数 | 伝送周波数特性の補正の実用的な下限（目安） |
 |---|---|
 | 384TAP | 概ね2kHz以上 |
 | 512TAP | 概ね1kHz以上 |
@@ -62,11 +62,11 @@ FIR（有限インパルス応答）フィルターは、デジタル信号処�
 ## 補正前の実測データ
 
 <figure style="margin:0 0 1rem;">
-  <img src="/images/blog/fir-before-m1.png" alt="補正前 M1（前方）周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
+  <img src="/images/blog/fir-before-m1.png" alt="補正前 M1（前方）伝送周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
   <figcaption style="font-size:0.85rem;color:#666;margin-top:0.4rem;text-align:center;">補正前 M1（前方）</figcaption>
 </figure>
 <figure style="margin:0 0 2rem;">
-  <img src="/images/blog/fir-before-m2.png" alt="補正前 M2（後方）周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
+  <img src="/images/blog/fir-before-m2.png" alt="補正前 M2（後方）伝送周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
   <figcaption style="font-size:0.85rem;color:#666;margin-top:0.4rem;text-align:center;">補正前 M2（後方）——200〜250Hz付近に顕著な山</figcaption>
 </figure>
 
@@ -81,17 +81,17 @@ FIR（有限インパルス応答）フィルターは、デジタル信号処�
 ## 補正後の実測データ
 
 <figure style="margin:0 0 1rem;">
-  <img src="/images/blog/fir-after-m1.png" alt="補正後 M1（前方）周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
+  <img src="/images/blog/fir-after-m1.png" alt="補正後 M1（前方）伝送周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
   <figcaption style="font-size:0.85rem;color:#666;margin-top:0.4rem;text-align:center;">補正後 M1（前方）——150Hz〜10kHzがほぼフラット</figcaption>
 </figure>
 <figure style="margin:0 0 2rem;">
-  <img src="/images/blog/fir-after-m2.png" alt="補正後 M2（後方）周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
+  <img src="/images/blog/fir-after-m2.png" alt="補正後 M2（後方）伝送周波数特性" style="width:100%;border-radius:0.5rem;" loading="lazy" />
   <figcaption style="font-size:0.85rem;color:#666;margin-top:0.4rem;text-align:center;">補正後 M2（後方）——200〜250Hzの山が大幅に抑制され前方に近い特性に</figcaption>
 </figure>
 
 **M1（前方）**：150Hz〜10kHzがほぼ±2dB以内に収束。非常にフラットな特性が出ています。
 
-**M2（後方）**：補正前に62dBあった200〜250Hzのピークが54dB台まで抑制。500Hz以上はフラットに整い、前方と近い印象の周波数特性になりました。
+**M2（後方）**：補正前に62dBあった200〜250Hzのピークが54dB台まで抑制。500Hz以上はフラットに整い、前方と近い印象の伝送周波数特性になりました。
 
 ---
 
@@ -117,7 +117,7 @@ FIR（有限インパルス応答）フィルターは、デジタル信号処�
 
 - 正清電器のFIR設計はピークを192TAP固定にすることで遅延を4msに固定——「位相を制御できる周波数」と「レイテンシー」のトレードオフから決めた値
 - 位相特性の制御はおおむね2kHz以上に限定——これは複数スピーカーの干渉特性と上記の遅延設計を踏まえた意図的なもの
-- TAP数が多いほど低域まで細かい伝送周波数補正が可能（2048TAPで概ね300Hz以上）
+- TAP数が多いほど低域まで細かい伝送周波数特性の補正が可能（2048TAPで概ね300Hz以上）
 - 100Hz以下はこのスピーカーが物理的に出せない帯域——信号は届いているがスピーカーを苦しめるだけ。後段のIIRクロスオーバーでカットし、サブウーファーに引き渡す
 
 今回の映像視聴ルームについては[導入事例ページ](/case)もあわせてご覧ください。

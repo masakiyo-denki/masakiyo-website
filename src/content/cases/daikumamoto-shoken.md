@@ -27,8 +27,8 @@ images:
     alt: "機材ラック ― DSP・パワーアンプ・制御プロセッサー"
     caption: "機材ラック内部。Extron IPCP・Blaze Audio DSPアンプ・無線マイク受信機を収納"
   - src: "/images/wix-okuma-freq-after.png"
-    alt: "音響調整後 周波数特性グラフ（後方席）"
-    caption: "実測データ：音響調整後の周波数特性。<br>160Hz〜4kHz・前後偏差10dB以内を達成"
+    alt: "音響調整後 伝送周波数特性グラフ（後方席）"
+    caption: "実測データ：音響調整後の伝送周波数特性。<br>160Hz〜4kHz・前後偏差10dB以内を達成"
 youtubeId: "SROKRGhhOoQ"
 tags:
   - 照明制御

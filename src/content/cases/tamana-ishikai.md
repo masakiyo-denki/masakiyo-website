@@ -82,9 +82,9 @@ PTZカメラ（AW-UE40K）で登壇者をズーム追尾し、固定カメラ（
 
 <img src="/images/case-tamana-acoustic-measurement.jpg" alt="玉名郡市医師会館 会議室 音響調整作業風景" style="width:100%;max-width:600px;" />
 
-<img src="/images/case-tamana-acoustic-graph.png" alt="音響調整前後の周波数特性グラフ（マゼンタ＝調整前 グリーン＝調整後）" style="width:100%;max-width:600px;" />
+<img src="/images/case-tamana-acoustic-graph.png" alt="音響調整前後の伝送周波数特性グラフ（マゼンタ＝調整前 グリーン＝調整後）" style="width:100%;max-width:600px;" />
 
-<small>マゼンタ＝調整前 ／ グリーン＝調整後。全帯域にわたり周波数特性がフラットに補正され、原音に忠実なシステムに仕上がっています。</small>
+<small>マゼンタ＝調整前 ／ グリーン＝調整後。全帯域にわたり伝送周波数特性がフラットに補正され、原音に忠実なシステムに仕上がっています。</small>
 
 ---
 

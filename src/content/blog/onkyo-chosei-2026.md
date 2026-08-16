@@ -57,13 +57,13 @@ heroImage: "/images/blog/onkyo-chosei/onkyo-measurement-gain.jpg"
 
 ### 施工後の現場測定
 
-測定用マイクロホンと音響アナライザーを用いて、客席代表点で音圧レベル・周波数特性・残響時間を実測します。測定データが調整の根拠になります。
+測定用マイクロホンと音響アナライザーを用いて、客席代表点で音圧レベル・伝送周波数特性・残響時間を実測します。測定データが調整の根拠になります。
 
 <img src="/images/blog/onkyo-chosei/onkyo-measurement-sti.jpg" alt="体育館での音響測定作業" style="width:100%;max-width:600px;" />
 <small>測定マイクを各座席位置に設置し、全エリアの音響特性を実測します。</small>
 
-<img src="/images/blog/onkyo-chosei/onkyo-smaart-analysis.png" alt="Smaartによる周波数特性・位相特性の解析画面" style="width:100%;max-width:600px;" />
-<small>音響測定ソフトSmaartで周波数特性・位相特性を解析。測定データをもとに調整を進めます。</small>
+<img src="/images/blog/onkyo-chosei/onkyo-smaart-analysis.png" alt="Smaartによる伝送周波数特性・位相特性の解析画面" style="width:100%;max-width:600px;" />
+<small>音響測定ソフトSmaartで伝送周波数特性・位相特性を解析。測定データをもとに調整を進めます。</small>
 
 ### FIR＋IIRハイブリッド調整
 
