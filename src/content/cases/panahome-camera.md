@@ -5,8 +5,8 @@ location: "熊本市"
 year: 2025
 category: "企業・ショールーム"
 description: "ショールーム全館にPanasonicネットワークカメラを設置。室内カメラ5台・駐車場カメラ1台を屋外Wi-Fi経由でネットワーク統合し、本社PCからリアルタイム映像を確認できる体制を構築。人物検知機能によりデジタルサイネージの自動再生にも連動しています。"
-heroImage: "/images/case-panahome-camera-nvr.jpg"
-heroImageAlt: "セキュリティカメラ NVRモニタリング画面"
+heroImage: "/images/case-panahome-camera-bullet-hero.jpg"
+heroImageAlt: "屋外バレット型ネットワークカメラ 外壁設置 ― Panasonic i-PRO"
 images:
   - src: "/images/case-panahome-camera-nvr.jpg"
     alt: "NVRレコーダー 監視モニター"

@@ -18,15 +18,16 @@ import Layout from '../../layouts/Layout.astro';
   -->
   <section class="relative overflow-hidden bg-[#001440]" style="min-height:420px;">
 
-    <!-- パネルA: プロジェクター映像設備 -->
-    <div class="absolute top-0 bottom-0" style="left:40%; width:24%; clip-path: polygon(0 0, 83% 0, 50% 100%, 0 100%);">
+    <!-- パネルA: プロジェクター映像設備（音響設備ページへのリンク） -->
+    <a href="/business/onkyo" class="group absolute top-0 bottom-0" style="left:40%; width:24%; clip-path: polygon(0 0, 83% 0, 50% 100%, 0 100%);">
       <img src="/images/install-projector-laser.jpg" alt="映像・プロジェクター設備" class="w-full h-full object-cover" style="object-position:65% 35%;" />
-      <div class="absolute inset-0 bg-[#001440]/52"></div>
+      <div class="absolute inset-0 bg-[#001440]/52 group-hover:bg-[#001440]/30 transition"></div>
       <div class="absolute bottom-5 text-white" style="left:8%;">
         <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">AUDIO / VIDEO</p>
-        <p class="font-bold text-sm">音響・映像設備</p>
+        <p class="font-bold text-sm group-hover:underline">音響・映像設備</p>
+        <p class="text-white/70 text-[11px] mt-0.5 group-hover:text-white">詳しく見る →</p>
       </div>
-    </div>
+    </a>
 
     <!-- パネルB: 防犯カメラ（施工事例へのリンク） -->
     <a href="/case/panahome-camera" class="group absolute top-0 bottom-0 overflow-hidden" style="left:50%; width:40%; clip-path: polygon(25% 0, 75% 0, 55% 100%, 5% 100%); background-image:url('/images/case-panahome-camera-bullet-wall.jpg'); background-size:180%; background-position:80% 42%; background-repeat:no-repeat;">
