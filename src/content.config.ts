@@ -11,6 +11,12 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
     imageAlt: z.string().optional(),
     category: z.string().optional(),
+    // FAQPageスキーマの生成元（blog/[...id].astro が読む）。
+    // ここで宣言しないと zod に未知キーとして捨てられ、FAQが一切出力されない
+    faq: z.array(z.object({
+      q: z.string(),
+      a: z.string(),
+    })).optional(),
   }),
 });
 
