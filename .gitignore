@@ -2,6 +2,8 @@
 dist/
 # generated types
 .astro/
+# astro-indexnow が生成する送信済みURLの記録（ローカル固有。無くても再生成される）
+.astro-indexnow-cache.json
 
 # dependencies
 node_modules/
