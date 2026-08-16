@@ -22,3 +22,14 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# 社内資料（公開リポジトリに載せない。ローカル保管のみ）
+# ホワイトペーパー原稿・Wix時代のURL棚卸し・過去の引き継ぎ資料など
+docs/
+_販促資料/
+
+# ローカル環境設定・作業メモ（公開リポジトリに載せない）
+# settings.local.json: PC固有の権限許可リスト
+# active-project-notes.md: クライアント実名を含む社内作業メモ（匿名化方針に抵触するため）
+.claude/settings.local.json
+.claude/active-project-notes.md

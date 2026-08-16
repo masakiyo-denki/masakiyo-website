@@ -25,7 +25,7 @@ Claudeがセッションをまたいでも正確な前提を持てるよう、�
 ### 技術スタック
 - Astro v5 / Tailwind CSS / TypeScript
 - ホスティング: Cloudflare Pages（GitHubプッシュで自動デプロイ）
-- リポジトリ: `C:\Users\silva\Desktop\New_HP_PJ\masakiyo-denki`
+- リポジトリ: `C:\Users\silva\Desktop\00_製品開発\masakiyo-denki`（2026-08-15移動。旧パス `Desktop\New_HP_PJ\` は消滅済み）
 
 ### 固定ページ（src/pages/）
 

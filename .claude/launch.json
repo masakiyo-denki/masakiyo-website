@@ -1,1 +1,1 @@
-{"version":"0.0.1","configurations":[{"name":"masakiyo-dev","runtimeExecutable":"npm","runtimeArgs":["run","dev"],"port":4321,"cwd":"C:\\Users\\silva\\Desktop\\New_HP_PJ\\masakiyo-denki"}]}
+{"version":"0.0.1","configurations":[{"name":"masakiyo-dev","runtimeExecutable":"npm","runtimeArgs":["run","dev"],"port":4321,"autoPort":false}]}
