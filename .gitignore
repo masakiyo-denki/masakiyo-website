@@ -30,6 +30,13 @@ pnpm-debug.log*
 docs/
 _販促資料/
 
+# 未整理の施工写真・元素材（顧客案件の資料を含む）
+# 2026-08-16に public/images/blog/onkyo-chosei/ から移動。
+# public/ は「置けば公開される」ディレクトリで、客先案件の.pptxが
+# git add 一発で公開URLに載る状態だったため、public/ の外へ物理的に出した。
+# 記事で使う写真は、都度ここから public/images/ へコピーして使うこと。
+_素材/
+
 # ローカル環境設定・作業メモ（公開リポジトリに載せない）
 # settings.local.json: PC固有の権限許可リスト
 # active-project-notes.md: クライアント実名を含む社内作業メモ（匿名化方針に抵触するため）
