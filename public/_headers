@@ -1,0 +1,59 @@
+# HTMLをCloudflareのエッジでキャッシュさせる設定
+#
+# 背景: Cloudflare Pages の既定では HTML が cf-cache-status: DYNAMIC となり
+# 毎回オリジンまで取りに行く。実測TTFBは 0.46〜0.64秒で、これがFCPの下限を
+# 直接決めていた（静的アセットは既に REVALIDATED でエッジから返っている）。
+#
+# s-maxage はCDN側のみに効き、ブラウザ側は max-age=0 で毎回検証する。
+# Cloudflare Pages はデプロイのたびにキャッシュを破棄するので、更新は即座に反映される。
+#
+# ⚠️ /* を使わないこと。
+# Cloudflare Pages はヘッダーを「上書き」ではなく「マージ」し、同名ヘッダーは
+# カンマで結合する。/* と /_astro/* を併記すると、アセットに
+# 「Cache-Control: max-age=0, ..., max-age=31536000」という壊れた値が付き、
+# 現在正常に効いているアセットのキャッシュ（max-age=14400）を破壊してしまう。
+# そのためHTMLのルートだけを明示的に列挙している。
+# アセットは /_astro/ /images/ /downloads/ と root直下のファイルのみで、
+# 以下のパターンとは一切衝突しない。
+
+/
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/blog
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/blog/*
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/business
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/business/*
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/case
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/case/*
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/case-housing
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/company
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/contact
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/overview
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/privacy-policy
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/recruit
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
+
+/value
+  Cache-Control: public, max-age=0, s-maxage=3600, must-revalidate
