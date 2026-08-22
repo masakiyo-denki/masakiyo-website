@@ -50,10 +50,13 @@ heroImage: "/images/blog/onkyo-chosei/onkyo-measurement-gain.jpg"
 
 ### ① 音響設計——事前シミュレーション
 
-設置前に、音響シミュレーションソフトで座席全体の音圧レベル分布を確認します。スピーカーの指向特性・機種・設置位置・角度を設計段階で最適化することで、「なんとなく設置」ではなく数値で裏付けた配置を実現します。
+設置前に、音響シミュレーションソフトで座席全体の音圧レベル分布を確認します。スピーカーの指向特性・機種・設置位置・角度を決め、その配置での分布を検証し、また角度を詰める——この繰り返しで「なんとなく設置」ではなく数値で裏付けた配置に追い込みます。
 
-<img src="/images/blog/onkyo-chosei/onkyo-simulation-palac.png" alt="音響シミュレーションソフトによるスピーカー配置設計" style="width:100%;max-width:600px;" />
-<small>スピーカーシミュレーションソフトで音圧レベル分布を事前に確認。機種・台数・設置角度を設計段階で最適化します。</small>
+<img src="/images/blog/onkyo-chosei/onkyo-simulation-axis.jpg" alt="音響シミュレーションによるスピーカーの配置と音軸の設計" style="width:100%;max-width:600px;" />
+<small>設計段階でスピーカーの機種・設置位置・角度を決め、各スピーカーの音軸をどこへ向けるかを検討します。</small>
+
+<img src="/images/blog/onkyo-chosei/onkyo-simulation-palac.jpg" alt="音響シミュレーションによる客席エリアの音圧レベル分布" style="width:100%;max-width:600px;" />
+<small>その配置での客席エリアの音圧レベル分布を検証します。分布を見ながら位置と角度を調整し、ムラが小さくなる配置に追い込みます。</small>
 
 ### ② 施工後の現場測定
 
