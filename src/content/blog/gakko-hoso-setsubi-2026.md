@@ -117,4 +117,6 @@ HDMI・USB-C・ワイヤレス（Miracast / Apple AirPlay）など、複数の�
 
 ---
 
+**関連記事：** [校内放送のIP化という選択肢](/blog/gakko-hoso-ip-2026)
+
 **関連ページ：** [学校・体育館の音響設備](/business/school) ／ [法人サービス一覧](/business/corporate)
