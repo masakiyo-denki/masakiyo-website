@@ -13,4 +13,4 @@ description: "2025年 新年のご挨拶。旧年中は格別のご厚情を賜�
 
 <!-- body-images -->
 
-![](/images/blog/blog-shinnen-2025-body-1.jpg)
+![2025年の年賀状。松竹梅と巳のイラストに「謹んで初春のお慶びを申し上げます」の挨拶文、代表社員 正清義啓の名前](/images/blog/blog-shinnen-2025-body-1.jpg)

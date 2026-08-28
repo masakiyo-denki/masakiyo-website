@@ -13,4 +13,4 @@ heroImage: "/images/blog/blog-spurious-2022.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-spurious-2022-body-1.jpg)
+![旧スプリアス規格の特定小電力無線機器の該当品番一覧表。認証番号の銘板上の記載例つき](/images/blog/blog-spurious-2022-body-1.jpg)

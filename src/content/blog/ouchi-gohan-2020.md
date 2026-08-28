@@ -20,4 +20,4 @@ heroImage: "/images/blog/blog-ouchi-gohan-2020.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-ouchi-gohan-2020-body-1.jpg)
+![おうちごはんキャンペーンの「お品書き」。炊飯器・オーブンレンジ・圧力なべでできる料理をイラストで紹介](/images/blog/blog-ouchi-gohan-2020-body-1.jpg)

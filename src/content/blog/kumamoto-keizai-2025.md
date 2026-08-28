@@ -15,6 +15,6 @@ Web版にフォトニュースも掲載されております。
 
 <!-- body-images -->
 
-![](/images/blog/blog-kumamoto-keizai-2025-body-1.jpg)
+![事務所で並んで座る五代目・正清義悟と四代目・正清義啓。背景に音響機材と表彰状](/images/blog/blog-kumamoto-keizai-2025-body-1.jpg)
 
-![](/images/blog/blog-kumamoto-keizai-2025-body-2.jpg)
+![「くまもと経済」2025年9月号の表紙](/images/blog/blog-kumamoto-keizai-2025-body-2.jpg)

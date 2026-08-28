@@ -15,4 +15,4 @@ heroImage: "/images/blog/blog-shonene-2024.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-shonene-2024-body-1.jpg)
+![住宅省エネ2024キャンペーンの支援策一覧。子育てエコホーム支援事業、先進的窓リノベ、給湯省エネ、賃貸集合給湯省エネの4事業の補助上限と申請期間](/images/blog/blog-shonene-2024-body-1.jpg)

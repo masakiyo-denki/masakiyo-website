@@ -18,4 +18,4 @@ heroImage: "/images/blog/blog-jar-suihanki-2021.png"
 
 <!-- body-images -->
 
-![](/images/blog/blog-jar-suihanki-2021-body-1.jpg)
+![ジャー炊飯器SR-SSX101・SR-SSX181の商品案内。「おまかせ見極め炊き」など新機能の説明](/images/blog/blog-jar-suihanki-2021-body-1.jpg)

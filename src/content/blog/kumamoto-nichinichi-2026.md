@@ -13,4 +13,4 @@ heroImage: "/images/blog/blog-kumamoto-nichinichi-2026.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-kumamoto-nichinichi-2026-body-1.jpg)
+![熊本日日新聞の掲載紙面。「事業承継 お手伝いします！」の記事内で、親族内承継の事例として正清電器が四代目・五代目の写真とともに紹介されている](/images/blog/blog-kumamoto-nichinichi-2026-body-1.jpg)

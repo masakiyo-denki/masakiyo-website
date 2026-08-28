@@ -15,6 +15,6 @@ heroImage: "/images/blog/blog-setsumeikai-2025.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-setsumeikai-2025-body-1.png)
+![会社説明会の告知。開催日程・会場・説明会内容・募集職種の項目が並ぶ案内](/images/blog/blog-setsumeikai-2025-body-1.png)
 
-![](/images/blog/blog-setsumeikai-2025-body-2.jpg)
+![正清電器の社員募集チラシ。家電製品販売・住設リフォーム・法人向けの3事業を写真で紹介し、2025年10月14日ポリテクセンター熊本での説明会概要を掲載](/images/blog/blog-setsumeikai-2025-body-2.jpg)

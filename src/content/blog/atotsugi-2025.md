@@ -23,6 +23,6 @@ KUMAMOTOアトツギベンチャーDAY2025について、お知らせいたし�
 
 <!-- body-images -->
 
-![](/images/blog/blog-atotsugi-2025-body-1.jpg)
+![KUMAMOTOアトツギベンチャーDAY2025のポスター。2025年7月17日、熊本市ビジネス支援施設XOSS POINTで開催、参加費無料](/images/blog/blog-atotsugi-2025-body-1.jpg)
 
-![](/images/blog/blog-atotsugi-2025-body-2.jpg)
+![同イベントのプログラム。基調講演とパネルディスカッション2部構成のタイムテーブルと登壇者一覧](/images/blog/blog-atotsugi-2025-body-2.jpg)

@@ -23,4 +23,4 @@ heroImage: "/images/blog/blog-home-viewing-2020.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-home-viewing-2020-body-1.jpg)
+![パナソニックホームビューイングキャンペーンのチラシ。4Kビエラと4Kディーガのセット購入で最大2万円キャッシュバック、対象品番の一覧](/images/blog/blog-home-viewing-2020-body-1.jpg)

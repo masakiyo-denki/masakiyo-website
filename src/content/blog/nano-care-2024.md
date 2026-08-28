@@ -19,4 +19,4 @@ heroImage: "/images/blog/blog-nano-care-2024.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-nano-care-2024-body-1.jpg)
+![ヘアードライヤーナノケアEH-NC80・EH-NC50のチラシ。高浸透ナノイーの説明と、髪質に合わせた4つのモードの紹介](/images/blog/blog-nano-care-2024-body-1.jpg)

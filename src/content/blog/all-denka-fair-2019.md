@@ -9,4 +9,4 @@ heroImage: "/images/blog/blog-all-denka-fair-2019.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-all-denka-fair-2019-body-1.png)
+![オール電化フェアの告知。九州電力とパナソニックのロゴが並ぶ案内](/images/blog/blog-all-denka-fair-2019-body-1.png)

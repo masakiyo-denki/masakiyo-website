@@ -17,6 +17,6 @@ heroImage: "/images/blog/blog-sakura-matsuri-pre-2024.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-sakura-matsuri-pre-2024-body-1.jpg)
+![合同展示会「よかばい熊本サクラまつり」の案内。2月23日・24日に熊本城ホール3階で開催、会場周辺の地図つき](/images/blog/blog-sakura-matsuri-pre-2024-body-1.jpg)
 
-![](/images/blog/blog-sakura-matsuri-pre-2024-body-2.jpg)
+![同展示会の来場記念品・成約記念品の案内。JA菊池500円お買物券、成約金額別の記念品、ラッキーナンバー抽選会の紹介](/images/blog/blog-sakura-matsuri-pre-2024-body-2.jpg)

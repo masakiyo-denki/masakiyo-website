@@ -15,4 +15,4 @@ heroImage: "/images/blog/blog-tenrankai-2026spring.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-tenrankai-2026spring-body-1.jpg)
+![2026春の合同展示会「パナソニックフェア」のチラシ。2月21日・22日にパナソニックショールーム熊本で開催、来場記念品500円お買物券、成約記念品、ガラポン抽選会、キッチンカーや調理器具実演の案内](/images/blog/blog-tenrankai-2026spring-body-1.jpg)

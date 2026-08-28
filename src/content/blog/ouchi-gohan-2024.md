@@ -18,6 +18,6 @@ heroImage: "/images/blog/blog-ouchi-gohan-2024.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-ouchi-gohan-2024-body-1.jpg)
+![炊飯器の買い替えサインを4項目のチェックリストで示したチラシ。あわせて可変圧力IHジャー炊飯器ビストロSR-V10BB・SR-V18BBを紹介](/images/blog/blog-ouchi-gohan-2024-body-1.jpg)
 
-![](/images/blog/blog-ouchi-gohan-2024-body-2.jpg)
+![オーブンレンジの買い替えサインをチェックリストで示したチラシ。スチームオーブンレンジビストロNE-UBS10Cの1台4役の機能を紹介](/images/blog/blog-ouchi-gohan-2024-body-2.jpg)

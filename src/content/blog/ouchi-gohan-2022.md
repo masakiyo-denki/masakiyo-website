@@ -19,6 +19,6 @@ heroImage: "/images/blog/blog-ouchi-gohan-2022.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-ouchi-gohan-2022-body-1.jpg)
+![おうちごはんキャンペーンのチラシ。スチームオーブンレンジNE-UBS10A・NE-SBS658と電気圧力なべSR-MP300のキャンペーン価格](/images/blog/blog-ouchi-gohan-2022-body-1.jpg)
 
-![](/images/blog/blog-ouchi-gohan-2022-body-2.jpg)
+![対象のビストロ購入後、スマホでアンケートに回答すると耐熱容器がもらえるプレゼント企画の案内](/images/blog/blog-ouchi-gohan-2022-body-2.jpg)

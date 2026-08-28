@@ -17,4 +17,4 @@ heroImage: "/images/blog/blog-doorphone-2021.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-doorphone-2021-body-1.jpg)
+![ドアホン＆宅配ボックスキャンペーンのチラシ。「外でもドアホン」対応機種と、宅配ボックス連携テレビドアホン、ワイヤレスカメラの紹介](/images/blog/blog-doorphone-2021-body-1.jpg)

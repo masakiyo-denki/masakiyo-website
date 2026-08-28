@@ -13,4 +13,4 @@ heroImage: "/images/blog/blog-haru-kaitekifair-2025.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-haru-kaitekifair-2025-body-1.jpg)
+![春のおうち快適フェアの案内。来場記念品のJA菊池500円お買物券と、成約金額別の記念品、ラッキーナンバー抽選会の紹介](/images/blog/blog-haru-kaitekifair-2025-body-1.jpg)

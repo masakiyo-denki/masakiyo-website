@@ -22,4 +22,4 @@ heroImage: "/images/blog/blog-panacard-reizoko-2024.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-panacard-reizoko-2024-body-1.jpg)
+![パナカード決済限定キャンペーンのチラシ。対象のコードレススティック掃除機MC-NX700K・MC-NS100Kの購入で最大1万円キャッシュバック](/images/blog/blog-panacard-reizoko-2024-body-1.jpg)

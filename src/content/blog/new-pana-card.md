@@ -14,4 +14,4 @@ heroImage: "/images/blog/blog-new-pana-card.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-new-pana-card-body-1.jpg)
+![新・パナカードの案内。カードが黒から青に変わること、現在の黒いカードは2026年9月末まで利用可能で、以降は新カードへの入会手続きが必要である旨の説明](/images/blog/blog-new-pana-card-body-1.jpg)

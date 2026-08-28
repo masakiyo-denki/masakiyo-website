@@ -15,4 +15,4 @@ heroImage: "/images/blog/blog-kigyoshinkumu-2025.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-kigyoshinkumu-2025-body-1.jpg)
+![会報誌「企業診断くまもと」No.31の目次ページ。「熊本の元気企業紹介 合資会社正清電器 信頼と革新の119年」が掲載されている](/images/blog/blog-kigyoshinkumu-2025-body-1.jpg)

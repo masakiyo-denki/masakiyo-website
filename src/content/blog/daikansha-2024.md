@@ -19,4 +19,4 @@ IHクッキングヒーターをお買い上げのお客様には先着で特別
 
 <!-- body-images -->
 
-![](/images/blog/blog-daikansha-2024-body-1.jpg)
+![秋の大感謝祭のチラシ。エアコン標準取付工事費33,000円などの工事費目安を掲載](/images/blog/blog-daikansha-2024-body-1.jpg)

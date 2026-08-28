@@ -13,4 +13,4 @@ heroImage: "/images/blog/blog-bohan-campaign-2023.jpg"
 
 <!-- body-images -->
 
-![](/images/blog/blog-bohan-campaign-2023-body-1.jpg)
+![防犯対策キャンペーンのチラシ。気象警報を知らせる「安心アラート」搭載のワイヤレスモニター付テレビドアホンと、防犯機能付き電話機の価格一覧](/images/blog/blog-bohan-campaign-2023-body-1.jpg)
