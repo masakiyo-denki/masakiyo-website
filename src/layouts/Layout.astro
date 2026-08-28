@@ -105,15 +105,18 @@ const localBusinessSchema = {
     {/* description が空文字の場合、既定値が効かず content 空のmetaが出るためここで弾く */}
     <meta name="description" content={description?.trim() || DEFAULT_DESCRIPTION} />
     <link rel="canonical" href={canonical} />
-    {/* ファビコンは3種を用途で使い分ける。
+    {/* ★ファビコンは必ず public/images/logo.jpg（正規ロゴ）から作ること。
+        生成は scripts/generate-favicon.mjs。他の画像を元にしないこと。
+        かつて public/favicon.svg という「Mの出来損ない」に見える手描きの近似ファイルがあり、
+        それを元にファビコンを作る事故が2回起きた。2026-08-28にファイルごと削除済み。
+        SVGファビコンを再び足す場合も、元は必ず正規ロゴにすること。
+
         - favicon.ico : Googleの検索結果用。48/96/144pxを内包（Googleは48の倍数を要求）。
           Googleは<link>宣言だけでなく /favicon.ico も直接見に来るため、ここが古いと
-          検索結果に別のアイコンが出る（2026-08-28まで Astro既定のロゴが残っていた）
-        - favicon.svg : 対応ブラウザ向け。ベクターなので拡大しても綺麗
+          検索結果に別のアイコンが出る
         - favicon.png : apple-touch-icon 兼フォールバック（180x180）。
           宣言が無いとiOSが /apple-touch-icon.png を自動要求し全ページで404が2件出る */}
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/favicon.png" />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />}
     <meta name="google-site-verification" content="nn9MSL16T_vjtS5YZxYAd_bOFxJUcTc6gaWnfJn4JBI" />
