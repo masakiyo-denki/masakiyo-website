@@ -49,10 +49,10 @@ const posts = (await getCollection('blog')).sort(
           顔なじみのスタッフが、くらしをまるごとサポートします。
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold text-base text-center">
+          <a href="/contact/" class="bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold text-base text-center">
             まずは無料相談
           </a>
-          <a href="/business" class="bg-white/20 hover:bg-white/30 transition px-8 py-3 rounded-lg font-bold text-base border border-white/40 text-center">
+          <a href="/business/" class="bg-white/20 hover:bg-white/30 transition px-8 py-3 rounded-lg font-bold text-base border border-white/40 text-center">
             事業内容を見る
           </a>
         </div>
@@ -139,7 +139,7 @@ const posts = (await getCollection('blog')).sort(
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- 個人向け：くらしのコンシェルジュ -->
-        <a href="/business#consumer" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-primary)]">
+        <a href="/business/#consumer" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-primary)]">
           <div class="aspect-[16/9] overflow-hidden">
             <img
               src="/images/service-tv-install.jpg"
@@ -168,7 +168,7 @@ const posts = (await getCollection('blog')).sort(
         </a>
 
         <!-- 法人向け -->
-        <a href="/business/corporate" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-accent)]">
+        <a href="/business/corporate/" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden border-t-4 border-[var(--color-accent)]">
           <div class="aspect-[16/9] overflow-hidden">
             <picture>
               <source srcset="/images/av-seminarroom.webp" type="image/webp" />
@@ -223,7 +223,7 @@ const posts = (await getCollection('blog')).sort(
             <li class="flex items-start gap-2"><span class="text-[var(--color-primary)] shrink-0 mt-0.5">▶</span>家電・水回り・リフォームを一社でまとめて依頼できる</li>
             <li class="flex items-start gap-2"><span class="text-[var(--color-primary)] shrink-0 mt-0.5">▶</span>修理・点検のアフターフォローも、同じ担当者が責任をもって対応</li>
           </ul>
-          <a href="/business#consumer" class="inline-block mt-5 text-[var(--color-primary)] font-bold text-sm hover:underline">個人向けサービスを見る →</a>
+          <a href="/business/#consumer" class="inline-block mt-5 text-[var(--color-primary)] font-bold text-sm hover:underline">個人向けサービスを見る →</a>
         </div>
         <!-- 法人向け -->
         <div class="bg-[var(--color-bg-gray)] rounded-xl p-6">
@@ -234,7 +234,7 @@ const posts = (await getCollection('blog')).sort(
             <li class="flex items-start gap-2"><span class="text-[var(--color-accent-text)] shrink-0 mt-0.5">▶</span>設計・施工・音響調整・アフターサポートまで一社完結</li>
             <li class="flex items-start gap-2"><span class="text-[var(--color-accent-text)] shrink-0 mt-0.5">▶</span>音響・映像・制御・ネットワークを一貫設計できる技術力</li>
           </ul>
-          <a href="/business/corporate" class="inline-block mt-5 text-[var(--color-accent-text)] font-bold text-sm hover:underline">法人向けサービスを見る →</a>
+          <a href="/business/corporate/" class="inline-block mt-5 text-[var(--color-accent-text)] font-bold text-sm hover:underline">法人向けサービスを見る →</a>
         </div>
       </div>
     </div>
@@ -281,7 +281,7 @@ const posts = (await getCollection('blog')).sort(
             顔なじみの同じスタッフが対応。一人暮らしの方・女性の方にもご安心いただいています。
           </p>
         </div>
-        <a href="/value" class="shrink-0 border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-5 py-2 rounded-lg text-sm whitespace-nowrap">
+        <a href="/value/" class="shrink-0 border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-5 py-2 rounded-lg text-sm whitespace-nowrap">
           詳しく見る
         </a>
       </div>
@@ -302,7 +302,7 @@ const posts = (await getCollection('blog')).sort(
           在庫がなくなる前に、早めのLED化をご検討ください。ご相談・お見積りは無料です。
         </p>
       </div>
-      <a href="/contact" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
+      <a href="/contact/" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
         LED化を相談する
       </a>
     </div>
@@ -313,12 +313,12 @@ const posts = (await getCollection('blog')).sort(
     <div class="max-w-5xl mx-auto">
       <div class="flex justify-between items-center mb-8">
         <h2 class="text-2xl font-bold text-[var(--color-primary)]">お知らせ</h2>
-        <a href="/blog" class="text-sm text-[var(--color-primary)] hover:underline">一覧を見る →</a>
+        <a href="/blog/" class="text-sm text-[var(--color-primary)] hover:underline">一覧を見る →</a>
       </div>
       <div class="space-y-3">
         {posts.map((post) => (
           <a
-            href={`/blog/${post.id}`}
+            href={`/blog/${post.id}/`}
             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-4 bg-white border border-gray-100 rounded-lg hover:border-[var(--color-primary)] transition"
           >
             <time class="text-sm text-gray-400 shrink-0">

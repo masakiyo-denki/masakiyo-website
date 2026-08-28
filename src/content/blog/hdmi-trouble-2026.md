@@ -115,4 +115,4 @@ HDMIトラブルの解決策として伝送機器や切替機器の導入を検�
 
 ---
 
-**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom) ／ [法人サービス一覧](/business/corporate) ／ [お問い合わせ](/contact)
+**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom/) ／ [法人サービス一覧](/business/corporate/) ／ [お問い合わせ](/contact/)

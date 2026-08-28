@@ -31,4 +31,4 @@ heroImage: "/images/shop-exterior.jpg"
 
 **☎ 096-379-1234**（月〜土 9:00〜18:30）
 
-[お問い合わせフォームはこちら](/contact)
+[お問い合わせフォームはこちら](/contact/)

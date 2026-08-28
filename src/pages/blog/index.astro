@@ -28,7 +28,7 @@ function thumb(src: string): string {
     <div class="space-y-6">
       {posts.map((post) => (
         <a
-          href={`/blog/${post.id}`}
+          href={`/blog/${post.id}/`}
           class="flex flex-col sm:flex-row gap-4 bg-white border border-gray-100 rounded-xl hover:border-[var(--color-primary)] hover:shadow-md transition overflow-hidden"
         >
           {(post.data.heroImage || post.data.image) ? (

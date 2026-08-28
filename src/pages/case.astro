@@ -40,7 +40,7 @@ const categoryColors: Record<string, string> = {
           const colorClass = categoryColors[c.data.category] ?? 'text-gray-700 bg-gray-100';
           return (
             <a
-              href={`/case/${c.id}`}
+              href={`/case/${c.id}/`}
               class="block bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md hover:border-[var(--color-primary)] transition group"
             >
               <div class="aspect-[16/9] overflow-hidden bg-gray-100">
@@ -82,7 +82,7 @@ const categoryColors: Record<string, string> = {
           <h2 class="text-lg font-bold text-[var(--color-primary)] mb-1">ご家庭の住宅設備・リフォーム事例はこちら</h2>
           <p class="text-sm text-gray-600">キッチン・水回り・太陽光・エコキュート・LED化など、くらしのリフォーム実績をご紹介しています。</p>
         </div>
-        <a href="/case-housing" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
+        <a href="/case-housing/" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
           住宅設備の施工事例を見る →
         </a>
       </div>
@@ -92,7 +92,7 @@ const categoryColors: Record<string, string> = {
         <p class="text-yellow-300 font-bold text-sm tracking-widest mb-2">TRACK RECORD</p>
         <p class="text-3xl md:text-4xl font-bold mb-2">技術責任者の音響設計・調整実績<br class="sm:hidden" /> 全国 <span class="text-yellow-300">80施設以上</span></p>
         <p class="text-white/70 text-sm mb-6">熊本県内はもちろん、全国各地の施設への施工実績があります<br />掲載以外にも多数の施工実績があります。お気軽にご相談ください。</p>
-        <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+        <a href="/contact/" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           お見積り・ご相談はこちら
         </a>
       </div>

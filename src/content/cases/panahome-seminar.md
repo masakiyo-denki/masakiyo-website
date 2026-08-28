@@ -55,4 +55,4 @@ Panasonic PressITのドングルをノートPCのHDMIに挿すだけで即座に
 
 ---
 
-**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom) ／ [音響設備 技術・実績](/business/onkyo)
+**関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom/) ／ [音響設備 技術・実績](/business/onkyo/)

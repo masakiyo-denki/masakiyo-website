@@ -248,11 +248,11 @@ const faqSchema = {
           家庭用の照明から店舗・事務所まで幅広く対応します。
         </p>
         <p class="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-          <a href="/blog/led-katei-2027" class="text-[var(--color-accent-text)] font-bold hover:underline">ご家庭の照明について詳しく見る →</a>
-          <a href="/business/led" class="text-[var(--color-accent-text)] font-bold hover:underline">オフィス・施設のLED化はこちら →</a>
+          <a href="/blog/led-katei-2027/" class="text-[var(--color-accent-text)] font-bold hover:underline">ご家庭の照明について詳しく見る →</a>
+          <a href="/business/led/" class="text-[var(--color-accent-text)] font-bold hover:underline">オフィス・施設のLED化はこちら →</a>
         </p>
       </div>
-      <a href="/contact" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
+      <a href="/contact/" class="shrink-0 bg-yellow-500 hover:bg-yellow-600 transition text-white font-bold px-6 py-3 rounded-lg whitespace-nowrap">
         LED化を相談する
       </a>
     </div>
@@ -268,19 +268,19 @@ const faqSchema = {
           <h2 class="text-lg font-bold text-[var(--color-primary)] mb-1">ご家庭の住宅設備・リフォーム事例</h2>
           <p class="text-sm text-gray-600">キッチン・水回り・太陽光・エコキュート・LED化など、熊本市内の施工実績をご紹介しています。</p>
         </div>
-        <a href="/case-housing" class="shrink-0 inline-block bg-[var(--color-primary)] text-white hover:opacity-90 transition font-bold px-6 py-3 rounded-lg text-sm">
+        <a href="/case-housing/" class="shrink-0 inline-block bg-[var(--color-primary)] text-white hover:opacity-90 transition font-bold px-6 py-3 rounded-lg text-sm">
           住宅設備の施工事例を見る →
         </a>
       </div>
 
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-2xl font-bold text-[var(--color-primary)]">最新のお知らせ</h2>
-        <a href="/blog" class="text-sm text-[var(--color-primary)] hover:underline">一覧を見る →</a>
+        <a href="/blog/" class="text-sm text-[var(--color-primary)] hover:underline">一覧を見る →</a>
       </div>
       <div class="space-y-3">
         {latestPosts.map((post) => (
           <a
-            href={`/blog/${post.id}`}
+            href={`/blog/${post.id}/`}
             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-4 bg-white border border-gray-100 rounded-lg hover:border-[var(--color-primary)] transition"
           >
             <time class="text-sm text-gray-400 shrink-0">
@@ -328,7 +328,7 @@ const faqSchema = {
         <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           📞 096-379-1234
         </a>
-        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+        <a href="/contact/" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           メールで相談する
         </a>
       </div>

@@ -19,7 +19,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="relative overflow-hidden bg-[#001440]" style="min-height:420px;">
 
     <!-- パネルA: プロジェクター映像設備（音響設備ページへのリンク） -->
-    <a href="/business/onkyo" class="group absolute top-0 bottom-0" style="left:40%; width:24%; clip-path: polygon(0 0, 83% 0, 50% 100%, 0 100%);">
+    <a href="/business/onkyo/" class="group absolute top-0 bottom-0" style="left:40%; width:24%; clip-path: polygon(0 0, 83% 0, 50% 100%, 0 100%);">
       <img src="/images/install-projector-laser.jpg" alt="映像・プロジェクター設備" class="w-full h-full object-cover" style="object-position:65% 35%;" />
       <div class="absolute inset-0 bg-[#001440]/52 group-hover:bg-[#001440]/30 transition"></div>
       <div class="absolute bottom-5 text-white" style="left:8%;">
@@ -30,7 +30,7 @@ import Layout from '../../layouts/Layout.astro';
     </a>
 
     <!-- パネルB: 防犯カメラ（施工事例へのリンク） -->
-    <a href="/case/panahome-camera" class="group absolute top-0 bottom-0 overflow-hidden" style="left:50%; width:40%; clip-path: polygon(25% 0, 75% 0, 55% 100%, 5% 100%); background-image:url('/images/case-panahome-camera-bullet-wall.jpg'); background-size:180%; background-position:80% 42%; background-repeat:no-repeat;">
+    <a href="/case/panahome-camera/" class="group absolute top-0 bottom-0 overflow-hidden" style="left:50%; width:40%; clip-path: polygon(25% 0, 75% 0, 55% 100%, 5% 100%); background-image:url('/images/case-panahome-camera-bullet-wall.jpg'); background-size:180%; background-position:80% 42%; background-repeat:no-repeat;">
       <div class="absolute inset-0 bg-[#001440]/45 group-hover:bg-[#001440]/25 transition"></div>
       <div class="absolute bottom-5 text-white" style="left:30%;">
         <p class="text-yellow-300 text-xs font-bold tracking-widest mb-0.5">SECURITY</p>
@@ -40,7 +40,7 @@ import Layout from '../../layouts/Layout.astro';
     </a>
 
     <!-- パネルC: LED照明工事（LED照明ページへのリンク） -->
-    <a href="/business/led" class="group absolute top-0 bottom-0" style="left:72%; width:28%; clip-path: polygon(29% 0, 100% 0, 100% 100%, 0 100%);">
+    <a href="/business/led/" class="group absolute top-0 bottom-0" style="left:72%; width:28%; clip-path: polygon(29% 0, 100% 0, 100% 100%, 0 100%);">
       <img src="/images/service-led-install.jpg" alt="LED照明工事" class="w-full h-full object-cover" style="object-position:35% 20%;" />
       <div class="absolute inset-0 bg-[#001440]/40 group-hover:bg-[#001440]/20 transition"></div>
       <div class="absolute bottom-5 text-white" style="left:35%;">
@@ -95,27 +95,27 @@ import Layout from '../../layouts/Layout.astro';
           技術責任者は全国80施設以上の音響設計・調整実績を持つ専門家。<br />
           音響シミュレーション・FIR音響調整・タッチパネルUI開発まで自社一貫対応。
         </p>
-        <a href="/business/onkyo" class="inline-block mt-3 text-[var(--color-accent-text)] font-bold text-sm hover:underline">技術解説・施工実績を詳しく見る →</a>
+        <a href="/business/onkyo/" class="inline-block mt-3 text-[var(--color-accent-text)] font-bold text-sm hover:underline">技術解説・施工実績を詳しく見る →</a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
           {
-            href: "/business/seminarroom",
+            href: "/business/seminarroom/",
             icon: "🏢",
             title: "会議室・ホール",
             desc: "Web会議対応・タッチパネル制御・FIR音響調整。「担当者しか使えない」を卒業。",
             tags: ["ハウリング対策", "タッチパネルUI", "音響シミュレーション"],
           },
           {
-            href: "/business/school",
+            href: "/business/school/",
             icon: "🏫",
             title: "学校・体育館",
             desc: "体育館の「声が聞き取れない」明瞭度問題を音響設計で解決。プロジェクター設置も対応。",
             tags: ["明瞭度（STI）測定", "プロジェクター設置", "視聴覚室リニューアル"],
           },
           {
-            href: "/business/nursery",
+            href: "/business/nursery/",
             icon: "🌸",
             title: "幼稚園・保育園",
             desc: "老朽化したミキサー・アンプの更新から、先生が迷わない操作設計まで一貫対応。",
@@ -159,7 +159,7 @@ import Layout from '../../layouts/Layout.astro';
           {
             icon: "🛡️",
             title: "防犯カメラ設備",
-            href: "/case/panahome-camera",
+            href: "/case/panahome-camera/",
             items: [
               "施設・駐車場・エントランスへの設置",
               "録画サーバー・NAS構築",
@@ -170,7 +170,7 @@ import Layout from '../../layouts/Layout.astro';
           {
             icon: "📺",
             title: "デジタルサイネージ",
-            href: "/case/panahome-signage",
+            href: "/case/panahome-signage/",
             items: [
               "縦型・横型モニターの設置・配線工事",
               "タッチパネル1台で全画面を一括制御",
@@ -191,7 +191,7 @@ import Layout from '../../layouts/Layout.astro';
           {
             icon: "💡",
             title: "LED照明工事",
-            href: "/business/led",
+            href: "/business/led/",
             linkLabel: "詳しく見る →",
             items: [
               "蛍光灯からLEDへの切り替え工事",
@@ -305,7 +305,7 @@ import Layout from '../../layouts/Layout.astro';
         <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           📞 096-379-1234
         </a>
-        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+        <a href="/contact/" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           メールで相談する
         </a>
       </div>

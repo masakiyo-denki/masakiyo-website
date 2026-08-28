@@ -39,8 +39,8 @@ heroImage: "/images/blog/blog-namagomi-2024.jpg"
 
 生ごみ処理機の補助金は終了しましたが、**エアコン・エコキュートなどの省エネ家電には現在も補助金が活用できる**場合があります。
 
-- [熊本市のエアコン買い替え補助金について](/blog/aircon-kaekae-kumamoto-2026)
-- [エコキュート（給湯省エネ2026）補助金について](/blog/ecocute-hojokin-2026)
+- [熊本市のエアコン買い替え補助金について](/blog/aircon-kaekae-kumamoto-2026/)
+- [エコキュート（給湯省エネ2026）補助金について](/blog/ecocute-hojokin-2026/)
 
 ---
 
@@ -50,4 +50,4 @@ heroImage: "/images/blog/blog-namagomi-2024.jpg"
 
 **☎ 096-379-1234**（月〜土 9:00〜18:30）
 
-[お問い合わせフォームはこちら](/contact)
+[お問い合わせフォームはこちら](/contact/)

@@ -38,7 +38,7 @@ heroImage: "/images/blog/blog-gakko-shichokaku-2026.jpg"
 
 ### 体育館の音響設備
 
-式典・集会での音響は学校行事の質に直結します。体育館音響の更新については、[体育館のハウリング・明瞭度不足を解決する方法](/blog/taikukan-howling-2026)の記事もあわせてご覧ください。
+式典・集会での音響は学校行事の質に直結します。体育館音響の更新については、[体育館のハウリング・明瞭度不足を解決する方法](/blog/taikukan-howling-2026/)の記事もあわせてご覧ください。
 
 主な更新内容：
 - スピーカーの配置見直し・増設
@@ -117,6 +117,6 @@ HDMI・USB-C・ワイヤレス（Miracast / Apple AirPlay）など、複数の�
 
 ---
 
-**関連記事：** [校内放送のIP化という選択肢](/blog/gakko-hoso-ip-2026)
+**関連記事：** [校内放送のIP化という選択肢](/blog/gakko-hoso-ip-2026/)
 
-**関連ページ：** [学校・体育館の音響設備](/business/school) ／ [法人サービス一覧](/business/corporate)
+**関連ページ：** [学校・体育館の音響設備](/business/school/) ／ [法人サービス一覧](/business/corporate/)

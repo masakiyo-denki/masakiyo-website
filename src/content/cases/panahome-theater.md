@@ -52,6 +52,6 @@ tags:
 
 ---
 
-**関連ページ：** [音響設備 技術・実績](/business/onkyo)
+**関連ページ：** [音響設備 技術・実績](/business/onkyo/)
 
-**関連記事：** [2048TAP FIRフィルターで音場を仕上げる](/blog/fir-tap-2048-theater-2026)
+**関連記事：** [2048TAP FIRフィルターで音場を仕上げる](/blog/fir-tap-2048-theater-2026/)

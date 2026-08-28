@@ -70,8 +70,8 @@ heroImage: "/images/fumira-gakugeikai.gif"
 
 ---
 
-**関連ページ：** [幼稚園・保育園の音響設備](/business/nursery) ／ [法人サービス一覧](/business/corporate)
+**関連ページ：** [幼稚園・保育園の音響設備](/business/nursery/) ／ [法人サービス一覧](/business/corporate/)
 
-**関連記事：** [幼稚園・保育園の音響設備リニューアルガイド](/blog/hoikuen-onkyo-2026)
+**関連記事：** [幼稚園・保育園の音響設備リニューアルガイド](/blog/hoikuen-onkyo-2026/)
 
 <small>イラスト：©fumira（[子供と動物のイラスト屋さん](https://www.fumira.jp/)）</small>

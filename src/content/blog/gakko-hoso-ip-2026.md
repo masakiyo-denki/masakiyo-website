@@ -103,6 +103,6 @@ GIGAスクール端末が一斉に通信する時間帯と重なると、影響�
 
 ---
 
-**関連ページ：** [学校・体育館の音響設備](/business/school) ／ [音響設備 技術・実績](/business/onkyo) ／ [法人サービス一覧](/business/corporate)
+**関連ページ：** [学校・体育館の音響設備](/business/school/) ／ [音響設備 技術・実績](/business/onkyo/) ／ [法人サービス一覧](/business/corporate/)
 
-**関連記事：** [学校の放送・視聴覚設備 更新のポイント](/blog/gakko-hoso-setsubi-2026)
+**関連記事：** [学校の放送・視聴覚設備 更新のポイント](/blog/gakko-hoso-setsubi-2026/)

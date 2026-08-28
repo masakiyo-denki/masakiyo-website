@@ -63,6 +63,6 @@ BrightSignメディアプレーヤーをローカル設置し、映像・音声�
 
 ---
 
-**関連ページ：** [法人向けサービス一覧](/business/corporate) ／ [音響設備 技術・実績](/business/onkyo)
+**関連ページ：** [法人向けサービス一覧](/business/corporate/) ／ [音響設備 技術・実績](/business/onkyo/)
 
-**関連事例：** [セキュリティカメラシステム](/case/panahome-camera)（同施設。動体検知でサイネージを自動再生）
+**関連事例：** [セキュリティカメラシステム](/case/panahome-camera/)（同施設。動体検知でサイネージを自動再生）

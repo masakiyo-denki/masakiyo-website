@@ -105,7 +105,7 @@ const faqSchema = {
         スピーカー設計・配置から現地音響調整まで一貫対応し、<strong class="text-white">明瞭度（STI）を数値で確認</strong>してお引き渡しします。
       </p>
       <p class="text-yellow-200/80 text-xs mb-8">技術責任者の音響設計・調整実績 全国80施設以上（ホール・アリーナ含む） ／ 創業120年 熊本最古参パナソニック正規販売店</p>
-      <a href="/contact" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
+      <a href="/contact/" class="inline-block bg-[var(--color-accent)] hover:opacity-90 transition px-8 py-3 rounded-lg font-bold">
         まずは無料相談
       </a>
     </div>
@@ -408,7 +408,7 @@ const faqSchema = {
         {[
           { icon: "🏟️", title: "技術責任者の音響設計・調整実績 全国80施設以上", body: "ホール・アリーナ・スタジアム等の大型施設で培った音響技術を学校・体育館にも展開。業界誌「サウンド＆レコーディングマガジン」掲載（2020年1月号・2022年4月号）。特許「臨場感音場再生装置及び臨場感音場再生方法」共同発明者。" },
           { icon: "📊", title: "音響測定で数値を確認してお引き渡し", body: "「なんとなく良くなった」ではなく、STI（音声の明瞭度）・音圧レベル分布を測定器で数値確認。熊本の実績施設ではスタジアム規模でもSTI 0.6以上（合格点0.45以上）を達成。改善前後のデータをレポートとして提出します。" },
-          { icon: "🎛️", title: "FIR/IIRハイブリッド調整は現場実施例が極めて少ない高度技術", body: "普通のPEQ（IIR）はバンド数に限りがあり、多段に重ねると位相が乱れます。正清電器ではFIRとIIRを組み合わせたハイブリッド調整を現場で標準実施し、位相の乱れを最小限に抑えながら精密な補正を実現しています。", link: { href: "/business/onkyo", text: "FIR/IIRの技術詳細を見る →" } },
+          { icon: "🎛️", title: "FIR/IIRハイブリッド調整は現場実施例が極めて少ない高度技術", body: "普通のPEQ（IIR）はバンド数に限りがあり、多段に重ねると位相が乱れます。正清電器ではFIRとIIRを組み合わせたハイブリッド調整を現場で標準実施し、位相の乱れを最小限に抑えながら精密な補正を実現しています。", link: { href: "/business/onkyo/", text: "FIR/IIRの技術詳細を見る →" } },
           { icon: "🔧", title: "設計から施工・調整・アフターまで完全自社一貫", body: "「設計は別会社・施工はまた別」では責任が曖昧になります。正清電器は同一担当者が設計〜施工〜調整〜アフターサポートまで一貫担当します。" },
           { icon: "⚡", title: "電気通信工事・電気工事も自社施工でワンストップ対応", body: "熊本県知事許可の電気通信工事業・電気工事業を保有。音響配線工事から電源工事まで含めて一社完結。窓口が増えて責任が曖昧になる問題を防ぎます。" },
           { icon: "🏠", title: "創業120年・熊本最古参パナソニック正規販売店", body: "1906年（明治39年）創業。地域に根ざした迅速なアフターサポートが可能です。施設管理担当が変わっても長期的にサポートします。" },
@@ -431,11 +431,11 @@ const faqSchema = {
       <div class="max-w-3xl mx-auto">
         <div class="flex items-center justify-between mb-6">
           <p class="text-[var(--color-primary)] font-bold text-sm tracking-widest">法人向けコラム</p>
-          <a href="/blog" class="text-xs text-[var(--color-accent-text)] font-bold hover:underline">一覧を見る →</a>
+          <a href="/blog/" class="text-xs text-[var(--color-accent-text)] font-bold hover:underline">一覧を見る →</a>
         </div>
         <div class="flex flex-col gap-3">
           {latestColumns.map(post => (
-            <a href={`/blog/${post.id}`} class="flex items-start gap-4 bg-white rounded-xl p-4 hover:shadow-md transition group">
+            <a href={`/blog/${post.id}/`} class="flex items-start gap-4 bg-white rounded-xl p-4 hover:shadow-md transition group">
               <div class="flex-1 min-w-0">
                 <p class="text-xs text-gray-400 mb-1">{post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 <p class="text-sm font-bold text-[var(--color-primary)] group-hover:underline leading-snug line-clamp-2">{post.data.title}</p>
@@ -480,7 +480,7 @@ const faqSchema = {
           <h3 class="text-lg font-bold text-[var(--color-primary)] mb-1">FIR/IIR調整・STI測定・施工実績の詳細</h3>
           <p class="text-sm text-gray-600">正清電器の音響技術・保有許可・全国80施設以上の実績をまとめたページです。</p>
         </div>
-        <a href="/business/onkyo" class="shrink-0 inline-block bg-[var(--color-primary)] text-white hover:opacity-90 transition font-bold px-6 py-3 rounded-lg text-sm">
+        <a href="/business/onkyo/" class="shrink-0 inline-block bg-[var(--color-primary)] text-white hover:opacity-90 transition font-bold px-6 py-3 rounded-lg text-sm">
           音響設備ページを見る →
         </a>
       </div>
@@ -490,7 +490,7 @@ const faqSchema = {
           <h3 class="text-lg font-bold text-[var(--color-primary)] mb-1">会議室・セミナールームの音響・映像設備</h3>
           <p class="text-sm text-gray-600">Web会議・タッチパネル制御・FIR音響調整など、企業・医療機関・金融機関向けの導入事例もご紹介しています。</p>
         </div>
-        <a href="/business/seminarroom" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
+        <a href="/business/seminarroom/" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
           会議室ページを見る →
         </a>
       </div>
@@ -500,14 +500,14 @@ const faqSchema = {
           <h3 class="text-lg font-bold text-[var(--color-primary)] mb-1">防犯カメラ・エアコン・LED照明もお任せください</h3>
           <p class="text-sm text-gray-600">体育館・学校の音響設備をはじめ、防犯カメラ・パッケージエアコン・LED照明工事も対応しています。</p>
         </div>
-        <a href="/business/corporate" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
+        <a href="/business/corporate/" class="shrink-0 inline-block border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition font-bold px-6 py-3 rounded-lg text-sm">
           法人サービス一覧を見る →
         </a>
       </div>
       <div class="bg-white rounded-2xl px-6 py-4 shadow-sm flex flex-wrap gap-4 items-center">
         <span class="text-xs text-gray-500 font-bold tracking-widest">他の施設種別</span>
-        <a href="/business/nursery" class="text-[var(--color-accent-text)] font-bold text-sm hover:underline">幼稚園・保育園 →</a>
-        <a href="/business/seminarroom" class="text-[var(--color-accent-text)] font-bold text-sm hover:underline">会議室・ホール →</a>
+        <a href="/business/nursery/" class="text-[var(--color-accent-text)] font-bold text-sm hover:underline">幼稚園・保育園 →</a>
+        <a href="/business/seminarroom/" class="text-[var(--color-accent-text)] font-bold text-sm hover:underline">会議室・ホール →</a>
       </div>
     </div>
   </section>
@@ -525,7 +525,7 @@ const faqSchema = {
         <a href="tel:0963791234" class="bg-white text-[var(--color-primary)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           📞 096-379-1234
         </a>
-        <a href="/contact" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
+        <a href="/contact/" class="bg-[var(--color-accent)] hover:opacity-90 transition font-bold px-8 py-3 rounded-lg">
           メールで相談する
         </a>
       </div>

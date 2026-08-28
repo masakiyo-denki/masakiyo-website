@@ -57,6 +57,6 @@ tags:
 
 ---
 
-**関連ページ：** [法人向けサービス一覧](/business/corporate)
+**関連ページ：** [法人向けサービス一覧](/business/corporate/)
 
-**関連事例：** [デジタルサイネージシステム](/case/panahome-signage)（同施設。カメラの人物検知と連動）
+**関連事例：** [デジタルサイネージシステム](/case/panahome-signage/)（同施設。カメラの人物検知と連動）
