@@ -2,8 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+// 関連コラムは施設種別で絞る。カテゴリだけで拾うと、このページに
+// 他施設（学校・保育園・会議室）の記事が日付順で並んでしまう。
+// 記事側の frontmatter `audience` が絞り込みの唯一の根拠。
 const latestColumns = (await getCollection('blog'))
-  .filter(p => p.data.category === '法人向けコラム')
+  .filter(p => p.data.category === '法人向けコラム' && p.data.audience?.includes('会議室'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 
@@ -56,7 +59,7 @@ const faqSchema = {
       "name": "Web会議でエコーがひどく使い物になりません。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AEC（音響エコーキャンセラー）を内蔵したシーリングマイクを採用することで解決できます。会議室のスピーカーから出た音がマイクに入り返す「音声ループ」を自動除去します。正清電器ではWeb会議対応システムの設計・施工・調整を一貫して対応します。"
+        "text": "AEC（音響エコーキャンセラー）を備えた構成にすることで解決できます。会議室のスピーカーから出た音がマイクに回り込む分を自動で除去する機能で、AEC内蔵のDSPミキサーで持たせるのが一般的です。AEC内蔵のシーリングマイクを使う構成もあります。前提として、パソコンへ送る音に相手の声を混ぜない「送り分け」の設定が必要です。正清電器ではWeb会議対応システムの設計・施工・調整を一貫して対応します。"
       }
     },
     {

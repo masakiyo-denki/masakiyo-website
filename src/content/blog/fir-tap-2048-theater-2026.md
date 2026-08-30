@@ -2,6 +2,7 @@
 title: "FIRフィルター2048TAPで何が変わるか——映像視聴ルーム施工の実測データで解説"
 date: 2026-07-24
 category: "法人向けコラム"
+audience: ["会議室"]
 description: "FIRフィルターのTAP数は「どこまで細かく伝送周波数特性を補正できるか」を決める要素です。映像視聴ルームの施工前後の実測データをもとに、2048TAPのFIRで実際に何ができるかを具体的に解説します。"
 heroImage: "/images/blog/fir-tap-hero.jpg"
 ---

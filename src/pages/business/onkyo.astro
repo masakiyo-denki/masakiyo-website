@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+// 音響設備の総合ページなので、施設種別では絞らない（会議室・学校・保育園すべて関連する）。
+// 施設別ページ（school / seminarroom / nursery）は audience で絞っている。
 const latestColumns = (await getCollection('blog'))
   .filter(p => p.data.category === '法人向けコラム')
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())

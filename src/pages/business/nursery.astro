@@ -2,8 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+// 関連コラムは施設種別で絞る。カテゴリだけで拾うと、このページに
+// 他施設（学校・保育園・会議室）の記事が日付順で並んでしまう。
+// 記事側の frontmatter `audience` が絞り込みの唯一の根拠。
 const latestColumns = (await getCollection('blog'))
-  .filter(p => p.data.category === '法人向けコラム')
+  .filter(p => p.data.category === '法人向けコラム' && p.data.audience?.includes('保育園'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 
