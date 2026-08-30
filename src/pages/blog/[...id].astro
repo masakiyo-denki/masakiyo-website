@@ -76,7 +76,8 @@ const articleSchema = {
             src={post.data.heroImage ?? post.data.image}
             alt={post.data.imageAlt ?? post.data.title}
             class="w-full object-cover"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
             decoding="async"
           />
         </div>
