@@ -121,13 +121,25 @@ const localBusinessSchema = {
     {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />}
     <meta name="google-site-verification" content="nn9MSL16T_vjtS5YZxYAd_bOFxJUcTc6gaWnfJn4JBI" />
     <meta name="msvalidate.01" content="6902C52A15B87A3BF51090DBD8513950" />
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1CRNT4PHC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-E1CRNT4PHC');
+    {/* Google Analytics 4 は本番ホストでのみ動かす。
+        ガードが無いと localhost の開発プレビューや masakiyo-website.pages.dev が
+        本番と同じプロパティに送信される。GA4の「ページパス」はホスト名を表示しないため
+        本番アクセスと見分けが付かない。2026-08-30に発覚し、編集中のページほど
+        表示回数と滞在時間が水増しされていた（/business/school は本番19に対しlocalhost27）。
+        ホスト名を足す条件式なので、将来ドメインを変えたらここも変えること。 */}
+    <script is:inline>
+      (function () {
+        var h = location.hostname;
+        if (h !== 'masakiyo-denki.com' && h !== 'www.masakiyo-denki.com') return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', 'G-E1CRNT4PHC');
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-E1CRNT4PHC';
+        document.head.appendChild(s);
+      })();
     </script>
 
     <!-- OGP -->
