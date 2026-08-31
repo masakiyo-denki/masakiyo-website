@@ -66,6 +66,8 @@ PTZカメラ（AW-UE40K）で登壇者をズーム追尾し、固定カメラ（
 
 <img src="/images/tamana-flow.svg" alt="玉名医師会 会議室 システム構成図" style="width:100%;max-width:510px;" />
 
+<small>※図は要点のみです。音声系の実際の流れは、ワイヤレスマイク → WX-AU202（アンテナ兼チューナー）→ WX-AM800（シーリングマイクの音とミキシングし Dante へ変換）→ Solaro QR1（DSPミキサー）→ Mezzo 322AD → WS-LA208 となります。</small>
+
 ## 音響調整
 
 正清電器の技術者がFIR+IIRハイブリッド調整を実施し、客席代表点での均一な音圧レベル分布と高い明瞭度を確保しています。
