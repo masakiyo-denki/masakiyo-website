@@ -120,3 +120,30 @@ Claudeがセッションをまたいでも正確な前提を持てるよう、�
 1. 施工写真が揃い次第、導入事例を追加（フォーマットはtamana-ishikai.mdを参照）
 2. GBPへの投稿を月1〜2回継続
 3. ブログ週1本継続
+
+---
+
+## リポジトリ運用（2026-08-31〜）
+
+外部デザイナー（長谷川さん）が参加するため、`main` に**ブランチ保護**をかけた。
+
+- **`main` は Require a pull request before merging（承認1件）**
+- **`Do not allow bypassing the above settings` は OFF。**
+  → リポジトリ管理者（masakiyo-denki）は**従来どおり `main` へ直接pushできる。**
+  外部コラボレーターはPR必須になる
+- force push と branch 削除は**全員禁止**
+
+**Cloudflare Pages のブランチプレビュー**（設定：Preview branch = All non-production branches）。
+`main` 以外を push すると `<ブランチ名>.masakiyo-website.pages.dev` が自動で立つ。
+**2026-08-31に実機で検証済み**（`preview-test` ブランチで200を確認後、削除）。
+ログイン不要で閲覧できる。
+
+**長谷川さんに触らせない範囲：** `src/content/`（記事・事例）／URL構成と `public/_redirects`／
+`public/` 画像の削除・リネーム。`astro.config.mjs` と `Layout.astro` の `<head>` 内は要相談。
+
+引き継ぎ書は `docs/正清電器サイト_デザイン改修引き継ぎ書.html`（gitignore対象）。
+
+### ソースファイルの BOM について
+2026-08-31に15ファイルからBOMを除去済み。**frontmatter を正規表現で扱うコードは、
+BOMがあると `^---` にマッチせず、エラーを出さずに誤動作する。**
+新規ファイルにBOMを付けないこと。
