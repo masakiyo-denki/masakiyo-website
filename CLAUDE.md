@@ -125,20 +125,22 @@ Claudeがセッションをまたいでも正確な前提を持てるよう、�
 
 ## リポジトリ運用（2026-08-31〜）
 
-外部デザイナー（長谷川さん）が参加するため、`main` に**ブランチ保護**をかけた。
+外部デザイナーが参加するため、`main` にブランチ保護をかけている。
 
-- **`main` は Require a pull request before merging（承認1件）**
-- **`Do not allow bypassing the above settings` は OFF。**
-  → リポジトリ管理者（masakiyo-denki）は**従来どおり `main` へ直接pushできる。**
-  外部コラボレーターはPR必須になる
-- force push と branch 削除は**全員禁止**
+- **`main` へは直接pushせず、作業ブランチ＋プルリクエストで進める**
+- force push と branch 削除は禁止
+- 保護設定の詳細と例外の扱いは `.claude/active-project-notes.md`（Git管理外）に記載
 
 **Cloudflare Pages のブランチプレビュー**（設定：Preview branch = All non-production branches）。
-`main` 以外を push すると `<ブランチ名>.masakiyo-website.pages.dev` が自動で立つ。
-**2026-08-31に実機で検証済み**（`preview-test` ブランチで200を確認後、削除）。
-ログイン不要で閲覧できる。
+`main` 以外を push すると `<ブランチ名>.masakiyo-website.pages.dev` が自動で立ち上がる。
+**ログイン不要で閲覧できる公開URL**である点に注意。
 
-**長谷川さんに触らせない範囲：** `src/content/`（記事・事例）／URL構成と `public/_redirects`／
+**★ブランチを削除しても、プレビューのデプロイは残り続ける。**
+不要になったらCloudflareのPagesプロジェクト → Deployments から
+該当のPreviewデプロイを個別に削除すること。**公開前の画像や顧客名を含むブランチを
+push すると、URLを知る人に閲覧されうる。**
+
+**外部デザイナーに触らせない範囲：** `src/content/`（記事・事例）／URL構成と `public/_redirects`／
 `public/` 画像の削除・リネーム。`astro.config.mjs` と `Layout.astro` の `<head>` 内は要相談。
 
 引き継ぎ書は `docs/正清電器サイト_デザイン改修引き継ぎ書.html`（gitignore対象）。
