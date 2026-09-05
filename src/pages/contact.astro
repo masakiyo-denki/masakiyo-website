@@ -59,6 +59,22 @@ import Layout from '../layouts/Layout.astro';
       <button type="submit" class="w-full bg-[var(--color-primary)] hover:opacity-90 transition text-white font-bold py-3 rounded-lg">
         送信する
       </button>
+
+      {/*
+        スパム対策：Formspree標準のハニーポット。人間には見えないので常に空で送られ、
+        ボットが埋めると Formspree 側で破棄される。required は絶対に付けないこと。
+
+        ★お客様の目に触れさせないことが最優先。この欄が見えて入力されると、
+          送信は成功したように見えるのに Formspree には届かない（問い合わせが黙って消える）。
+          そのため隠し方を二重にしている。
+          - hidden 属性 … CSSが読み込めなくてもブラウザ標準で display:none になる
+          - style      … Tailwind のクラスに依存しない
+          さらに hidden 属性があることで、Tailwind の space-y-5 が
+          この欄を間隔計算から除外する（付けないと上に余白が1つ増える）。
+
+        ★フォームの最後に置くこと。先頭に置くと space-y-5 の起点がずれる。
+      */}
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden style="display:none" />
     </form>
     <p class="text-xs text-gray-400 mt-3">※ フォームの送信にはFormspreeを利用しています。送信内容はSSLで暗号化されます。</p>
   </div>

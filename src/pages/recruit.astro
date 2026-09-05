@@ -113,6 +113,12 @@ import Layout from '../layouts/Layout.astro';
           応募する
         </button>
         <p class="text-xs text-gray-400">※ フォームはSSLで暗号化されています。お電話でのご応募もお気軽にどうぞ。</p>
+
+        {/*
+          スパム対策：Formspree標準のハニーポット。詳しい理由は contact.astro の同じ箇所に書いてある。
+          応募者に見えて入力されると、応募が届かないまま送信成功に見える。隠し方は二重にすること。
+        */}
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden style="display:none" />
       </form>
     </div>
   </section>
