@@ -116,4 +116,12 @@ heroImage: "/images/school-gym-hero.jpg"
 
 ---
 
+## ご相談・お問い合わせ
+
+**合資会社 正清電器**（熊本市南区田迎3丁目2番33号）
+TEL: [096-379-1234](tel:0963791234)
+[お問い合わせフォームはこちら](/contact/)
+
+---
+
 **関連ページ：** [学校・体育館の音響設備](/business/school/) ／ [音響設備ハブページ（熊本の音響設備）](/business/onkyo/) ／ [会議室・ホールの音響設備](/business/seminarroom/)
