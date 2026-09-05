@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import indexnow from 'astro-indexnow';
 import tailwindcss from '@tailwindcss/vite';
 
 /**
@@ -49,7 +48,16 @@ function rehypeSentenceBreaks() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.masakiyo-denki.com',
-  integrations: [sitemap(), indexnow({ key: 'a89324d0c7b651fe' })],
+  /* astro-indexnow は2026-09-05に撤去した。
+     9か月間（2025-12のAstro移行以降）一度も成功しておらず、毎ビルド116URLを
+     送信して403で失敗し続けていた。失敗するとキャッシュが更新されないため
+     次回も全URLが対象になり、循環していた（.astro-indexnow-cache.json は 2バイトの {} のまま）。
+     Bing Webmaster Tools 側でも送信記録は0件で、最終がWix時代の2026-05-09だった。
+     Bingは IndexNow 無しでも公開直後に拾うので実害はない（Googleより速い）。
+     毎ビルド警告が出続けると本物の異常が埋もれる方が問題だった。
+     キーファイル public/a89324d0c7b651fe.txt は残してある（16バイト・所有証明なので、
+     再開する場合に必要）。 */
+  integrations: [sitemap()],
   markdown: {
     rehypePlugins: [rehypeSentenceBreaks],
   },
