@@ -31,7 +31,10 @@ const serviceSchema = {
     { "@type": "City", "name": "熊本市" },
     { "@type": "AdministrativeArea", "name": "熊本県" }
   ],
-  "url": "https://www.masakiyo-denki.com/business/seminarroom"
+  /* canonical と1文字でも違うと自己矛盾する。末尾スラッシュを必ず付けること。
+     Service スキーマを持つのはonkyo と seminarroom の2枚だけ。
+     法人ページを増やすときはここも揃える。2026-09-05訂正 */
+  "url": "https://www.masakiyo-denki.com/business/seminarroom/"
 };
 
 const faqSchema = {

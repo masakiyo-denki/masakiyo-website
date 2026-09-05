@@ -7,6 +7,9 @@ interface Props {
   canonicalPath?: string;
   ogImage?: string;
   preloadImage?: string;
+  /* パンくずの末端に出す名前。記事・事例のように動的にタイトルが決まるページだけ渡す。
+     固定ページは下の BREADCRUMB_TRAILS に書いてあるので渡さなくてよい。 */
+  breadcrumbName?: string;
 }
 
 const DEFAULT_DESCRIPTION = 'お陰様で創業120周年。正清電器は熊本最古参のパナソニックの街の電気屋（パナショップ）。家電から会議室・AVシステムまで何でもご相談ください。';
@@ -17,6 +20,7 @@ const {
   canonicalPath: rawCanonicalPath = Astro.url.pathname,
   ogImage = '/images/shop-exterior.jpg',
   preloadImage,
+  breadcrumbName,
 } = Astro.props;
 
 const siteUrl = 'https://www.masakiyo-denki.com';
@@ -34,7 +38,10 @@ const localBusinessSchema = {
     "url": `${siteUrl}/images/logo.jpg`
   },
   "image": `${siteUrl}/images/shop-exterior.jpg`,
-  "description": "熊本市南区田迎のパナソニック専門店（パナショップ）。創業明治39年（1906年）、熊本最古参の電器店。家電販売・修理から会議室・体育館・学校・幼稚園の音響映像設備工事まで対応。電気工事業・電気通信工事業登録。",
+  /* 許認可の表記は /overview/ の記載と必ず揃えること。
+     建設業許可を取得した結果、電気工事業は「登録」ではなく「みなし登録」になっている。
+     2026-09-05時点で value.astro と本ファイルの2箇所が旧表記のまま残っていた。 */
+  "description": "熊本市南区田迎のパナソニック専門店（パナショップ）。創業明治39年（1906年）、熊本最古参の電器店。家電販売・修理から会議室・体育館・学校・幼稚園の音響映像設備工事まで対応。建設業許可 熊本県知事許可（般-6）第20120号（電気工事業・管工事業・電気通信工事業）、みなし登録電気工事業者。",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "田迎3丁目2番33号",
@@ -89,10 +96,72 @@ const localBusinessSchema = {
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "電気工事・電気通信工事" } }
     ]
   },
+  /* sameAs は「同じ事業者を指す“他所の”ページ」を並べる欄。
+     以前ここに置いていた https://panasonic.net/pcc/support/loc/jp/shop/ は
+     2026-09-05時点で404（上位パスも404）だった。パナソニック特約店であることの
+     機械可読な裏付けが切れていたため、自社の公式掲載ページに差し替えた。
+     差し替え先はパナソニック「街のでんきやさん」の正清電器の店舗ページ。
+     リンク切れは裏付けとして機能しないので、URLを変えるときは必ず疎通を確認すること。 */
   "sameAs": [
-    "https://panasonic.net/pcc/support/loc/jp/shop/",
-    "https://www.masakiyo-denki.com"
+    "https://ps-hp.jpn.panasonic.com/ps/search/14302799"
   ]
+};
+
+/* ───────────── パンくず（BreadcrumbList） ─────────────
+   検索結果のURL行を「masakiyo-denki.com › business › seminarroom」から
+   「正清電器 › 法人・施設のお客様 › 会議室・ホール」に変えるための構造化データ。
+   FAQリッチリザルトと違い、パンくずは今も検索結果に表示される。
+
+   ★パスから機械的に組み立てないこと。
+   URLの階層とサイトの意味構造が一致していない。/business/ は「個人のお客様」の
+   ハブだが、その配下の onkyo / seminarroom / school / nursery / led は法人向けで、
+   親は /business/corporate/（法人サービス一覧）にあたる。パスを辿ると
+   「個人のお客様 › 音響設備」という誤った系統になるため、対応表を明示で持つ。
+   ページを追加したらここにも1行足すこと。書き漏らした場合はパンくずが出ないだけで、
+   ページ自体は壊れない。 */
+const BREADCRUMB_TRAILS: Record<string, [string, string][]> = {
+  '/value/':                [['まちの電器屋とは', '/value/']],
+  '/business/':             [['個人のお客様', '/business/']],
+  '/business/corporate/':   [['法人・施設のお客様', '/business/corporate/']],
+  '/business/onkyo/':       [['法人・施設のお客様', '/business/corporate/'], ['音響設備', '/business/onkyo/']],
+  '/business/seminarroom/': [['法人・施設のお客様', '/business/corporate/'], ['会議室・ホール', '/business/seminarroom/']],
+  '/business/school/':      [['法人・施設のお客様', '/business/corporate/'], ['学校・体育館', '/business/school/']],
+  '/business/nursery/':     [['法人・施設のお客様', '/business/corporate/'], ['幼稚園・保育園', '/business/nursery/']],
+  '/business/led/':         [['法人・施設のお客様', '/business/corporate/'], ['LED照明', '/business/led/']],
+  '/case/':                 [['導入事例', '/case/']],
+  '/case-housing/':         [['導入事例', '/case/'], ['住宅設備・リフォーム', '/case-housing/']],
+  '/company/':              [['会社について', '/company/']],
+  '/overview/':             [['会社について', '/company/'], ['会社概要', '/overview/']],
+  '/blog/':                 [['お知らせ', '/blog/']],
+  '/contact/':              [['お問い合わせ', '/contact/']],
+  '/recruit/':              [['採用情報', '/recruit/']],
+  '/privacy-policy/':       [['個人情報保護方針', '/privacy-policy/']],
+};
+
+/** 記事・事例は件数が増えるので対応表に書かず、一覧ページを親にして末端だけ動的に組む。 */
+function buildTrail(path: string, leafName?: string): [string, string][] | null {
+  if (BREADCRUMB_TRAILS[path]) return BREADCRUMB_TRAILS[path];
+  if (!leafName) return null;
+  if (path.startsWith('/blog/')) return [['お知らせ', '/blog/'], [leafName, path]];
+  if (path.startsWith('/case/')) return [['導入事例', '/case/'], [leafName, path]];
+  return null;
+}
+
+const trail = canonicalPath === '/' ? null : buildTrail(canonicalPath, breadcrumbName);
+
+/* トップだけの1段パンくずは情報量が無いので出さない（trail が null のとき丸ごと省略）。 */
+const breadcrumbSchema = trail && {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "正清電器", "item": `${siteUrl}/` },
+    ...trail.map(([name, href], i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": name,
+      "item": `${siteUrl}${href}`,
+    })),
+  ],
 };
 ---
 
@@ -153,6 +222,7 @@ const localBusinessSchema = {
 
     <!-- LocalBusiness 構造化データ -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
   </head>
   <body class="text-[var(--color-text)] bg-[var(--color-bg)]">
 
@@ -252,6 +322,11 @@ const localBusinessSchema = {
           <a href="/case/" class="hover:opacity-100 py-1">導入事例</a>
 
           <a href="/company/" class="hover:opacity-100 py-1">会社について</a>
+          {/* 会社概要（法人番号・建設業許可・加盟団体・取引銀行）は /company/ からの
+              1本しか導線が無く、ナビにもフッターにも出ていなかった。それでも検索では
+              サイト5位（28日で7クリック/131表示）、GoogleのAI概要にも12回出ている。
+              「この会社は何者か」を調べる導線なのでフッターに出す。2026-09-05追加 */}
+          <a href="/overview/" class="hover:opacity-100 py-1">会社概要</a>
           <a href="/blog/" class="hover:opacity-100 py-1">お知らせ</a>
           <a href="/contact/" class="hover:opacity-100 py-1">お問い合わせ</a>
           <a href="/recruit/" class="hover:opacity-100 py-1">採用情報</a>

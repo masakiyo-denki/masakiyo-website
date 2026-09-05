@@ -46,7 +46,10 @@ const articleSchema = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `${siteUrl}/blog/${post.id}`
+    /* 末尾スラッシュを必ず付ける。canonical（Layout.astro が付与）と1文字でも
+       違うと、記事とページの結び付けが自己矛盾する。2026-09-05まで93記事すべてが
+       スラッシュ無しで、canonical とズレていた。 */
+    "@id": `${siteUrl}/blog/${post.id}/`
   }
 };
 ---
@@ -56,6 +59,7 @@ const articleSchema = {
   description={post.data.description}
   canonicalPath={`/blog/${post.id}`}
   ogImage={post.data.heroImage ?? post.data.image}
+  breadcrumbName={post.data.title}
 >
   <div class="max-w-3xl mx-auto px-4 py-16">
     <a href="/blog/" class="text-sm text-[var(--color-primary)] hover:underline mb-6 inline-block">← お知らせ一覧へ</a>
