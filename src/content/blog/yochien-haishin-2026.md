@@ -71,6 +71,14 @@ heroImage: "/images/fumira-gakugeikai.gif"
 
 ---
 
+## ご相談・お問い合わせ
+
+**合資会社 正清電器**（熊本市南区田迎3丁目2番33号）
+TEL: [096-379-1234](tel:0963791234)
+[お問い合わせフォームはこちら](/contact/)
+
+---
+
 **関連ページ：** [幼稚園・保育園の音響設備](/business/nursery/) ／ [法人サービス一覧](/business/corporate/)
 
 **関連記事：** [幼稚園・保育園の音響設備リニューアルガイド](/blog/hoikuen-onkyo-2026/)
