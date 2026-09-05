@@ -5,7 +5,12 @@ import { getCollection } from 'astro:content';
 // 個人向けハブの内部導線。B2C記事は鮮度で埋もれるため、恒久ページ側から拾い直す。
 // 法人向け4ページ（onkyo/seminarroom/school/nursery）が「法人向けコラム3件」を
 // 自動表示しているのと同じ役割を、個人向けハブにも持たせる。
+// このページは個人のお客様向けハブ。法人向けコラムを除いて拾う。
+// 絞らないと、法人記事が続いたときに個人向け記事への導線がゼロになる。
+// `=== 'お知らせ'` にすると category 未設定の記事（社長交代・熊本地震など75本）が
+// 消えるため、除外の形で書くこと。
 const latestPosts = (await getCollection('blog'))
+  .filter(p => p.data.category !== '法人向けコラム')
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 
