@@ -116,3 +116,21 @@ body {
   color: var(--color-primary);
   font-weight: 700;
 }
+
+/* 本文中のリンク。
+   2026-09-12まで .prose a のルールが無く、Tailwind の初期化で a が色を継承し
+   下線も消えるため、記事本文のリンクが本文と完全に同じ見た目になっていた。
+   関連記事への導線も、末尾の「お問い合わせフォームはこちら」も、
+   リンクだと気づけない状態が92記事すべてで続いていた。
+   常時下線にしているのは、スマホにはホバーが無いため。色だけの区別も
+   色覚の面で不十分なので、色と下線の両方で示す。 */
+.prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+.prose a:hover {
+  text-decoration-thickness: 2px;
+}
