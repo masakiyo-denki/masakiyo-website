@@ -91,3 +91,5 @@ PTZカメラ（AW-UE40K）で登壇者をズーム追尾し、固定カメラ（
 ---
 
 **関連ページ：** [会議室・ホールの音響映像設備](/business/seminarroom/) ／ [音響設備 技術・実績](/business/onkyo/)
+
+**関連記事：** [この会議室の天井マイクについて — 仕組み・向く部屋・費用](/blog/kaigishitsu-tenjo-mic-2026/)
