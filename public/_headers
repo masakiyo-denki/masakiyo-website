@@ -1,0 +1,10 @@
+# Cloudflare Pages のカスタムヘッダ。書式：パスの行 → 2スペース字下げでヘッダ行。
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# 資料PDF（ホワイトペーパー）を検索結果に出さない。2026-09-13 正清さん判断。
+# /business/ 系ページからゲート無しで直リンクしている無料資料で、
+# 検索から直接PDFに来ると、サイトの導線も連絡先も無い状態で読み終わる。
+# リンク元のHTMLページは残るので、ページの順位には影響しない。
+# 反映確認：curl -sI https://www.masakiyo-denki.com/downloads/whitepaper-seminar.pdf | grep -i x-robots
+/downloads/*
+  X-Robots-Tag: noindex
